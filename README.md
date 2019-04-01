@@ -1,6 +1,6 @@
 # DEVELOPER-INSTALLATION
-Clone this repo and run npm install in the folder.
-Try to run npm start and see if it works.
+- Clone this repo and run npm install in the folder.
+- Try to run npm start and see if it works.
 # END OF INSTALLATION
 
 
