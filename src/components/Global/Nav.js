@@ -16,6 +16,7 @@ const Nav = props => {
       <Link to="/">Donations</Link>
       {/* Länka till botten av Home */}
       <Link to="/news">News</Link>
+      <Link to="/contact">Contact</Link>
     </StyledNav>
   );
 };

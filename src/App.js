@@ -4,12 +4,16 @@ import { render } from "react-dom";
 import { Router, Link } from "@reach/router";
 import styled from "styled-components";
 import Nav from "./components/Global/Nav";
+import Home from "./components/Pages/Home/Home";
+import GetInvolved from "./components/Pages/Get-involved/GetInvolved";
+import WhoWeAre from "./components/Pages/Who-we-are/WhoWeAre";
+import WhatWeDo from "./components/Pages/What-we-do/WhatWeDo";
+import News from "./components/Pages/News/News";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header" />
         <Nav />
         <Router>
           <Home path="/" />
