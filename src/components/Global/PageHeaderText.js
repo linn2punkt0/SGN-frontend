@@ -3,9 +3,13 @@ import styled from "styled-components";
 
 const StyledPageHeaderText = styled.div`
   margin-left: 82px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   h2 {
     width: 634px;
     height: 94px;
+    margin: 0 0 12px 0;
     font-weight: 300;
     font-size: 64px;
   }
@@ -13,7 +17,8 @@ const StyledPageHeaderText = styled.div`
     font-weight: 300;
     font-size: 24px;
     width: 634px;
-    height: 106px;
+    /* height: 106px; */
+    margin: 0 0 23px 0;
   }
   a {
     width: 634px;
@@ -33,8 +38,7 @@ const PageHeaderText = props => {
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur.
+        commodo consequat.
       </p>
       <a href="">Länk</a>
     </StyledPageHeaderText>

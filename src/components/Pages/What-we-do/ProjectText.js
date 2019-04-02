@@ -20,7 +20,6 @@ const StyledProjectText = styled.div`
     font-size: 24px;
   }
   a {
-    width: 634px;
     height: 36px;
     font-weight: 500;
     font-size: 24px;
