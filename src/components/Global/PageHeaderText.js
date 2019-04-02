@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledPageHeaderText = styled.div`
-  left: 82px;
+  margin-left: 82px;
   h2 {
     width: 634px;
     height: 94px;
