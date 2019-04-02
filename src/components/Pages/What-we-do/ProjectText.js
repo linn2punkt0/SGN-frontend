@@ -6,7 +6,7 @@ const StyledProjectText = styled.div``;
 const ProjectText = props => {
   return (
     <StyledProjectText>
-      <h5>Title</h5>
+      <h4>Title</h4>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -16,6 +16,7 @@ const ProjectText = props => {
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum.
       </p>
+      <a href="">Link to project</a>
     </StyledProjectText>
   );
 };
