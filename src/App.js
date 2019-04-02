@@ -7,6 +7,7 @@ import GetInvolved from "./components/Pages/Get-involved/GetInvolved";
 import WhoWeAre from "./components/Pages/Who-we-are/WhoWeAre";
 import WhatWeDo from "./components/Pages/What-we-do/WhatWeDo";
 import News from "./components/Pages/News/News";
+import Contact from "./components/Pages/Contact/Contact";
 
 class App extends Component {
   componentDidMount = () => {
@@ -59,6 +60,7 @@ class App extends Component {
           <WhoWeAre path="/who-we-are" />
           <WhatWeDo path="/what-we-do" />
           <News path="/news" />
+          <Contact path="/contact" />
         </Router>
       </div>
     );
