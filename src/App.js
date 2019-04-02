@@ -11,6 +11,7 @@ import WhatWeDo from "./components/Pages/What-we-do/WhatWeDo";
 import News from "./components/Pages/News/News";
 
 class App extends Component {
+
   render() {
     return (
       <div className="App">
