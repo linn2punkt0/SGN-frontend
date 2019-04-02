@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
-const StyledTextContainer = styled.div``;
+const StyledPageHeaderText = styled.div``;
 
-const TextContainer = props => {
+const PageHeaderText = props => {
   return (
-    <StyledTextContainer>
-      <h2>{props.title}</h2>
+    <StyledPageHeaderText>
+      <h2>Title</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -16,8 +16,8 @@ const TextContainer = props => {
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum.
       </p>
-    </StyledTextContainer>
-  )
-}
+    </StyledPageHeaderText>
+  );
+};
 
-export default TextContainer;
+export default PageHeaderText;

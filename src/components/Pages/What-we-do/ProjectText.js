@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
-const StyledTextContainer = styled.div``;
+const StyledProjectText = styled.div``;
 
-const TextContainer = props => {
+const ProjectText = props => {
   return (
-    <StyledTextContainer>
-      <h2>{props.title}</h2>
+    <StyledProjectText>
+      <h5>Title</h5>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -16,8 +16,8 @@ const TextContainer = props => {
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum.
       </p>
-    </StyledTextContainer>
-  )
-}
+    </StyledProjectText>
+  );
+};
 
-export default TextContainer;
+export default ProjectText;
