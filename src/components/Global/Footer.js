@@ -11,6 +11,12 @@ const StyledFooter = styled.div`
   a {
     color: #1f1f1f;
     text-decoration: none;
+    /* Temporary margin */
+    margin: 10px;
+  }
+  p {
+    /* Temporary margin */
+    margin: 10px;
   }
 `;
 
@@ -20,7 +26,7 @@ const Footer = props => {
       <a href="">Facebook</a>
       <a href="">Twitter</a>
       <a href="">Instagram</a>
-      <p>insert language selector here</p>
+      <p>Insert language selector here</p>
       <p>Email</p>
       <p>Phone number</p>
     </StyledFooter>
