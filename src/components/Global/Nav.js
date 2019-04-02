@@ -2,7 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "@reach/router";
 
-const StyledNav = styled.div``;
+const StyledNav = styled.div`
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    padding: 2em;
+`;
 
 const Nav = props => {
   return (

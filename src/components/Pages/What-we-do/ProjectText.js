@@ -2,7 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledProjectText = styled.div`
-  left: 82px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 82px;
   h4 {
     width: 467px;
     height: 53px;
@@ -28,13 +32,15 @@ const StyledProjectText = styled.div`
 const ProjectText = props => {
   return (
     <StyledProjectText>
-      <h4>Title</h4>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat.
-      </p>
+      <div>
+        <h4>Title</h4>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+      </div>
       <a href="">Link to project</a>
     </StyledProjectText>
   );
