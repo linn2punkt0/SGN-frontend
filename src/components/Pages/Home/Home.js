@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components"
 import ImageContainer from "../../Global/ImageContainer"
-import TextContainer from "./TextContainer"
+import TextContainer from "./TextContainer.js"
 import PageHeaderText from "../../Global/PageHeaderText"
 
 const StyledHome = styled.div`
