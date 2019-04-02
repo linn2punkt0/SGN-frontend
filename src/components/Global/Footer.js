@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
 const StyledFooter = styled.div`
@@ -18,17 +18,42 @@ const StyledFooter = styled.div`
     /* Temporary margin */
     margin: 10px;
   }
+  div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
 `;
 
 const Footer = props => {
+  const [footerData, setFooterData] = useState(null);
+
+  useEffect(() => {
+    fetchFooter();
+  }, []);
+
+  const fetchFooter = () => {
+    fetch(`http://wordplate.test/wp-json/wp/v2/footers`)
+      .then(response => response.json())
+      .then(data => {
+        setFooterData(data[0].acf);
+        console.log(footerData);
+      })
+      .catch(error => console.error(error));
+  };
   return (
     <StyledFooter>
-      <a href="">Facebook</a>
-      <a href="">Twitter</a>
-      <a href="">Instagram</a>
-      <p>Insert language selector here</p>
-      <p>Email</p>
-      <p>Phone number</p>
+      {footerData && (
+        <div>
+          <a href={footerData.facebook}>Facebook</a>
+          <a href={footerData.twitter}>Twitter</a>
+          <a href={footerData.instagram}>Instagram</a>
+          <p>Insert language selector here</p>
+          <p>{footerData.email}</p>
+          <p>{footerData.phone}</p>
+        </div>
+      )}
     </StyledFooter>
   );
 };

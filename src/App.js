@@ -10,9 +10,11 @@ import News from "./components/Pages/News/News";
 import Contact from "./components/Pages/Contact/Contact";
 
 class App extends Component {
-  componentDidMount = () => {
-    this.fetchActivities();
+  state = {
+    footerData: ""
   };
+
+  componentDidMount = () => {};
 
   fetchActivities = () => {
     fetch(`http://wordplate.test/wp-json/wp/v2/activities`)
