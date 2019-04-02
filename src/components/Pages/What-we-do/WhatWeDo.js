@@ -3,6 +3,7 @@ import styled from "styled-components";
 import ImageContainer from "../../Global/ImageContainer";
 import ProjectText from "./ProjectText";
 import PageHeaderText from "../../Global/PageHeaderText";
+import ContactUsFooter from "../../Global/ContactUsFooter";
 
 const StyledWhatWeDo = styled.div`
   display: grid;
@@ -21,6 +22,7 @@ const WhatWeDo = props => {
       <ImageContainer background="green" />
       <ProjectText />
       <ImageContainer background="red" />
+      <ContactUsFooter />
     </StyledWhatWeDo>
   );
 };
