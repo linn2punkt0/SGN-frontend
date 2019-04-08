@@ -1,28 +1,76 @@
-import React from "react";
+import React, { Component } from "react";
 import styled from "styled-components";
-import { Link } from "@reach/router";
+import NavBox from "./Navbox"
 
-const StyledNav = styled.div`
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    padding: 2em;
-`;
+const StyledNavbar = styled.div`
+overflow-x:hidden;
+z-index:999;
+position: fixed;
+width: 100vw;
+display: flex;
+justify-content: flex-end;
+`
+ const StyledHamburger = styled.div`  
+  position: fixed;
+  justify-content: center;
+  flex-direction: column;
+  margin: 6px;
+  padding-right: 20px;
+    > div {
+      transition: 0.6s;
+      border-radius: 2px;
+      margin: 3px 1px;
+    }
+ `
+  const BarOne = styled.div`
+  background-color: black;
+  width: 30px;
+  height: 3px; 
 
-const Nav = props => {
+  `
+  
+  const BarTwo = styled.div `
+  width: 30px;
+  background-color: black;
+  height: 3px;
+  
+  `
+  const BarThree = styled.div  `
+  width: 15px;
+  background-color: black;
+  height: 3px;
+  
+  `
+
+  
+class Nav extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            isHidden: true,
+    }
+}
+    toggleHidden =() => {
+        this.setState({
+           isHidden : false,
+        })
+    }
+
+render() {
   return (
-    <StyledNav>
-      <Link to="/">Home</Link>
-      <Link to="/get-involved">Get involved</Link>
-      <Link to="/who-we-are">Who we are</Link>
-      <Link to="/what-we-do">What we do</Link>
-      <Link to="/get-involved">Membership</Link>
-      {/* Länka till botten av Get involved */}
-      <Link to="/">Donations</Link>
-      {/* Länka till botten av Home */}
-      <Link to="/news">News</Link>
-      <Link to="/contact">Contact</Link>
-    </StyledNav>
-  );
-};
+
+    <StyledNavbar>
+      <StyledHamburger onClick={this.toggleHidden} >
+   
+        <BarOne style={!this.state.isHidden ? {transform: "rotate(-45deg) translate(-9px, 6px)"} : null}/>
+        <BarTwo style={!this.state.isHidden ? {opacity: "0"} : null}/>
+        <BarThree style={!this.state.isHidden ? {transform: "rotate(45deg) translate(-1px, -1px)", width: "30px"} : null}/>
+        {!this.state.isHidden && <NavBox />} 
+      </StyledHamburger>
+    </StyledNavbar>
+    )
+  }
+}
 
 export default Nav;
+
