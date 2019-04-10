@@ -9,6 +9,7 @@ import WhatWeDo from "./components/Pages/What-we-do/WhatWeDo";
 import News from "./components/Pages/News/News";
 import Contact from "./components/Pages/Contact/Contact";
 
+
 class App extends Component {
   state = {
     footerData: ""

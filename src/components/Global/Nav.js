@@ -52,7 +52,7 @@ class Nav extends Component {
 }
     toggleHidden =() => {
         this.setState({
-           isHidden : false,
+           isHidden: !this.state.isHidden,
         })
     }
 
