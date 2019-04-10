@@ -6,10 +6,34 @@ import Logo from "./Logo";
 
 
 
+
 const StyledContact = styled.div`
+
+@media (min-width: 1281px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(3, 100vh);
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 100vh);
+}
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 100vh);
+}
+@media (min-width: 481px) and (max-width: 767px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 100vh);
+}
+@media (min-width: 320px) and (max-width: 480px) { 
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 100vh);
+}
 `;
 
 const Contact = props => {
@@ -17,8 +41,20 @@ const Contact = props => {
         <StyledContact>
             <PageHeaderText />
             <Logo image="https://www.designevo.com/res/templates/thumb_small/brown-circle-and-chocolate-coffee.png" />
-            <Logo image="http://ekora.fr/WordPress3/wp-content/uploads/2012/07/picto_user.png" />
-            <Logo image="http://ekora.fr/WordPress3/wp-content/uploads/2012/07/picto_user.png" />
+            <Logo 
+            header="H3 Heebo"
+            image="http://ekora.fr/WordPress3/wp-content/uploads/2012/07/picto_user.png" 
+            text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum magnam, sapiente. Animi natus, dicta placeat. Earum nihil, libero consectetur ad facilis et est optio, recusandae dolor commodi consequatur molestias harum." 
+            email="name@name.com"
+            phone="070707070"
+            />
+            <Logo 
+            header="H3 Heebo"
+            image="http://ekora.fr/WordPress3/wp-content/uploads/2012/07/picto_user.png" 
+            text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum magnam, sapiente. Animi natus, dicta placeat. Earum nihil, libero consectetur ad facilis et est optio, recusandae dolor commodi consequatur molestias harum." 
+            email="name@name.com"
+            phone="070707070"
+            />
             <PageHeaderText />
             <ImageContainer background="tomato" />  
         </StyledContact>
