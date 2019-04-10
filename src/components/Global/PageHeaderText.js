@@ -6,7 +6,12 @@ const StyledPageHeaderText = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  h2 {
+  h5 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+  }
+  h1 {
     width: 634px;
     height: 94px;
     margin: 0 0 12px 0;
@@ -28,19 +33,27 @@ const StyledPageHeaderText = styled.div`
     color: #1f1f1f;
     text-decoration: none;
   }
+  h4 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+  }
 `;
 
 const PageHeaderText = props => {
   return (
     <StyledPageHeaderText>
-      <h2>Title</h2>
+      <h5>Nån text</h5>
+      <h1>Title</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
         commodo consequat.
       </p>
-      <a href="">Länk</a>
+      <a href="">
+        <h4>Länk</h4>
+      </a>
     </StyledPageHeaderText>
   );
 };
