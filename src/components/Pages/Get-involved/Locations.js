@@ -4,13 +4,15 @@ import styled from "styled-components";
 const StyledLocations = styled.div`
   width: 644px;
   height: 501px;
-  left: 78px;
   overflow-y: scroll;
+
+  ul {
+    padding: 0;
+  }
 
   li {
     width: 635px;
     height: 106px;
-    left: 82px;
     list-style: none;
     border-bottom: 1px solid black;
     display: flex;
