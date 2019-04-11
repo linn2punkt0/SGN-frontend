@@ -12,6 +12,7 @@ justify-content: flex-end;
 `
  const StyledHamburger = styled.div`  
   position: fixed;
+  z-index: 999;
   justify-content: center;
   flex-direction: column;
   margin: 6px;
@@ -26,20 +27,17 @@ justify-content: flex-end;
   background-color: black;
   width: 30px;
   height: 3px; 
-
   `
   
   const BarTwo = styled.div `
   width: 30px;
   background-color: black;
   height: 3px;
-  
   `
   const BarThree = styled.div  `
   width: 15px;
   background-color: black;
   height: 3px;
-  
   `
 
   

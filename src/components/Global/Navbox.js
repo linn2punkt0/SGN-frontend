@@ -21,7 +21,7 @@ const StyledNav = styled.div `
     font-weight: 300;
     font-size: 24px;
     line-height: normal;
-    
+    z-index:1;
     justify-content: space-between;
     color: #1F1F1F;
     
