@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import ImageContainer from "../../Global/ImageContainer";
 import ProjectText from "./ProjectText";
@@ -19,6 +19,20 @@ overflow-x: hidden;
 `;
 
 const WhatWeDo = props => {
+  const [projects, setProjects] = useState(null);
+
+  useEffect(() => {
+    fetchProjects();
+  }, []);
+
+  const fetchProjects = () => {
+    fetch(`http://wordplate.test/wp-json/wp/v2/projects`)
+      .then(response => response.json())
+      .then(data => {
+        setProjects(data[0].acf);
+      })
+      .catch(error => console.error(error));
+  };
   return (
     <StyledWhatWeDo>
       <PageHeaderText />
