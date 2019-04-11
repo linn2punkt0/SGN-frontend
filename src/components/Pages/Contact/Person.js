@@ -3,9 +3,9 @@ import styled from "styled-components";
 import PropTypes from 'prop-types';
 
 
-const StlyedLogo = styled.div`
+const StlyedPerson = styled.div`
 	display: grid;
-
+	grid-template-columns: 1fr;
 	img {
 		justify-self: center;
 		height: 40%;
@@ -18,19 +18,19 @@ const StlyedLogo = styled.div`
 	}
 `;
 
-const Logo = props => {
+const Person = props => {
     return (
-        <StlyedLogo>
+        <StlyedPerson>
 	        	<img src={props.image} />
 	        	<h1>{props.header}</h1>
 	        	<p>{props.text}</p>
 	        	<h3>{props.email}</h3>
 	        	<h3>{props.phone}</h3>
-        </StlyedLogo>
+        </StlyedPerson>
     );
 };
 
-Logo.propTypes = {
+Person.propTypes = {
 	header: PropTypes.string,
     image: PropTypes.string, 
     text: PropTypes.string, 
@@ -38,4 +38,4 @@ Logo.propTypes = {
     phone: PropTypes.string, 
 }
 
-export default Logo;
+export default Person;

@@ -2,9 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import PageHeaderText from "../../Global/PageHeaderText";
 import ImageContainer from "../../Global/ImageContainer";
-import Logo from "./Logo";
-
-
+import Person from "./Person";
+import Text from "./Text";
+import Form from "./Form";
+import Footer from "../../Global/Footer";
 
 
 const StyledContact = styled.div`
@@ -34,29 +35,34 @@ const StyledContact = styled.div`
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 100vh);
 }
+img {
+    justify-self: center;
+    height: 500px;
+}
+
+
 `;
 
 const Contact = props => {
     return (
         <StyledContact>
-            <PageHeaderText />
-            <Logo image="https://www.designevo.com/res/templates/thumb_small/brown-circle-and-chocolate-coffee.png" />
-            <Logo 
-            header="H3 Heebo"
+            <Text />
+            <img src="https://www.designevo.com/res/templates/thumb_small/brown-circle-and-chocolate-coffee.png" />
+            <Person 
+            header="Jane Doe"
             image="http://ekora.fr/WordPress3/wp-content/uploads/2012/07/picto_user.png" 
             text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum magnam, sapiente. Animi natus, dicta placeat. Earum nihil, libero consectetur ad facilis et est optio, recusandae dolor commodi consequatur molestias harum." 
-            email="name@name.com"
+            email="jane@mail.com"
             phone="070707070"
             />
-            <Logo 
-            header="H3 Heebo"
+            <Person 
+            header="John Doe"
             image="http://ekora.fr/WordPress3/wp-content/uploads/2012/07/picto_user.png" 
             text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum magnam, sapiente. Animi natus, dicta placeat. Earum nihil, libero consectetur ad facilis et est optio, recusandae dolor commodi consequatur molestias harum." 
-            email="name@name.com"
+            email="john@mail.com"
             phone="070707070"
             />
-            <PageHeaderText />
-            <ImageContainer background="tomato" />  
+            <Footer />
         </StyledContact>
         );
 };
