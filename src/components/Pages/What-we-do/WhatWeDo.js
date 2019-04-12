@@ -22,10 +22,13 @@ const WhatWeDo = props => {
     fetch(`http://wordplate.test/wp-json/wp/v2/projects`)
       .then(response => response.json())
       .then(data => {
-        setProjects(data[0].acf);
+        console.log(data);
+        setProjects(data);
       })
       .catch(error => console.error(error));
   };
+
+  // foreach project in projects, we want to access "projects[index].acf"
   return (
     <StyledWhatWeDo>
       <PageHeaderText />

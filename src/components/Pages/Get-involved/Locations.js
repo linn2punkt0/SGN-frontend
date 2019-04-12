@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import locationImage from "../../../ikoner/location.svg";
 
 const StyledLocations = styled.div`
   width: 644px;
@@ -19,6 +20,9 @@ const StyledLocations = styled.div`
     justify-content: flex-start;
     align-items: center;
 
+    img {
+      width: 40px;
+    }
     h5 {
       font-family: Heebo;
       font-style: normal;
@@ -30,12 +34,35 @@ const StyledLocations = styled.div`
 `;
 
 const Locations = props => {
+  const [locations, setLocations] = useState([]);
+
+  console.log(locations);
+
+  useEffect(() => {
+    fetchLocations();
+  }, []);
+
+  const fetchLocations = () => {
+    fetch(`http://wordplate.test/wp-json/wp/v2/branches`)
+      .then(response => response.json())
+      .then(data => {
+        setLocations(data);
+      })
+      .catch(error => console.error(error));
+  };
+
   return (
     <StyledLocations>
       <ul>
-        <li>
-          <h5>location</h5>
-        </li>
+        {locations.map(element => {
+          console.log(element);
+          return (
+            <li key={element.id}>
+              <img src={locationImage} alt="location-icon" />
+              <h5>{element.acf.branches.city}</h5>
+            </li>
+          );
+        })}
         <li>
           <h5>location</h5>
         </li>
