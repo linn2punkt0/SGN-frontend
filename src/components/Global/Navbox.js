@@ -25,6 +25,7 @@ const StyledNav = styled.div `
     justify-content: space-between;
     color: #1F1F1F;
     
+    
     > * {
        text-decoration: none; 
        color: black;
