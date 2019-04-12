@@ -9,7 +9,7 @@ flex-direction: row; */
 /* opacity:0.3; */
 position: absolute;
 /* width: 100%; */
-width: 50%;
+width: 100%;
 height: 100%;
 
 

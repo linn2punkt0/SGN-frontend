@@ -8,9 +8,9 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "2.1.8",
-    "react-scroll": "^1.7.11",
-    "react-swipe-carousel": "^1.0.2",
+    "react-slick": "^0.23.2",
     "react-waypoint": "^9.0.1",
+    "slick-carousel": "^1.8.1",
     "styled-components": "^4.2.0"
   },
   "scripts": {

@@ -5,13 +5,13 @@ import ProjectText from "./ProjectText";
 import PageHeaderText from "../../Global/PageHeaderText";
 import ContactUsFooter from "../../Global/ContactUsFooter";
 // import ImageSlide from "./ImageSlide"
-import Slider from "./Slider"
+import Slider from "./Slide/Slider"
+import SlideImage from "./SlideImage"
 
 const StyledWhatWeDo = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 100vh 100vh 100vh 100vh 60vh;
-
 background-attachment: fixed;
 background-position: center;
 background-repeat: no-repeat;
@@ -36,12 +36,11 @@ const WhatWeDo = props => {
       .catch(error => console.error(error));
   };
 
-  const fixedBack = {
-    position: "fixed"
-  }
+  
   return (
     <StyledWhatWeDo>
       <PageHeaderText />
+      {/* <SlideImage /> */}
       <Slider/>
       {/* <ImageSlide /> */}
       {/* <ImageContainer background="lightyellow" /> */}

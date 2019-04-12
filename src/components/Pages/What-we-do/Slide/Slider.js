@@ -10,9 +10,7 @@ const SliderContainer = styled.div `
     /* overflow-x: hidden; */
     display: flex;
     align-items: center;
-    
-    /* background-size: cover; */
-    
+    /* background-size: cover; */  
 `
 class Slider extends Component {
   constructor(props) {
@@ -57,17 +55,14 @@ class Slider extends Component {
 
 
   render(props) {
-      console.log(this.state.images[3])
+      console.log(this.state.images)
       
     return (
       <SliderContainer 
-      style={{transform: `translateX(${this.state.translateValue}px)`,
-            transition: 'transform ease-out 0.45s',
-            }}
+      // style={{transform: `translateX(${this.state.translateValue}px)`,
+      //       transition: 'transform ease-out 0.45s',
+      //       }}
             >
-
-
-
         {
           this.state.images.map((image, i) => ( 
         
