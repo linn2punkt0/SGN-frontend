@@ -4,7 +4,8 @@ import ImageContainer from "../../Global/ImageContainer";
 import ProjectText from "./ProjectText";
 import PageHeaderText from "../../Global/PageHeaderText";
 import ContactUsFooter from "../../Global/ContactUsFooter";
-import ImageSlide from "./ImageSlide"
+// import ImageSlide from "./ImageSlide"
+import Slider from "./Slider"
 
 const StyledWhatWeDo = styled.div`
   display: grid;
@@ -16,6 +17,7 @@ background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
 overflow-x: hidden;
+position: relative;
 `;
 
 const WhatWeDo = props => {
@@ -33,10 +35,15 @@ const WhatWeDo = props => {
       })
       .catch(error => console.error(error));
   };
+
+  const fixedBack = {
+    position: "fixed"
+  }
   return (
     <StyledWhatWeDo>
       <PageHeaderText />
-      <ImageSlide />
+      <Slider/>
+      {/* <ImageSlide /> */}
       {/* <ImageContainer background="lightyellow" /> */}
       <ProjectText />
       <ImageContainer background="blue" />

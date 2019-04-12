@@ -4,6 +4,7 @@ import styled from "styled-components";
 const ContainerImageSlide = styled.div`
     width: 100%;
     height: 100vh;
+    position: relative;
     overflow-x: hidden;
     display: flex;
     background-color: gray;
@@ -13,9 +14,26 @@ const ContainerImageSlide = styled.div`
 `
 
 const ImageContainer = styled.div `
-width: 50vw;
-transform: translateX(50%);
+/* width: 50vw;
+transform: translateX(50%); */
+position: absolute;
+width: 100%;
+height: 100%;
+opacity: 0;
+transition: 0.4s ease-in-out;
+
+  /* opacity: ${
+      props => props.active ?
+        "1" :
+          "none"
+  }; */
+    &.current{
+        opacity: 1;
+        background-color: red;
+        width: 50vw;
+    }
 `;
+
 
 const ImageButton = styled.div`
 width: 100px;
@@ -33,7 +51,8 @@ class ImageSlide extends Component {
 
 whenClicked = () => {
     this.setState({
-        clickedImage: !this.state.isHidden
+        clickedImage: !this.state.isHidden, 
+        active: false
     })
 }
   render() {
@@ -42,14 +61,15 @@ whenClicked = () => {
 
      <ContainerImageSlide>
 
-         <div className="button">
+         {/* <div className="button">   
      <ImageButton onClick={this.whenClicked}> </ImageButton>
-     </div>
-        
-       <ImageContainer>HEJ</ImageContainer>
-      <ImageContainer style={!this.state.clickImage? {transform: "translateX(100%)"} : null}>KORV</ImageContainer>
-      <ImageContainer>LOL</ImageContainer>
-      <ImageContainer>KAK</ImageContainer>
+     </div> */}
+       {/* <ImageContainer className="current" >HEJ</ImageContainer>
+      <ImageContainer className={ this.state.active ? "slide current" : "slide" } >KORV</ImageContainer>
+      <ImageContainer className={ this.state.active ? "slide current" : "slide" } >LOL</ImageContainer>
+      <ImageContainer className={ this.state.active ? "slide current" : "slide" } >KAK</ImageContainer> */}
+
+
       </ContainerImageSlide>
 
     )

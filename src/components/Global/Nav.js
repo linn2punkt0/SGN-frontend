@@ -4,7 +4,7 @@ import NavBox from "./Navbox"
 
 const StyledNavbar = styled.div`
 overflow-x:hidden;
-z-index:999;
+z-index:988;
 position: fixed;
 width: 100vw;
 display: flex;
@@ -17,10 +17,13 @@ justify-content: flex-end;
   flex-direction: column;
   margin: 6px;
   padding-right: 20px;
+  
     > div {
       transition: 0.6s;
       border-radius: 2px;
       margin: 3px 1px;
+      
+      
     }
  `
   const BarOne = styled.div`
@@ -55,15 +58,16 @@ class Nav extends Component {
     }
 
 render() {
+
   return (
 
     <StyledNavbar>
-      <StyledHamburger onClick={this.toggleHidden} >
-   
+      <StyledHamburger onClick={this.toggleHidden} style={!this.state.isHidden ? {zIndex: "999"} : null} >
+   {!this.state.isHidden && <NavBox />} 
         <BarOne style={!this.state.isHidden ? {transform: "rotate(-45deg) translate(-9px, 6px)"} : null}/>
         <BarTwo style={!this.state.isHidden ? {opacity: "0"} : null}/>
         <BarThree style={!this.state.isHidden ? {transform: "rotate(45deg) translate(-1px, -1px)", width: "30px"} : null}/>
-        {!this.state.isHidden && <NavBox />} 
+        {/* {!this.state.isHidden && <NavBox />}  */}
       </StyledHamburger>
     </StyledNavbar>
     )
