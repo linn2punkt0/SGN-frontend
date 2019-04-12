@@ -5,6 +5,7 @@ import ProjectText from "./ProjectText";
 import PageHeaderText from "../../Global/PageHeaderText";
 import ContactUsFooter from "../../Global/ContactUsFooter";
 // import ImageSlide from "./ImageSlide"
+
 import Slider from "./Slide/Slider"
 import SlideImage from "./SlideImage"
 
@@ -12,12 +13,14 @@ const StyledWhatWeDo = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 100vh 100vh 100vh 100vh 60vh;
+
 background-attachment: fixed;
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
 overflow-x: hidden;
 position: relative;
+
 `;
 
 const WhatWeDo = props => {
@@ -31,17 +34,22 @@ const WhatWeDo = props => {
     fetch(`http://wordplate.test/wp-json/wp/v2/projects`)
       .then(response => response.json())
       .then(data => {
-        setProjects(data[0].acf);
+        console.log(data);
+        setProjects(data);
       })
       .catch(error => console.error(error));
   };
 
-  
+
+  // foreach project in projects, we want to access "projects[index].acf"
+  const fixedBack = {
+    position: "fixed"
+  };
   return (
     <StyledWhatWeDo>
       <PageHeaderText />
-      {/* <SlideImage /> */}
-      <Slider/>
+      <Slider />
+
       {/* <ImageSlide /> */}
       {/* <ImageContainer background="lightyellow" /> */}
       <ProjectText />

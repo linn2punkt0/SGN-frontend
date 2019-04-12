@@ -38,7 +38,6 @@ const Footer = props => {
       .then(response => response.json())
       .then(data => {
         setFooterData(data[0].acf);
-        console.log(footerData);
       })
       .catch(error => console.error(error));
   };
