@@ -2,11 +2,17 @@ import React from "react";
 import styled from "styled-components";
 import Form from "./Form";
 
+
 const StyledText = styled.div`
 div {
   display:grid;
   justify-items: center;
 
+}
+.header {
+  height:10px;
+  background-color: #e3e3e3;
+  width: 100%;
 }
 h1, p {
   padding-left: 15%;
@@ -26,7 +32,8 @@ h1, p {
 const Text = props => {
   return (
     <StyledText>
-    <div>
+
+
       <h1>Title</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -35,7 +42,6 @@ const Text = props => {
         commodo consequat.
       </p>
       <Form />
-    </div>
     </StyledText>
   );
 };

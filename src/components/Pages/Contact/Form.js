@@ -6,16 +6,16 @@ div {
 	display: grid;
 	justify-content: center;
 }
-input {
+input, select {
 	padding-bottom: 2%;
 	margin-bottom: 10%;
 	border: none;
 	border-bottom: 1px solid lightgrey;
 	width: 100%;
-	font-size: 1.4em;
+	font-size: 24px;
 	font-weight: 100;
 }
-input:focus {
+input:focus, select:focus {
 	outline:none;
 }
 form {
@@ -44,15 +44,27 @@ button:hover {
 	color:blue;
 	transform: scale(1.1)
 }
-
+select {
+	background-color: #FDFDFD;
+   // -webkit-appearance: none; 
+   // -moz-appearance: none;
+   // appearance: none;       /* remove default arrow */
+   // background-image: url(...);   /* add custom arrow */
+}
 `;
-const Form = () => {
+
+const Form = props => {
 	return(
 		<StyledForm>
 			<div>
 				<form action="#">
+					<select>
+						<option value="user">Users</option>
+						<option value="user">Users</option>
+						<option value="user">Users</option>
+					</select>
 					<input type="text" name="dropdown" placeholder="I'm interested in.." />
-					<div class="inline">
+					<div className="inline">
 						<input type="text" name="name" placeholder="Your name.." />
 						<input type="email" name="email" placeholder="E-mail"/>
 					</div>

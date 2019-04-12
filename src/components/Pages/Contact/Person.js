@@ -6,9 +6,8 @@ import PropTypes from 'prop-types';
 const StlyedPerson = styled.div`
 	display: grid;
 	grid-template-columns: 1fr;
-	img {
+	div {
 		justify-self: center;
-		height: 40%;
 	}
 	h1, p, h3 {
 		margin-left: 5rem
@@ -16,12 +15,20 @@ const StlyedPerson = styled.div`
 	h3 {
 		font-weight: 400;
 	}
+	h1 {
+		font-weight 400;
+	}
+	p {
+		font-weight: 300;
+	}
 `;
 
 const Person = props => {
     return (
         <StlyedPerson>
-	        	<img src={props.image} />
+        		<div className="imgContainer">
+	        		<img src={props.image} />
+				</div>
 	        	<h1>{props.header}</h1>
 	        	<p>{props.text}</p>
 	        	<h3>{props.email}</h3>
