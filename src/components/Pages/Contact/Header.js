@@ -1,26 +1,20 @@
 import React from "react";
 import styled from "styled-components";
-
+// import Logo from "../../assets/logo-contact.png";
 
 const StyledHeader = styled.div`
-// div {
-//   display:grid;
-//   justify-items: center;
-
-// }
-.header {
-
-  height:10px;
-  background-color: #e3e3e3;
-  width: 100%;
+.contactLogo {
+	padding-top: 16px;
+	padding-bottom: 16px;
+	max-height: 60px;
+	max-width: 150px;
 }
 `;
 
 const Header = props => {
   return (
     <StyledHeader>
-      <div className="header">
-      </div>
+    	<img className="contactLogo" src="https://i.ibb.co/ng82ZN0/contact-logo.png" alt="contact-logo" />
     </StyledHeader>
   );
 };
