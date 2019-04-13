@@ -17,9 +17,11 @@ const StyledContact = styled.div`
         margin-left: 82px;
         margin-right: 82px;
         grid-template-columns: 1.7fr 1.7fr;
-        // grid-template-rows: 0.3fr 2.5fr 0.2fr;
         grid-template-rows: repeat(1, 100vh);
         margin-bottom: 100px;
+        p {
+
+        }
     }
     .wrapper2 {
         display: grid;
@@ -29,46 +31,85 @@ const StyledContact = styled.div`
             margin-right: 82px;
         }
     }
-    .row {
-        width: 100%;
-        // height: 150px;
-        margin-left: 82px;
-        margin-right: 82px;
+    .row2  {
+        display: flex;
+        justify-content: center;
+    }
+    img {
+        justify-self: flex-end;
+        max-height: 449px;
+    }
+    p {
+        height: 106px;
+    }
+    h6 {
+        font-size: 64px;
+        font-weight: 300;
     }
 }
 
 @media (min-width: 768) and (orientation: landscape) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, 100vh);
+    .wrapper {
+        display: flex;
+        margin-right: 24px;
+        margin-left: 24px;
+    }
+    .wrapper2 {
+        h1, h4, p {
+            margin-left: 24px;
+            margin-right: 24px;
+        }
+    }
+    .row {
+        width: 100%;
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+    .row2  {
+        display: flex;
+        justify-content: center;
+        h6 {
+            font-size: 30px;
+            font-weight: 300;
+        }
+    }
 }
 
 @media (min-width: 320) and (max-width: 1024px) and (orientation: landscape) {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 100vh);
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 100vh); 
+    .wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-right: 24px;
+        margin-left: 24px;
+        img {
+            height: 200px;
+        }
+    }
+    .wrapper2 {
+        h1, h4, p {
+            margin-left: 24px;
+            margin-right: 24px;
+            max-width: 80%;
+        }
+    }
+    .row {
+        width: 100%;
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+    .row2  {
+        display:flex;
+        justify-content: center;
+        h6 {
+            font-size: 30px;
+            font-weight: 300;
+        }
+    }
 }
-img {
-    justify-self: flex-end;
-    max-height: 449px;
-}
-p {
-    height: 106px;
-}
-h6 {
-    font-size: 64px;
-    font-weight: 300;
-}
-.row2  {
-    display:flex;
-    justify-content: center;
-}
+
 `;
 
 
@@ -105,7 +146,7 @@ const Contact = props => {
                     return(
                         <Person key={person.id}
                             contactName={person.title.rendered}
-                            contactImage="https://i.ibb.co/8PPtrcY/person1.png" alt="person1"
+                            contactImage="http://i.ibb.co/8PPtrcY/person1.png" alt="person1"
                             contactDescription={person.acf.contactinfo.description}
                             contactEmail={person.acf.contactinfo.email}
                             contactPhone={person.acf.contactinfo.phone}

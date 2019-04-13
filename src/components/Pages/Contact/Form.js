@@ -23,10 +23,12 @@ form {
 	width: 100%;
 }
 button {
-	border:none;
+	border: none;
 	border-bottom: 1px solid grey;
 	font-size 24px;
 	font-weight: 500;
+	background-color: #FDFDFD;
+	padding-left: 0px;
 }
 button:hover {
 	color:blue;
