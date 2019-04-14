@@ -1,14 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import Locations from "./Locations";
+import Activities from "./Activities";
 
 const StyledFind = styled.div`
   margin-left: 82px;
   position: relative;
   h4 {
     font-weight: 300;
-    font-size: 36px;
-    margin: 40px 0 2px 0;
+    font-size: 4vh;
+    margin: 4vh 0 2px 0;
   }
   .grey {
     margin: 0;
@@ -35,15 +36,19 @@ const StyledFind = styled.div`
 `;
 
 const Find = props => {
+  {
+    console.log(props.content);
+  }
   return (
     <StyledFind>
-      <h4>Find us here/Activities</h4>
-      <h4 className="grey">These are our branches/Activities</h4>
-      <Locations />
+      <h4>{props.content.title}</h4>
+      <h4 className="grey">{props.content.title_2}</h4>
+      {props.content.title === "Our locations" && <Locations />}
+      {props.content.title === "Activities" && <Activities />}
       <div className="startYourOwn">
-        <h5>No branch/Got an idea?</h5>
+        <h5>{props.content.question}</h5>
         <a>
-          <h5>Start one/ Start it yourself!</h5>
+          <h5>{props.content.start_one}</h5>
         </a>
       </div>
     </StyledFind>

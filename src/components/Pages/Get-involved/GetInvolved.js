@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Find from "./Find";
 import PageHeaderText from "../../Global/PageHeaderText";
@@ -11,12 +11,29 @@ const StyledGetInvolved = styled.div`
 `;
 
 const GetInvolved = props => {
+  const [content, setContent] = useState(null);
+
+  useEffect(() => {
+    fetchContent();
+  }, []);
+
+  const fetchContent = () => {
+    fetch(`http://wordplate.test/wp-json/wp/v2/pages?slug=get-involved`)
+      .then(response => response.json())
+      .then(data => {
+        setContent(data[0].acf);
+      })
+      .catch(error => console.error(error));
+  };
+
   return (
     <StyledGetInvolved>
-      <PageHeaderText />
+      {content && <PageHeaderText content={content.header} />}
       <ImageContainer background="lightpink" />
-      <Find />
+      {content && <Find content={content.locations} />}
       <ImageContainer background="blue" />
+      {content && <Find content={content.activities} />}
+      <ImageContainer background="green" />
     </StyledGetInvolved>
   );
 };
