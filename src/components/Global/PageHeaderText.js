@@ -41,18 +41,14 @@ const StyledPageHeaderText = styled.div`
 `;
 
 const PageHeaderText = props => {
+  console.log(props.content);
   return (
     <StyledPageHeaderText>
-      <h5>Nån text</h5>
-      <h1>Title</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat.
-      </p>
+      <h5>{props.content.tagline}</h5>
+      <h1>{props.content.title}</h1>
+      <p>{props.content.descriptions}</p>
       <a href="">
-        <h4>Länk</h4>
+        <h4>{props.content.scroll}</h4>
       </a>
     </StyledPageHeaderText>
   );
