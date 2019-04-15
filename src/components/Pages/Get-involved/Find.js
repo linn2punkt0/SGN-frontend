@@ -43,7 +43,7 @@ const Find = props => {
     <StyledFind>
       <h4>{props.content.title}</h4>
       <h4 className="grey">{props.content.title_2}</h4>
-      {props.content.title === "Our locations" && <Locations />}
+      {props.content.title === "Our Locations" && <Locations />}
       {props.content.title === "Activities" && <Activities />}
       <div className="startYourOwn">
         <h5>{props.content.question}</h5>
