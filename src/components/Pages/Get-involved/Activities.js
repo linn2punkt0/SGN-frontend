@@ -43,7 +43,7 @@ const Activities = props => {
   }, []);
 
   const fetchActivities = () => {
-    fetch(`http://wordplate.test/wp-json/wp/v2/branches`)
+    fetch(`http://wordplate.test/wp-json/wp/v2/activities`)
       .then(response => response.json())
       .then(data => {
         setActivities(data);
@@ -51,7 +51,7 @@ const Activities = props => {
       .catch(error => console.error(error));
   };
   const fetchProjects = () => {
-    fetch(`http://wordplate.test/wp-json/wp/v2/branches`)
+    fetch(`http://wordplate.test/wp-json/wp/v2/projects`)
       .then(response => response.json())
       .then(data => {
         setProjects(data);
@@ -68,6 +68,21 @@ const Activities = props => {
             </li>
           );
         })}
+        <li>
+          <h5>activity</h5>
+        </li>
+        <li>
+          <h5>activity</h5>
+        </li>
+        <li>
+          <h5>activity</h5>
+        </li>
+        <li>
+          <h5>activity</h5>
+        </li>
+        <li>
+          <h5>activity</h5>
+        </li>
         <li>
           <h5>activity</h5>
         </li>
