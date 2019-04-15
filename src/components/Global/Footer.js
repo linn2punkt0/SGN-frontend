@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
 const StyledFooter = styled.div`
+  grid-column: 1 / 3;
   display: flex;
   flex-direction: row;
   justify-content: space-around;

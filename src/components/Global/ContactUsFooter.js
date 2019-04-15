@@ -4,12 +4,12 @@ import Footer from "./Footer";
 import { Link } from "@reach/router";
 
 const StyledContactUsFooter = styled.div`
-  grid-column: 1/3;
+  grid-column: 1 / 3;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 100vh;
+  width: 100vw;
   height: 94px;
   font-weight: 300;
   font-size: 64px;
