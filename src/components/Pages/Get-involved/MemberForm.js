@@ -33,18 +33,30 @@ const StyledMemberForm = styled.div`
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
+      text-align: start;
     }
     .row {
+      width: 100%;
       display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: center;
     }
     .wrapper {
+      width: 100%;
+      margin-right: 10px;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
+    }
+    label {
+      color: rgba(113, 113, 113, 0.7);
+    }
+    input {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid black;
     }
   }
 `;
@@ -73,7 +85,7 @@ const MemberForm = props => {
           <input name="adress1" type="text" />
           <label for="adress2">Adress 2</label>
           <input name="adress2" type="text" />
-          <div>
+          <div className="row">
             <div className="wrapper">
               <label for="city">City</label>
               <input name="city" type="text" />

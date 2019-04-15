@@ -6,21 +6,20 @@ import PageHeaderText from "../../Global/PageHeaderText";
 import ContactUsFooter from "../../Global/ContactUsFooter";
 // import ImageSlide from "./ImageSlide"
 
-import Slider from "./Slide/Slider"
-import SlideImage from "./SlideImage"
+import Slider from "./Slide/Slider";
+import SlideImage from "./SlideImage";
 
 const StyledWhatWeDo = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 100vh 100vh 100vh 100vh 60vh;
 
-background-attachment: fixed;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-overflow-x: hidden;
-position: relative;
-
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+  position: relative;
 `;
 
 const WhatWeDo = props => {
@@ -40,14 +39,13 @@ const WhatWeDo = props => {
       .catch(error => console.error(error));
   };
 
-
   // foreach project in projects, we want to access "projects[index].acf"
   const fixedBack = {
     position: "fixed"
   };
   return (
     <StyledWhatWeDo>
-      <PageHeaderText />
+      <PageHeaderText content="" />
       <Slider />
 
       {/* <ImageSlide /> */}

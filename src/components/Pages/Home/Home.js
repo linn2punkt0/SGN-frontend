@@ -57,7 +57,7 @@ class Home extends Component {
 
       // {({ isInView }) =>
       <StyledHome>
-        <PageHeaderText />
+        <PageHeaderText content="" />
         <ImageContainer background="pink" />
         <TextContainer title="Get Involved" />
         <ImageContainer background="#2703BB" />
