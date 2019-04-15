@@ -30,7 +30,7 @@ const GetInvolved = props => {
 
   return (
     <StyledGetInvolved>
-      {content && <PageHeaderText content={content.header} />}
+      <PageHeaderText content={content ? content.header : ""} />
       <ImageContainer background="lightpink" />
       {content && <Find content={content.locations} />}
       <ImageContainer background="blue" />
