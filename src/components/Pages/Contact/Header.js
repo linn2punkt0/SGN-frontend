@@ -8,6 +8,7 @@ const StyledHeader = styled.div`
 	padding-bottom: 16px;
 	max-height: 60px;
 	max-width: 150px;
+	margin-left: 10vh;
 }
 `;
 
