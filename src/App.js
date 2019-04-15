@@ -9,50 +9,7 @@ import WhatWeDo from "./components/Pages/What-we-do/WhatWeDo";
 import News from "./components/Pages/News/News";
 import Contact from "./components/Pages/Contact/Contact";
 
-
 class App extends Component {
-  state = {
-    footerData: ""
-  };
-
-  componentDidMount = () => {};
-
-  fetchActivities = () => {
-    fetch(`http://wordplate.test/wp-json/wp/v2/activities`)
-      .then(response => response.json())
-      .then(data => {
-        console.log(data);
-      })
-      .catch(error => console.error(error));
-  };
-
-  fetchBranches = () => {
-    fetch(`http://wordplate.test/wp-json/wp/v2/branches`)
-      .then(response => response.json())
-      .then(data => {
-        console.log(data);
-      })
-      .catch(error => console.error(error));
-  };
-
-  fetchPartners = () => {
-    fetch(`http://wordplate.test/wp-json/wp/v2/partners`)
-      .then(response => response.json())
-      .then(data => {
-        console.log(data);
-      })
-      .catch(error => console.error(error));
-  };
-
-  fetchProjects = () => {
-    fetch(`http://wordplate.test/wp-json/wp/v2/projects`)
-      .then(response => response.json())
-      .then(data => {
-        console.log(data);
-      })
-      .catch(error => console.error(error));
-  };
-
   render() {
     return (
       <div className="App">
