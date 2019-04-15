@@ -43,15 +43,11 @@ const StyledPageHeaderText = styled.div`
 const PageHeaderText = props => {
   return (
     <StyledPageHeaderText>
-      <h5>{props.content.tagline ? props.content.tagline : "Tagline"}</h5>
-      <h1>{props.content.title ? props.content.title : "Title"}</h1>
-      <p>
-        {props.content.descriptions
-          ? props.content.descriptions
-          : "Description"}
-      </p>
+      <h5>{props.content ? props.content.tagline : "Tagline"}</h5>
+      <h1>{props.content ? props.content.title : "Title"}</h1>
+      <p>{props.content ? props.content.descriptions : "Description"}</p>
       <a href="">
-        <h4>{props.content.scroll ? props.content.scroll : "Scroll down"}</h4>
+        <h4>{props.content ? props.content.scroll : "Scroll down"}</h4>
       </a>
     </StyledPageHeaderText>
   );

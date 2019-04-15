@@ -73,50 +73,49 @@ const MemberForm = props => {
         <form>
           <div className="row">
             <div className="wrapper">
-              <label for="name">Name</label>
+              <label htmlFor="name">Name</label>
               <input name="name" type="text" />
             </div>
             <div className="wrapper">
-              <label for="surname">Surname</label>
+              <label htmlFor="surname">Surname</label>
               <input name="surname" type="text" />
             </div>
           </div>
-          <label for="adress1">Adress 1</label>
+          <label htmlFor="adress1">Adress 1</label>
           <input name="adress1" type="text" />
-          <label for="adress2">Adress 2</label>
+          <label htmlFor="adress2">Adress 2</label>
           <input name="adress2" type="text" />
           <div className="row">
             <div className="wrapper">
-              <label for="city">City</label>
+              <label htmlFor="city">City</label>
               <input name="city" type="text" />
             </div>
             <div className="wrapper">
-              <label for="postal-code">Postal code</label>
+              <label htmlFor="postal-code">Postal code</label>
               <input name="postal-code" type="text" />
             </div>
           </div>
           <div className="row">
             <div className="wrapper">
-              <label for="phone">Phone number</label>
+              <label htmlFor="phone">Phone number</label>
               <input name="phone" type="text" />
             </div>
             <div className="wrapper">
-              <label for="email">Email</label>
+              <label htmlFor="email">Email</label>
               <input name="email" type="text" />
             </div>
           </div>
-          <label for="refugee">Refugee</label>
+          <label htmlFor="refugee">Refugee</label>
           <input name="refugee" type="checkbox" />
-          <label for="volunter">Volunter</label>
+          <label htmlFor="volunter">Volunter</label>
           <input name="volunter" type="checkbox" />
-          <label for="offer">
+          <label htmlFor="offer">
             This is what i can offer (knowledge, materials, locales etc.)
           </label>
           <input name="offer" type="text" />
-          <label for="background">Education and occupation</label>
+          <label htmlFor="background">Education and occupation</label>
           <input name="background" type="text" />
-          <label for="match">
-            {" "}
+          <label htmlFor="match">
             Yes, I would like for you to match my competence with suitable
             available jobs
           </label>

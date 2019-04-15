@@ -23,6 +23,7 @@ const StyledWhatWeDo = styled.div`
 `;
 
 const WhatWeDo = props => {
+  // Fetch all projects from API
   const [projects, setProjects] = useState(null);
 
   useEffect(() => {
@@ -39,13 +40,27 @@ const WhatWeDo = props => {
       .catch(error => console.error(error));
   };
 
-  // foreach project in projects, we want to access "projects[index].acf"
+  // Fetch What-we-do-page from API and set all custom-field-content to content-hook
+  const [content, setContent] = useState(null);
+  useEffect(() => {
+    fetchContent();
+  }, []);
+
+  const fetchContent = () => {
+    fetch(`http://wordplate.test/wp-json/wp/v2/pages?slug=what-we-do`)
+      .then(response => response.json())
+      .then(data => {
+        setContent(data[0].acf);
+      })
+      .catch(error => console.error(error));
+  };
+
   const fixedBack = {
     position: "fixed"
   };
   return (
     <StyledWhatWeDo>
-      <PageHeaderText content="" />
+      <PageHeaderText content={content ? content.header : ""} />
       <Slider />
 
       {/* <ImageSlide /> */}

@@ -36,9 +36,6 @@ const StyledFind = styled.div`
 `;
 
 const Find = props => {
-  {
-    console.log(props.content);
-  }
   return (
     <StyledFind>
       <h4>{props.content.title ? props.content.title : "Title"}</h4>
