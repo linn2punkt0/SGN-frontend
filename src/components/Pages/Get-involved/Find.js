@@ -41,14 +41,18 @@ const Find = props => {
   }
   return (
     <StyledFind>
-      <h4>{props.content.title}</h4>
-      <h4 className="grey">{props.content.title_2}</h4>
+      <h4>{props.content.title ? props.content.title : "Title"}</h4>
+      <h4 className="grey">
+        {props.content.title_2 ? props.content.title_2 : "Title2"}
+      </h4>
       {props.content.title === "Our Locations" && <Locations />}
       {props.content.title === "Activities" && <Activities />}
       <div className="startYourOwn">
-        <h5>{props.content.question}</h5>
+        <h5>{props.content.question ? props.content.question : "Question"}</h5>
         <a>
-          <h5>{props.content.start_one}</h5>
+          <h5>
+            {props.content.start_one ? props.content.start_one : "Start one!"}
+          </h5>
         </a>
       </div>
     </StyledFind>
