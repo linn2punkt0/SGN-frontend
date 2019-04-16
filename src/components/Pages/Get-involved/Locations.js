@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import locationImage from "../../../ikoner/location.svg";
+import locationImage from "../../ikoner/location.svg";
 
 const StyledLocations = styled.div`
   height: 50vh;
