@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-// import Logo from "../../assets/logo-contact.png";
 
 const StyledHeader = styled.div`
 .contactLogo {
@@ -8,7 +7,7 @@ const StyledHeader = styled.div`
 	padding-bottom: 16px;
 	max-height: 60px;
 	max-width: 150px;
-	margin-left: 10vh;
+	margin-left: 5vw;
 }
 `;
 

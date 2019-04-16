@@ -6,7 +6,6 @@ import Person from "./Person";
 import Text from "./Text";
 import Form from "./Form";
 import Header from "./Header";
-// import Logo from "../../assets/logo.png"; // works locally atm
 import Footer from "../../Global/Footer";
 
 const StyledContact = styled.div`
@@ -18,6 +17,8 @@ const StyledContact = styled.div`
         margin-right: 5vw;
         grid-template-columns: 1.7fr 1.7fr;
         grid-template-rows: repeat(1, 100vh);
+        margin-top: 20vh;
+        margin-bottom: 10vh;
         
     }
     .wrapper2 {

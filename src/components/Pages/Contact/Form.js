@@ -15,7 +15,7 @@ input:focus, select:focus {
 	outline:none;
 }
 form {
-	margin-top: 82px;
+	margin-top: 10vh;
 }
 
 .inline {
@@ -61,10 +61,10 @@ const Form = props => {
 				<form action="#">
 		            <select>
 						<option>I'm interested in..</option>
-							{activities.map((element) => {
+							{activities.map((element, i) => {
 								console.log(element)
 						  		return (
-									<option>{element.title.rendered}</option>
+									<option key={i}>{element.title.rendered}</option>
 						  		);
 				        	})}
 					</select>
@@ -72,7 +72,7 @@ const Form = props => {
 						<input type="text" name="name" placeholder="Your name.." />
 						<input type="email" name="email" placeholder="E-mail"/>
 					</div>
-					<input type="text" name="subject" placeholder="Describe your errand.." />
+					<input type="text" name="subject" placeholder="Message" />
 					<button type="submit">Send</button>
 				</form>
 		</StyledForm>

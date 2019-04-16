@@ -5,7 +5,6 @@ const StyledText = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   h1,
   h2,
   p {
@@ -13,7 +12,6 @@ const StyledText = styled.div`
   }
   h1 {
     font-size: 64px;
-    margin-top: 0;
   }
   p {
     font-size: 24px;
