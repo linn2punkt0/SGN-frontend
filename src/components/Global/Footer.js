@@ -8,6 +8,10 @@ const StyledFooter = styled.div`
   align-items: center;
   font-weight: 300;
   font-size: 16px;
+  background-color: red;
+  height: 30vh;
+  width: 100vw;
+  position: absolute;
   a {
     color: #1f1f1f;
     text-decoration: none;
@@ -41,6 +45,7 @@ const Footer = props => {
       })
       .catch(error => console.error(error));
   };
+
   return (
     <StyledFooter>
       {footerData && (

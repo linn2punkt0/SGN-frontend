@@ -6,9 +6,11 @@ import Footer from "../../Global/Footer.js"
 const ContactContainer = styled.div`
 display: flex;
 justify-content: space-around;
-
+/* position:relative; */
 position: absolute;
 /* width: 100vw; */
+align-items: flex-end;
+/* height: 100vh; */
  background-color: green;
 `
 

@@ -2,10 +2,13 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledPageHeaderText = styled.div`
-  margin-left: 82px;
+margin-bottom: 5vw;
+  margin-left: 5vw;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
+/* position: relative; */
+  
   h5 {
     font-style: normal;
     font-weight: normal;
@@ -43,16 +46,12 @@ const StyledPageHeaderText = styled.div`
 const PageHeaderText = props => {
   return (
     <StyledPageHeaderText>
-      <h5>Nån text</h5>
-      <h1>Title</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat.
+      <h5>Fighting hopelessness, alienation and apathy</h5>
+      <h1>{props.title}</h1>
+      <p>We’ ve taken action against hopelessness by empowering and encouraging asylum seekers, refugees, immigrants, migrants and new countrymen.
       </p>
       <a href="">
-        <h4>Länk</h4>
+        <h4>Discover</h4>
       </a>
     </StyledPageHeaderText>
   );
