@@ -21,9 +21,18 @@ const StyledContact = styled.div`
         margin-bottom: 10vh;
         
     }
-    .wrapper2 {
+    .personContainerBig {
         display: grid;
         grid-template-columns: 1.7fr 1.7fr;
+        h1, h4, p {
+            margin-left: 5vw;
+            margin-right: 5vw;
+        }
+    }
+    .personContainerSmall {
+        margin-top: 20vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
         h1, h4, p {
             margin-left: 5vw;
             margin-right: 5vw;
@@ -64,7 +73,7 @@ const StyledContact = styled.div`
             height: 200px;
         }
     }
-    .wrapper2 {
+    .personContainerBig {
         h1, h4, p {
             margin-left: 5vw;
             margin-right: 5vw;
@@ -101,7 +110,9 @@ const Contact = props => {
         })
         .catch(error => console.error(error));
     };
-
+    const displayContacts = () => {
+     
+    }
     return (
         <StyledContact>
             <div>
@@ -111,19 +122,22 @@ const Contact = props => {
                 <Text />
                 <img src="https://i.ibb.co/dc55VRx/logo.png" alt="logo" /> 
             </div>
-            <div className="wrapper2">
+            <div className="personContainerBig">
                 {contacts.map((person) => {
-                    // console.log(person.acf)
+                    console.log(person.id)
                     return(
                         <Person key={person.id}
                             contactName={person.title.rendered}
-                            contactImage="http://i.ibb.co/8PPtrcY/person1.png" alt="person1"
-                            contactDescription={person.acf.contactinfo.description}
-                            contactEmail={person.acf.contactinfo.email}
-                            contactPhone={person.acf.contactinfo.phone}
+                            contactImage={person.acf.information.image.sizes.large}
+                            contactDescription={person.acf.information.description}
+                            contactEmail={person.acf.information.email}
+                            contactPhone={person.acf.information.phone}
                         />
                     );
                 })}
+            </div>
+            <div className="personContainerSmall">
+               
             </div>
             <div className="row">
                 <h6>info@supportgroup.com</h6>
