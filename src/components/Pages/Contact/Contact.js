@@ -37,19 +37,26 @@ const StyledContact = styled.div`
             margin-left: 5vw;
             margin-right: 5vw;
         }
+        img {
+            height: 300px
+            justify-self: center;
+        }
     }
     .row {
         display: flex;
         justify-content: center;
+        align-items: center;
+        height: 100vh;
+        h6 {
+            font-size: 64px;
+            font-weight: 300;
+        }
     }
     img {
         justify-self: flex-end;
         max-height: 449px;
     }
-    h6 {
-        font-size: 64px;
-        font-weight: 300;
-    }
+    
 }
 
 @media (min-width: 768) and (orientation: landscape) {
@@ -64,27 +71,34 @@ const StyledContact = styled.div`
         flex-direction: column-reverse;
         margin-right: 5vw;
         margin-left: 5vw;
-
+        margin-bottom: 10vh;
         .inline {
             display:block;
             width: 100%;
         }
         img {
-            height: 200px;
+            height: 400px;
+            margin-bottom: 5vh;
         }
     }
-    .personContainerBig {
+    .personContainerBig, .personContainerSmall {
         h1, h4, p {
             margin-left: 5vw;
             margin-right: 5vw;
             max-width: 80%;
+            margin-bottom: 5vh;
+        }
+        h1 {
+            margin-bottom: 0;
         }
     }
     .row  {
-        display:flex;
+        display: flex;
         justify-content: center;
+        align-items: center;
+        height: 30vh;
         h6 {
-            font-size: 30px;
+            font-size: 24px;
             font-weight: 300;
         }
     }
@@ -123,7 +137,7 @@ const Contact = props => {
                 <img src="https://i.ibb.co/dc55VRx/logo.png" alt="logo" /> 
             </div>
             <div className="personContainerBig">
-                {contacts.map((person) => {
+                {contacts.slice(0, 2).map((person) => {
                     console.log(person.id)
                     return(
                         <Person key={person.id}
@@ -137,12 +151,23 @@ const Contact = props => {
                 })}
             </div>
             <div className="personContainerSmall">
-               
+               {contacts.slice(2).map((person) => {
+                    console.log(person.id)
+                    return(
+                        <Person key={person.id}
+                            contactName={person.title.rendered}
+                            contactImage={person.acf.information.image.sizes.large}
+                            contactDescription={person.acf.information.description}
+                            contactEmail={person.acf.information.email}
+                            contactPhone={person.acf.information.phone}
+                        />
+                    );
+                })}
             </div>
             <div className="row">
                 <h6>info@supportgroup.com</h6>
             </div>
-                <div className="row">
+                <div>
                     <Footer />
                 </div>
         </StyledContact>
