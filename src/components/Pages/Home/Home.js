@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useState, useEffect } from "react";
 import styled from "styled-components";
 import ImageContainer from "../../Global/ImageContainer";
 import TextContainer from "./TextContainer.js";
@@ -40,15 +40,7 @@ const StyledHome = styled.div`
 
 // })
 
-class Home extends Component {
-  constructor(props) {
-    super();
-    this.state = {
-      show: false
-    };
-    // this.showNotification = this.showNotification.bind(this);
-  }
-
+const Home = props => {
   //   showNotification() {
   //   // You can use redux for this.
   //   this.setState({
@@ -61,31 +53,47 @@ class Home extends Component {
   //     }, 1000);
   // }
 
-  render(props) {
-    return (
-      // <WhenInView>
+  // Fetch home-page from api and set custom-field-content to content-hook.
+  const [content, setContent] = useState(null);
 
-      // {({ isInView }) =>
-      <StyledHome>
+  console.log(content);
 
-        <PageHeaderText />
-        <ImageHeader background="white" />
-        <TextContainer title="Get Involved" colorButton="#F9DC0E"/>
-        <ImageContainer background="#2703BB" />
-        <TextContainer title="Who We Are"  colorButton="#0021B8"/>
-        <ImageContainer background="black" />
-        <TextContainer title="What we do / stories" colorButton="#F43F2A"/>
-        <ImageContainer background="lightgreen" />
-        <ContactContainer
-          title="Wanna help out?"
-          textContact="Låna ut lokal? Donera pengar? Material?"
-        />
-        {/* <Footer /> */}
-      </StyledHome>
-      // }
-      // </WhenInView>
-    );
-  }
-}
+  useEffect(() => {
+    fetchContent();
+  }, []);
+
+  const fetchContent = () => {
+    fetch(`http://wordplate.test/wp-json/wp/v2/pages?slug=home`)
+      .then(response => response.json())
+      .then(data => {
+        setContent(data[0].acf);
+      })
+      .catch(error => console.error(error));
+  };
+
+  return (
+    // <WhenInView>
+
+
+    // {({ isInView }) =>
+    <StyledHome>
+      <PageHeaderText content={content ? content.header : ""} />
+      <ImageContainer background="pink" />
+      <TextContainer content={content ? content.get_involved : ""} />
+      <ImageContainer background="#2703BB" />
+      <TextContainer content={content ? content.who_we_are : ""} />
+      <ImageContainer background="black" />
+      <TextContainer content={content ? content.what_we_do : ""} />
+      <ImageContainer background="lightgreen" />
+      <ContactContainer
+        title="Wanna help out?"
+        textContact="Låna ut lokal? Donera pengar? Material?"
+      />
+    </StyledHome>
+    // }
+    // </WhenInView>
+  );
+};
+
 
 export default Home;

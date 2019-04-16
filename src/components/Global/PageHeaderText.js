@@ -46,12 +46,13 @@ margin-bottom: 5vw;
 const PageHeaderText = props => {
   return (
     <StyledPageHeaderText>
-      <h5>Fighting hopelessness, alienation and apathy</h5>
-      <h1>{props.title}</h1>
-      <p>We’ ve taken action against hopelessness by empowering and encouraging asylum seekers, refugees, immigrants, migrants and new countrymen.
-      </p>
+
+      <h5>{props.content ? props.content.tagline : "Tagline"}</h5>
+      <h1>{props.content ? props.content.title : "Title"}</h1>
+      <p>{props.content ? props.content.descriptions : "Description"}</p>
       <a href="">
-        <h4>Discover</h4>
+        <h4>{props.content ? props.content.scroll : "Scroll down"}</h4>
+
       </a>
     </StyledPageHeaderText>
   );

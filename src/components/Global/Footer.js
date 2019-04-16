@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
 const StyledFooter = styled.div`
+  grid-column: 1 / 3;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -50,12 +51,14 @@ const Footer = props => {
     <StyledFooter>
       {footerData && (
         <div>
+          <p>Insert language selector here</p>
+          <p>GDPR</p>
           <a href={footerData.facebook}>Facebook</a>
           <a href={footerData.twitter}>Twitter</a>
+          <a href="">What's app</a>
           <a href={footerData.instagram}>Instagram</a>
-          <p>Insert language selector here</p>
-          <p>{footerData.email}</p>
-          <p>{footerData.phone}</p>
+          <p>{footerData.email ? footerData.email : "email@email.com"}</p>
+          <p>{footerData.phone ? footerData.phone : "1234567"}</p>
         </div>
       )}
     </StyledFooter>

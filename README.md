@@ -1,5 +1,7 @@
 # DEVELOPER-INSTALLATION
 - Clone this repo and run npm install in the folder.
+- npm install react-slick
+- npm install slick-carousel
 - Try to run npm start and see if it works.
 # END OF INSTALLATION
 

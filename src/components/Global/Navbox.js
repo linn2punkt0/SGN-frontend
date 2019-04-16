@@ -1,8 +1,7 @@
+
 import React, { Component } from 'react'
 import styled from "styled-components"
-import { Link } from "@reach/router";
 import NavLink from "./Link"
-
 
 const StyledNav = styled.div `
     /* display: flex;
@@ -47,3 +46,4 @@ const NavBox = (props) => {
     
 }
 export default NavBox
+

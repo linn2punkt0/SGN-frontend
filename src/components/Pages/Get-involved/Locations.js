@@ -3,17 +3,17 @@ import styled from "styled-components";
 import locationImage from "../../../ikoner/location.svg";
 
 const StyledLocations = styled.div`
-  width: 644px;
-  height: 501px;
+  height: 50vh;
   overflow-y: scroll;
+  margin-right: 119px;
+  margin-top: 11vh;
 
   ul {
     padding: 0;
   }
 
   li {
-    width: 635px;
-    height: 106px;
+    height: 11vh;
     list-style: none;
     border-bottom: 1px solid black;
     display: flex;
@@ -27,16 +27,15 @@ const StyledLocations = styled.div`
       font-family: Heebo;
       font-style: normal;
       font-weight: normal;
-      font-size: 24px;
+      font-size: 2.7vh;
       line-height: normal;
+      margin-left: 24px;
     }
   }
 `;
 
 const Locations = props => {
   const [locations, setLocations] = useState([]);
-
-  console.log(locations);
 
   useEffect(() => {
     fetchLocations();
@@ -55,7 +54,6 @@ const Locations = props => {
     <StyledLocations>
       <ul>
         {locations.map(element => {
-          console.log(element);
           return (
             <li key={element.id}>
               <img src={locationImage} alt="location-icon" />

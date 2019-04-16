@@ -6,24 +6,24 @@ import PageHeaderText from "../../Global/PageHeaderText";
 import ContactUsFooter from "../../Global/ContactUsFooter";
 // import ImageSlide from "./ImageSlide"
 
-import Slider from "./Slide/Slider"
-import SlideImage from "./SlideImage"
+import Slider from "./Slide/Slider";
+import SlideImage from "./SlideImage";
 
 const StyledWhatWeDo = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 100vh 100vh 100vh 100vh 60vh;
 
-background-attachment: fixed;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-overflow-x: hidden;
-position: relative;
-
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+  position: relative;
 `;
 
 const WhatWeDo = props => {
+  // Fetch all projects from API
   const [projects, setProjects] = useState(null);
 
   useEffect(() => {
@@ -40,14 +40,27 @@ const WhatWeDo = props => {
       .catch(error => console.error(error));
   };
 
+  // Fetch What-we-do-page from API and set all custom-field-content to content-hook
+  const [content, setContent] = useState(null);
+  useEffect(() => {
+    fetchContent();
+  }, []);
 
-  // foreach project in projects, we want to access "projects[index].acf"
+  const fetchContent = () => {
+    fetch(`http://wordplate.test/wp-json/wp/v2/pages?slug=what-we-do`)
+      .then(response => response.json())
+      .then(data => {
+        setContent(data[0].acf);
+      })
+      .catch(error => console.error(error));
+  };
+
   const fixedBack = {
     position: "fixed"
   };
   return (
     <StyledWhatWeDo>
-      <PageHeaderText />
+      <PageHeaderText content={content ? content.header : ""} />
       <Slider />
 
       {/* <ImageSlide /> */}

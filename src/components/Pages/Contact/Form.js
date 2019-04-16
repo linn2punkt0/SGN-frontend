@@ -1,65 +1,80 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
 const StyledForm = styled.div`
-div {
-	display: grid;
-	justify-content: center;
-}
-input {
-	padding-bottom: 2%;
-	margin-bottom: 10%;
+
+input, select {
+	margin-bottom: 10vh;
 	border: none;
 	border-bottom: 1px solid lightgrey;
 	width: 100%;
-	font-size: 1.4em;
+	font-size: 24px;
 	font-weight: 100;
 }
-input:focus {
+input:focus, select:focus {
 	outline:none;
 }
 form {
-	padding: 5%;
-	margin-left: 10%;
-	justify-self: center;
+	margin-top: 82px;
 }
-form:focus-within {
-  box-shadow: 0px 0.2em 0.5em #c4c4c4;
-  -webkit-transform: scale(1.025);
-          transform: scale(1.025);
-}
+
 .inline {
 	display: inline-flex;
 	width: 100%;
 }
 button {
-	border:none;
-	padding: 2px;
+	border: none;
 	border-bottom: 1px solid grey;
-	color: black;
-	font-size 1.7em;
-	font-weight: 600;
+	font-size 24px;
+	font-weight: 500;
+	background-color: #FDFDFD;
+	padding-left: 0px;
 }
 button:hover {
 	color:blue;
 	transform: scale(1.1)
 }
+select {
+	background-color: #FDFDFD;
+}
 
 `;
-const Form = () => {
+
+const Form = props => {
+
+  const [activities, setActivities] = useState([]);
+
+  useEffect(() => {
+    fetchActivities();
+  }, []);
+
+  const fetchActivities = () => {
+    fetch(`http://wordplate.test/wp-json/wp/v2/activities`)
+      .then(response => response.json())
+      .then(data => {
+        setActivities(data);
+      })
+      .catch(error => console.error(error));
+  };
 	return(
 		<StyledForm>
-			<div>
 				<form action="#">
-					<input type="text" name="dropdown" placeholder="I'm interested in.." />
-					<div class="inline">
+		            <select>
+						<option>I'm interested in..</option>
+							{activities.map((element) => {
+								console.log(element)
+						  		return (
+									<option>{element.title.rendered}</option>
+						  		);
+				        	})}
+					</select>
+					<div className="inline">
 						<input type="text" name="name" placeholder="Your name.." />
 						<input type="email" name="email" placeholder="E-mail"/>
 					</div>
 					<input type="text" name="subject" placeholder="Describe your errand.." />
 					<button type="submit">Send</button>
 				</form>
-			</div>
 		</StyledForm>
 	)
 }
