@@ -20,26 +20,27 @@ justify-content: flex-end;
   padding-right: 3vw;
     > div {
       transition: 0.6s;
-      border-radius: 2px;
+      border-radius: 0.3px;
       margin: 3px 1px; 
+      
     }
  `
   const BarOne = styled.div`
   background-color: black;
-  width: 1.8vw;
-  height: 3px; 
+  width: 1.4vw;
+  height: 2px; 
   `
   const BarTwo = styled.div `
-  width: 1.8vw;
+  width: 1.4vw;
   background-color: black;
-  height: 3px;
+  height: 2px;
   `
   const BarThree = styled.div  `
-  width: 1vw;
+  width: 0.7vw;
   background-color: black;
-  height: 3px;
+  height: 2px;
   ${StyledHamburger}:hover &{
-    transform: translatex(0.8vw);
+    transform: translatex(0.6vw);
   }
   `
 class Nav extends Component {
@@ -75,9 +76,9 @@ render(props) {
    
         {/* {!this.state.isHidden && <NavBox />} */}
      
-        <BarOne style={!this.state.isHidden ? {transform: "rotate(-45deg) translate(-1vh, 1vw"} : null}/>
-        <BarTwo style={!this.state.isHidden ? {opacity: "0"} : null}/>
-        <BarThree style={!this.state.isHidden ? {transform: "rotate(45deg) translate(0.8vh, -0.1vw)", width: "1.8vw"} : null}/>
+        <BarOne style={!this.state.isHidden ? {transform: "rotate(220deg) translate(-1.3vh, -0.5vw"} : null}/>
+        <BarTwo style={!this.state.isHidden ? {transform: "rotate(-45deg) translate(-0.4vh, 0.5vw"} : null}/>
+        <BarThree style={!this.state.isHidden ? {opacity: "0"} : null}/>
         {/* {!this.state.isHidden && <NavBox />}  */}
       </StyledHamburger>
       
