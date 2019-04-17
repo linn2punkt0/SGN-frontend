@@ -17,7 +17,9 @@ const LinksForNav = styled.div`
     transform: translate(50%);
   
     /*VAD SKA JAG SÄGA HÄR FÖR ATT DEN SKA TRANSFPORMA*/
-  /* ${props => props.transformlinks && `
+  /* ${props =>
+    props.transformlinks &&
+    `
     transform: translate(0%);
     `} */
     > * {
@@ -26,20 +28,21 @@ const LinksForNav = styled.div`
     transition:1s transform;
     /* transform: translate(50%); */
     
-    /* ${props => props.transforLinks && `
+    /* ${props =>
+      props.transforLinks &&
+      `
     transform: translate(0%);
     `} */
     }
-    `
+    `;
 
-const NavLinks = (props) =>{
-    console.log(props)
-// render(props){
-    // console.log(props)
+const NavLinks = props => {
+  console.log(props);
+  // render(props){
+  // console.log(props)
 
-    let delayIncrement = 1;
-
-    return (
+  let delayIncrement = 1;
+  return (
 
     <LinksForNav >
         <Link onClick={props.closeMenu} style={{transform: props.transforlinks ? 'translate(-5%)' : 'translate(50%)', transitionDelay:`0.${delayIncrement}s`}} to="/">Home</Link>
@@ -53,8 +56,11 @@ const NavLinks = (props) =>{
         {/* Länka till botten av Home */}
         {/* <Link onClick={props.closeMenu} style={{transform: props.transforlinks ? 'translate(0)' : 'translate(50%)', transitionDelay:`0.${(delayIncrement++)}s`}} to="/news">News</Link> */}
         <Link onClick={props.closeMenu} style={{transform: props.transforlinks ? 'translate(-5%)' : 'translate(50%)', transitionDelay:`0.${(delayIncrement++)}s`}} to="/contact">Contact</Link>
-    </LinksForNav>
-    )
-}
 
-export default NavLinks
+
+
+    </LinksForNav>
+  );
+};
+
+export default NavLinks;

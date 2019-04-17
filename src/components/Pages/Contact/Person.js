@@ -9,9 +9,16 @@ img {
 }
 p {
     max-width: 80%;
+    font-weight: 300;
+    font-size: 24px;
+}
+h1 {
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 48px;
 }
 h4 {
-    font-weight: 500;
+    font-weight: 400;
     font-size: 24px;
 }
 

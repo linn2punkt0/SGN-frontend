@@ -8,8 +8,6 @@ const StyledWhoWeAre = styled.div`
   @media (min-width: 769px) {
     .wrapper {
       display: grid;
-      margin-left: 82px;
-      margin-right: 82px;
       grid-template-columns: 1.7fr 1.7fr;
       height: 100vh;
       margin-bottom: 100px;
@@ -30,8 +28,8 @@ const StyledWhoWeAre = styled.div`
       h1,
       h4,
       p {
-        margin-left: 82px;
-        margin-right: 82px;
+        margin-left: 5vw;
+        margin-right: 5vw;
       }
     }
     .logo {
@@ -45,32 +43,6 @@ const StyledWhoWeAre = styled.div`
   }
 
   @media (min-width: 768) and (orientation: landscape) {
-    .wrapper {
-      display: flex;
-      margin-right: 24px;
-      margin-left: 24px;
-    }
-    .wrapper2 {
-      h1,
-      h4,
-      p {
-        margin-left: 24px;
-        margin-right: 24px;
-      }
-    }
-    .row {
-      width: 100%;
-      margin-left: 24px;
-      margin-right: 24px;
-    }
-    .row2 {
-      display: flex;
-      justify-content: center;
-      h6 {
-        font-size: 30px;
-        font-weight: 300;
-      }
-    }
   }
 
   @media (min-width: 320) and (max-width: 1024px) and (orientation: landscape) {
@@ -80,10 +52,8 @@ const StyledWhoWeAre = styled.div`
     .wrapper {
       display: flex;
       flex-direction: column-reverse;
-      margin-right: 24px;
-      margin-left: 24px;
       .logo {
-        height: 200px;
+        height: 60vh;
       }
     }
     .wrapper2 {
@@ -92,8 +62,8 @@ const StyledWhoWeAre = styled.div`
       h1,
       h4,
       p {
-        margin-left: 24px;
-        margin-right: 24px;
+        margin-left: 5vw;
+        margin-right: 5vw;
         max-width: 80%;
       }
       .firstImg {
@@ -105,19 +75,6 @@ const StyledWhoWeAre = styled.div`
         height: 50vw;
         width: 100vw;
         background: url('https://i.ibb.co/1qycyjY/img2.png" alt="img2"');
-      }
-    }
-    .row {
-      width: 100%;
-      margin-left: 24px;
-      margin-right: 24px;
-    }
-    .row2 {
-      display: flex;
-      justify-content: center;
-      h6 {
-        font-size: 30px;
-        font-weight: 300;
       }
     }
   }
@@ -157,9 +114,7 @@ const WhoWeAre = props => {
 
   return (
     <StyledWhoWeAre>
-      <div className="row">
-        <Header />
-      </div>
+    <Header />
       <div className="wrapper">
         <PageHeaderText content={content ? content.header : ""} />
         <img
@@ -180,7 +135,6 @@ const WhoWeAre = props => {
           <h1>{content ? content.our_history.quote : "Some text"}</h1>
         </div>
       </div>
-      <div className="row" />
     </StyledWhoWeAre>
   );
 };

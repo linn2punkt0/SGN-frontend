@@ -39,6 +39,7 @@ const ProjectText = props => {
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat.
         </p>
+        <h6>Small text with project start-date</h6>
       </div>
       <a href="">Link to project</a>
     </StyledProjectText>

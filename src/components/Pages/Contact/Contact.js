@@ -6,7 +6,6 @@ import Person from "./Person";
 import Text from "./Text";
 import Form from "./Form";
 import Header from "./Header";
-// import Logo from "../../assets/logo.png"; // works locally atm
 import Footer from "../../Global/Footer";
 
 const StyledContact = styled.div`
@@ -18,9 +17,11 @@ const StyledContact = styled.div`
         margin-right: 5vw;
         grid-template-columns: 1.7fr 1.7fr;
         grid-template-rows: repeat(1, 100vh);
+        margin-top: 20vh;
+        margin-bottom: 10vh;
         
     }
-    .wrapper2 {
+    .personContainerBig {
         display: grid;
         grid-template-columns: 1.7fr 1.7fr;
         h1, h4, p {
@@ -28,18 +29,34 @@ const StyledContact = styled.div`
             margin-right: 5vw;
         }
     }
+    .personContainerSmall {
+        margin-top: 20vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        h1, h4, p {
+            margin-left: 5vw;
+            margin-right: 5vw;
+        }
+        img {
+            height: 300px
+            justify-self: center;
+        }
+    }
     .row {
         display: flex;
         justify-content: center;
+        align-items: center;
+        height: 100vh;
+        h6 {
+            font-size: 64px;
+            font-weight: 300;
+        }
     }
     img {
         justify-self: flex-end;
         max-height: 449px;
     }
-    h6 {
-        font-size: 64px;
-        font-weight: 300;
-    }
+    
 }
 
 @media (min-width: 768) and (orientation: landscape) {
@@ -54,27 +71,34 @@ const StyledContact = styled.div`
         flex-direction: column-reverse;
         margin-right: 5vw;
         margin-left: 5vw;
-
+        margin-bottom: 10vh;
         .inline {
             display:block;
             width: 100%;
         }
         img {
-            height: 200px;
+            height: 400px;
+            margin-bottom: 5vh;
         }
     }
-    .wrapper2 {
+    .personContainerBig, .personContainerSmall {
         h1, h4, p {
             margin-left: 5vw;
             margin-right: 5vw;
             max-width: 80%;
+            margin-bottom: 5vh;
+        }
+        h1 {
+            margin-bottom: 0;
         }
     }
     .row  {
-        display:flex;
+        display: flex;
         justify-content: center;
+        align-items: center;
+        height: 30vh;
         h6 {
-            font-size: 30px;
+            font-size: 24px;
             font-weight: 300;
         }
     }
@@ -100,7 +124,9 @@ const Contact = props => {
         })
         .catch(error => console.error(error));
     };
-
+    const displayContacts = () => {
+     
+    }
     return (
         <StyledContact>
             <div>
@@ -110,16 +136,30 @@ const Contact = props => {
                 <Text />
                 <img src="https://i.ibb.co/dc55VRx/logo.png" alt="logo" /> 
             </div>
-            <div className="wrapper2">
-                {contacts.map((person) => {
-                    // console.log(person.acf)
+            <div className="personContainerBig">
+                {contacts.slice(0, 2).map((person) => {
+                    console.log(person.id)
                     return(
                         <Person key={person.id}
                             contactName={person.title.rendered}
-                            contactImage="http://i.ibb.co/8PPtrcY/person1.png" alt="person1"
-                            contactDescription={person.acf.contactinfo.description}
-                            contactEmail={person.acf.contactinfo.email}
-                            contactPhone={person.acf.contactinfo.phone}
+                            contactImage={person.acf.information.image.sizes.large}
+                            contactDescription={person.acf.information.description}
+                            contactEmail={person.acf.information.email}
+                            contactPhone={person.acf.information.phone}
+                        />
+                    );
+                })}
+            </div>
+            <div className="personContainerSmall">
+               {contacts.slice(2).map((person) => {
+                    console.log(person.id)
+                    return(
+                        <Person key={person.id}
+                            contactName={person.title.rendered}
+                            contactImage={person.acf.information.image.sizes.large}
+                            contactDescription={person.acf.information.description}
+                            contactEmail={person.acf.information.email}
+                            contactPhone={person.acf.information.phone}
                         />
                     );
                 })}
@@ -127,7 +167,7 @@ const Contact = props => {
             <div className="row">
                 <h6>info@supportgroup.com</h6>
             </div>
-                <div className="row">
+                <div>
                     <Footer />
                 </div>
         </StyledContact>
