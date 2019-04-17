@@ -138,7 +138,7 @@ const Contact = props => {
             </div>
             <div className="personContainerBig">
                 {contacts.slice(0, 2).map((person) => {
-                    console.log(person.id)
+                    // console.log(person.id)
                     return(
                         <Person key={person.id}
                             contactName={person.title.rendered}
@@ -152,7 +152,7 @@ const Contact = props => {
             </div>
             <div className="personContainerSmall">
                {contacts.slice(2).map((person) => {
-                    console.log(person.id)
+                    // console.log(person.id)
                     return(
                         <Person key={person.id}
                             contactName={person.title.rendered}

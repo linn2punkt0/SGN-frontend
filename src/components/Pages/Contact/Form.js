@@ -62,7 +62,7 @@ const Form = props => {
 		            <select>
 						<option>I'm interested in..</option>
 							{activities.map((element, i) => {
-								console.log(element)
+								// console.log(element)
 						  		return (
 									<option key={i}>{element.title.rendered}</option>
 						  		);

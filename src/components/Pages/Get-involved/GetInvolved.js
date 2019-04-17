@@ -4,7 +4,7 @@ import Find from "./Find";
 import PageHeaderText from "../../Global/PageHeaderText";
 import ImageContainer from "../../Global/ImageContainer";
 import MemberForm from "./MemberForm";
-import Footer from "../../Global/Footer";
+// import Footer from "../../Global/Footer";
 
 const StyledGetInvolved = styled.div`
   display: grid;
@@ -37,7 +37,7 @@ const GetInvolved = props => {
       {content && <Find content={content.activities} />}
       <ImageContainer background="green" />
       {content && <MemberForm content={content.membership} />}
-      <Footer />
+     
     </StyledGetInvolved>
   );
 };
