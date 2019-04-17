@@ -32,11 +32,11 @@ const GetInvolved = props => {
     <StyledGetInvolved>
       <PageHeaderText content={content ? content.header : ""} />
       <ImageContainer background="lightpink" />
-      {content && <Find content={content.locations} />}
+      <Find content={content ? content.locations : ""} />
       <ImageContainer background="blue" />
-      {content && <Find content={content.activities} />}
+      <Find content={content ? content.activities : ""} />
       <ImageContainer background="green" />
-      {content && <MemberForm content={content.membership} />}
+      <MemberForm content={content ? content.membership : ""} />
       <Footer />
     </StyledGetInvolved>
   );
