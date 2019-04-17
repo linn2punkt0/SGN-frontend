@@ -12,13 +12,16 @@ const StyledWhoWeAre = styled.div`
       height: 100vh;
       margin-bottom: 100px;
     }
-    .wrapper2 {
+    .container {
       display: grid;
       grid-template-columns: 1.7fr 1.7fr;
       .firstImg {
         height: 100vh;
         width: 50vw;
         background: url('https://i.ibb.co/k42yQCz/img1.png" alt="img1"');
+        h1 {
+          color: white;
+        }
       }
       .secondImg {
         height: 100vh;
@@ -56,7 +59,7 @@ const StyledWhoWeAre = styled.div`
         height: 60vh;
       }
     }
-    .wrapper2 {
+    .container {
       display: flex;
       flex-direction: column-reverse;
       h1,
@@ -70,6 +73,9 @@ const StyledWhoWeAre = styled.div`
         height: 50vh;
         width: 100vw;
         background: url('https://i.ibb.co/k42yQCz/img1.png" alt="img1"');
+        h1 {
+          color: white;
+        }
       }
       .secondImg {
         height: 50vw;
@@ -123,13 +129,13 @@ const WhoWeAre = props => {
           alt="who-we-are"
         />
       </div>
-      <div className="wrapper2">
+      <div className="container">
         <Text content={content ? content.our_cause : ""} />
         <div className="firstImg">
           <h1>{content ? content.our_cause.quote : "Some text"}</h1>
         </div>
       </div>
-      <div className="wrapper2">
+      <div className="container">
         <Text content={content ? content.our_history : ""} />
         <div className="secondImg">
           <h1>{content ? content.our_history.quote : "Some text"}</h1>

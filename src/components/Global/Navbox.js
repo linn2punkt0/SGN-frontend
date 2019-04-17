@@ -9,7 +9,7 @@ const StyledNav = styled.div `
     flex-direction: column; */
     background-color: white;
     transform: translate(100%);
-    transition: all 1s ease-in-out;
+    transition: all 0.3s ease-in-out;
     width: 45vw;
     height: 95vh;
     padding-right: 5vw;
