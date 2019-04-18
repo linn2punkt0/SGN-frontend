@@ -5,6 +5,7 @@ import PageHeaderText from "../../Global/PageHeaderText";
 import ImageContainer from "../../Global/ImageContainer";
 import MemberForm from "./MemberForm";
 import Gathering from "./Gathering";
+import Map from "./Map";
 import Footer from "../../Global/Footer";
 
 const StyledGetInvolved = styled.div`
@@ -39,7 +40,7 @@ const GetInvolved = props => {
       <PageHeaderText content={content ? content.header : ""} />
       <ImageContainer background="lightpink" />
       <Find content={content ? content.locations : ""} />
-      <ImageContainer background="blue" />
+      <Map content={content ? content.locations : ""} />
       <Find content={content ? content.activities : ""} />
       <Gathering />
       {/* <ImageContainer background="red" /> */}
