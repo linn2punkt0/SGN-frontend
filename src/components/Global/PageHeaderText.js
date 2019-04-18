@@ -3,12 +3,14 @@ import styled from "styled-components";
 
 const StyledPageHeaderText = styled.div`
   /* Desktop styling done */
+  width: 50%;
   margin-bottom: 53px;
-  margin-left: 82px;
+  /* padding-left: 82px;  */
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-
+ >  *{
+   padding-left: 82px;  }
   h5 {
     margin: 0;
     font-style: normal;
@@ -17,17 +19,14 @@ const StyledPageHeaderText = styled.div`
     color: rgba(113, 113, 113, 0.7);
   }
   h1 {
-
     max-width: 634px;
     margin: 0 0 1.5vh 0;
-
     font-weight: 300;
     font-size: 8vh;
   }
   p {
     font-weight: 300;
   }
-
   a {
     /* width: 634px;
     height: 36px; */
@@ -45,11 +44,13 @@ const StyledPageHeaderText = styled.div`
     color: #1f1f1f;
     text-decoration: underline;
   }
+
 `
 const PageHeaderText = props => {
   console.log(props.content);
   return (
     <StyledPageHeaderText>
+
       <h5>{props.content ? props.content.tagline : "Tagline"}</h5>
       <h1>{props.content ? props.content.title : "Title"}</h1>
  
