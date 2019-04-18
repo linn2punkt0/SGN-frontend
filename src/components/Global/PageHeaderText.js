@@ -2,10 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledPageHeaderText = styled.div`
-  /* Desktop styling done */
   width: 50%;
   margin-bottom: 53px;
-  /* padding-left: 82px;  */
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
