@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 import { Link } from "@reach/router";
 
@@ -37,7 +37,7 @@ const LinksForNav = styled.div`
     `;
 
 const NavLinks = props => {
-  console.log(props);
+  // console.log(props);
   // render(props){
   // console.log(props)
 
