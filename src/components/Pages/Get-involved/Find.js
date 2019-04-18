@@ -4,8 +4,12 @@ import Locations from "./Locations";
 import Activities from "./Activities";
 
 const StyledFind = styled.div`
-  margin-left: 82px;
+  width: 50%;
   position: relative;
+
+  div > * {
+    padding-left: 82px;
+  }
   h4 {
     font-weight: 300;
     font-size: 4vh;
