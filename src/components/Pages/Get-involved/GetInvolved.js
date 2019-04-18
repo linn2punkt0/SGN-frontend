@@ -41,6 +41,7 @@ const GetInvolved = props => {
       <ImageContainer background="lightpink" />
       <Find content={content ? content.locations : ""} />
       <Map content={content ? content.locations : ""} />
+    {/* <ImageContainer background="blue" /> */}
       <Find content={content ? content.activities : ""} />
       <Gathering />
       {/* <ImageContainer background="red" /> */}

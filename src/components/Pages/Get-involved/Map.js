@@ -11,20 +11,21 @@ import Locations from "./Locations";
 const StyledActivities = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
   .img {
     width:100%;
-    // max-height: 50vh;
+    height: 30%;
   }
-
-    div h4 {
+    .text-container  {
       display:flex;
       flex-direction: column;
       align-items: center;
     }
+    h1, p {
+      margin-left: 10vh;
+      align-self: flex-start;
+    }
      h1 {
       margin-top: 0;
-      justify-self:center;
       font-weight: 500;
       font-size: 24px;
     }
@@ -41,22 +42,22 @@ const StyledActivities = styled.div`
       justify-self: center;
     }
     ul {
-      padding: 0;
-      display: flex;
+      display:flex;
+      flex-wrap: wrap;
       justify-content: center;
+      padding: 0;
     }
     li {
-      // width: 50%;
       margin-right: 1vh;
       font-weight: 300;
       display: inline-block;
       list-style: none;
+      border-bottom: 1px solid #1F1F1F;
       img {
         height: 40px;
       }
       span {
-        width: 16vw;
-        border-bottom: 1px solid #1F1F1F;
+        width: 20vw;
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -95,7 +96,7 @@ console.log(activities)
     <StyledActivities>
         <img className="img" src="https://cdn1.tekrevue.com/wp-content/uploads/2015/04/map-location-pin-960x540.jpg" />
       <div>
-        <div>
+        <div className="text-container">
           <h1>Värnesborg</h1>
           <p>Vänersborg is the head seat of our organisation and has a wide variety of activities and branches.</p>
           <h4>Feautured Activities</h4>
