@@ -52,7 +52,7 @@ const Contact = props => {
       <ContactTitle>{props.title}</ContactTitle>
       <ContactText>{props.textContact}</ContactText>
       <Button>SWISH</Button>
-      <Footer />
+      {/* <Footer /> */}
     </ContactContainer>
   )
 }
