@@ -6,7 +6,6 @@ import Home from "./components/Pages/Home/Home";
 import GetInvolved from "./components/Pages/Get-involved/GetInvolved";
 import WhoWeAre from "./components/Pages/Who-we-are/WhoWeAre";
 import WhatWeDo from "./components/Pages/What-we-do/WhatWeDo";
-// import News from "./components/Pages/News/News";
 import Contact from "./components/Pages/Contact/Contact";
 
 class App extends Component {
