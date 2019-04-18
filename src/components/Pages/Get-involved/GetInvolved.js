@@ -11,7 +11,11 @@ const StyledGetInvolved = styled.div`
   /* Desktop styling done */
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(5, 100vh);
+  grid-template-rows: repeat(6, 100vh);
+
+  .last {
+    grid-row: 6 / 7;
+  }
 `;
 
 const GetInvolved = props => {
@@ -40,7 +44,7 @@ const GetInvolved = props => {
       <Gathering />
       {/* <ImageContainer background="red" /> */}
       <MemberForm content={content ? content.membership : ""} />
-      {/* <Footer /> */}
+      <Footer className="last" />
     </StyledGetInvolved>
   );
 };
