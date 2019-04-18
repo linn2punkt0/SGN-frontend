@@ -28,8 +28,6 @@ const StyledPageHeaderText = styled.div`
     font-weight: 300;
   }
   a {
-    /* width: 634px;
-    height: 36px; */
     font-weight: 500;
     font-size: 24px;
     color: #1f1f1f;
@@ -44,6 +42,11 @@ const StyledPageHeaderText = styled.div`
     color: #1f1f1f;
     text-decoration: underline;
   }
+
+    @media (min-width: 320px) and (max-width: 767px) {
+     height: 50vh;
+     width: 100%;
+}
 
 `
 const PageHeaderText = props => {

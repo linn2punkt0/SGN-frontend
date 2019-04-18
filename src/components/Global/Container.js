@@ -7,7 +7,7 @@ const ContainerForContent = styled.div`
   height: 100vh;
   width: 100vw;
   @media (min-width: 320px) and (max-width: 767px) {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 `;
 const ImageContainer = styled.div`
@@ -26,7 +26,7 @@ const TextContainer = styled.div`
   background-color: blue;
   @media (min-width: 320px) and (max-width: 767px) {
     width: 100vw;
-    height: 50vh;
+    height: 100vh;
   }
 `;
 

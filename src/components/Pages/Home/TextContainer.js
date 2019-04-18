@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 
 const StyledTextContainer = styled.div `
-  width: 50vw;
+  width: 50%;
   height: 100vh;
   top: 6%;
   display: flex;
@@ -18,12 +18,19 @@ const StyledTextContainer = styled.div `
   line-height: normal;
   color: #959595;
 
-
+  @media (min-width: 320px) and (max-width: 767px) {
+  height: 50vh;
+  width: 100%;
+  top: 0;
+  /* justify-content: space-between; */
+  padding: 8%;
+  left: 0;
+   }
+  
 `
 const StyledForText = styled.div`
   width: 100%;
   height: 70%;
-  /* top: 8%; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,14 +40,14 @@ const StyledForText = styled.div`
   font-weight: 300;
   font-size: 36px;
   line-height: normal;
-  margin:0;
+  margin:0 0 10% 0;
     >p{
-    margin:0;
+    /* margin: 10% 0 0 0; */
     width: 70%;
     height: 45%;
   }
   >h6{
-    margin: 5% 0 0 0;
+    margin: 0 0 0 0;
     font-family: Heebo;
     font-style: normal;
     width: 100%;
@@ -48,7 +55,7 @@ const StyledForText = styled.div`
     font-size: 16px;
     line-height: normal;
     color: rgba(113, 113, 113, 0.7);
-
+  }
     @media (min-width: 320px) and (max-width: 767px) {
       >h6{
         font-family: Heebo;
@@ -62,10 +69,10 @@ const StyledForText = styled.div`
       font-weight: 300;
       font-size: 16px;
       line-height: 30px;
+      width: 85%;
      }
     }
-
-  }`
+  `
   const Headerh2 = styled.h2`
   color: #1F1F1F;
   margin: 0;
@@ -96,12 +103,12 @@ const LinkReadMore = styled.a`
   text-align: center;
   align-self: flex-start;
   margin: 0;
-
+ 
  @media (min-width: 320px) and (max-width: 767px) {
 font-family: Heebo;
 font-style: normal;
 font-weight: 500;
-font-size: 16px;
+font-size: 16px !important;
 line-height: 30px;
    }
 `

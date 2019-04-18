@@ -23,17 +23,17 @@ const StyledHamburger = styled.div`
     border-radius: 0.3px;
     margin: 3px 1px;
   }
-`;
+`
 const BarOne = styled.div`
   background-color: black;
   width: 1.4vw;
   height: 2px;
-`;
+`
 const BarTwo = styled.div`
   width: 1.4vw;
   background-color: black;
   height: 2px;
-`;
+`
 const BarThree = styled.div`
   width: 0.7vw;
   background-color: black;
@@ -41,7 +41,7 @@ const BarThree = styled.div`
   ${StyledHamburger}:hover & {
     transform: translatex(0.6vw);
   }
-`;
+`
 class Nav extends Component {
   constructor(props) {
     super(props);
