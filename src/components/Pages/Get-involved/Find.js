@@ -7,7 +7,7 @@ const StyledFind = styled.div`
   width: 50%;
   position: relative;
 
-  div > * {
+  > * {
     padding-left: 82px;
   }
   h4 {
