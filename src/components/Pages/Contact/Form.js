@@ -2,6 +2,26 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
 const StyledForm = styled.div`
+.line {
+	border-bottom: 1px solid black;
+	margin-top: 5px;
+	width: 120px;
+}
+.transform {
+	width: 30%;
+}
+.transform:hover {
+    button, .line {
+		cursor: pointer;
+    	color: white;
+    	background-color: black;
+    	transition: all 0.2s ease-in;
+    }
+    .line {
+    	border-bottom: 0;
+    }
+}
+
 
 input, select {
 	margin-bottom: 10vh;
@@ -22,17 +42,12 @@ form {
 	display: inline-flex;
 	width: 100%;
 }
+
 button {
 	border: none;
-	border-bottom: 1px solid grey;
 	font-size 24px;
 	font-weight: 500;
-	background-color: #FDFDFD;
 	padding-left: 0px;
-}
-button:hover {
-	color:blue;
-	transform: scale(1.1)
 }
 select {
 	background-color: #FDFDFD;
@@ -73,7 +88,10 @@ const Form = props => {
 						<input type="email" name="email" placeholder="E-mail"/>
 					</div>
 					<input type="text" name="subject" placeholder="Message" />
-					<button type="submit">Send</button>
+					<div className="transform">
+						<button className="" type="submit">Contact Us</button>
+						<div className="line"></div>
+					</div>
 				</form>
 		</StyledForm>
 	)
