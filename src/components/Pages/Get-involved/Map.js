@@ -8,10 +8,11 @@ import Culture from "../../ikoner/culture-club.svg";
 import Phone from "../../ikoner/phone.svg";
 import Locations from "./Locations";
 
-const StyledTextArea = styled.div `
+const StyledTextArea = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 50vw;
   .img {
     width:100%;
     height: 30%;
@@ -37,16 +38,16 @@ const StyledTextArea = styled.div `
   h4 {
     justify-self: center;
   }
-`
+`;
 const StyledMiniFooter = styled.div`
   display: flex;
-    img {
-      height: 40px;
-    }
-    h1 {
-      font-size: 16px;
-    }
-`
+  img {
+    height: 40px;
+  }
+  h1 {
+    font-size: 16px;
+  }
+`;
 const StyledActivities = styled.div`
   overflow-y: scroll;
   display: grid;
@@ -93,33 +94,76 @@ const Map = props => {
     fetch(`http://wordplate.test/wp-json/wp/v2/branches`)
       .then(response => response.json())
       .then(data => {
-        console.log(data)
+        console.log(data);
         setLocations(data[0].acf.branches);
         setActivities(data[0].acf.branches.featured_activity_headline);
       })
       .catch(error => console.error(error));
   };
-console.log(activities)
+  console.log(activities);
   return (
     <StyledActivities>
       <div>
-      <StyledTextArea>
-        <img className="img" src="https://cdn1.tekrevue.com/wp-content/uploads/2015/04/map-location-pin-960x540.jpg" />
+        <StyledTextArea>
+          <img
+            className="img"
+            src="https://cdn1.tekrevue.com/wp-content/uploads/2015/04/map-location-pin-960x540.jpg"
+          />
           <h1>Värnesborg</h1>
-          <p>Vänersborg is the head seat of our organisation and has a wide variety of activities and branches.</p>
+          <p>
+            Vänersborg is the head seat of our organisation and has a wide
+            variety of activities and branches.
+          </p>
           <h4>Feautured Activities</h4>
-      </StyledTextArea>
+        </StyledTextArea>
         <div>
-        <ul>
-          <li><span><img src={Sport} /><h5>{activities.first_activity ? activities.first_activity : "Sports Club" }</h5></span></li>
-          <li><span><img src={Academic} /><h5>{activities.second_activity ? activities.second_activity : "Womens Club"}</h5></span></li>
-          <li><span><img src={Academic} /><h5>{activities.third_activity ? activities.third_activity : "Academic Club"}</h5></span></li>
-          <li><span><img src={Kids} /><h5>{activities.fourth_activity ? activities.fourth_activity : "Kids Club"}</h5></span></li>
-        </ul>
-      </div>
-      <StyledMiniFooter>
-          <img src={Phone} /><h1>Ansvarig</h1>
-      </StyledMiniFooter>
+          <ul>
+            <li>
+              <span>
+                <img src={Sport} />
+                <h5>
+                  {activities.first_activity
+                    ? activities.first_activity
+                    : "Sports Club"}
+                </h5>
+              </span>
+            </li>
+            <li>
+              <span>
+                <img src={Academic} />
+                <h5>
+                  {activities.second_activity
+                    ? activities.second_activity
+                    : "Womens Club"}
+                </h5>
+              </span>
+            </li>
+            <li>
+              <span>
+                <img src={Academic} />
+                <h5>
+                  {activities.third_activity
+                    ? activities.third_activity
+                    : "Academic Club"}
+                </h5>
+              </span>
+            </li>
+            <li>
+              <span>
+                <img src={Kids} />
+                <h5>
+                  {activities.fourth_activity
+                    ? activities.fourth_activity
+                    : "Kids Club"}
+                </h5>
+              </span>
+            </li>
+          </ul>
+        </div>
+        <StyledMiniFooter>
+          <img src={Phone} />
+          <h1>Ansvarig</h1>
+        </StyledMiniFooter>
       </div>
     </StyledActivities>
   );

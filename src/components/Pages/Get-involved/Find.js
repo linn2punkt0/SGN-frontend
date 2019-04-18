@@ -42,8 +42,12 @@ const Find = props => {
       <h4 className="grey">
         {props.content.title_2 ? props.content.title_2 : "Title2"}
       </h4>
+      {/* If content is Locations load this */}
       {props.content.title === "Our Locations" && <Locations />}
+      {/* If content is Activities load this */}
       {props.content.title === "Activities" && <Activities />}
+      {/* If content is empty load this */}
+      {props.content === "" && <Locations />}
       <div className="startYourOwn">
         <h5>{props.content.question ? props.content.question : "Question"}</h5>
         <a>
