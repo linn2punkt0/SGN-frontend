@@ -4,7 +4,6 @@ import styled from "styled-components";
 const StyledHeader = styled.div`
   .contactLogo {
     padding-top: 4vh;
-    padding-left: 69px;
     max-height: 60px;
     max-width: 150px;
   }
