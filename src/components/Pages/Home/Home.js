@@ -32,7 +32,7 @@ const StyledHome = styled.div`
   @media (min-width: 320px) and (max-width: 767px){
   position: relative;
   flex-direction: column;
-  background-color: green;
+  /* background-color: green; */
   width: 100vw;
   height: 100%;
   background-attachment: fixed;
@@ -44,9 +44,8 @@ const StyledHome = styled.div`
 `;
 
 
+
 const Home = props => {
-
-
   // Fetch home-page from api and set custom-field-content to content-hook.
   const [content, setContent] = useState(null);
 
