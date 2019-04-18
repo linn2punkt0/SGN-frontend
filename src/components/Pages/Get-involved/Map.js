@@ -69,7 +69,7 @@ const StyledActivities = styled.div`
       height: 40px;
     }
   span {
-    width: 20vw;
+    /* width: 20vw; */
     display: flex;
     justify-content: flex-start;
     align-items: center;

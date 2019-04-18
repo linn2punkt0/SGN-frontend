@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import styled from "styled-components";
 
 const ContainerForContent = styled.div`
@@ -10,6 +10,7 @@ const ContainerForContent = styled.div`
     flex-direction: column-reverse;
   }
 `;
+
 const ImageContainer = styled.div`
 width: 50vw;
 height: 100vh;
@@ -31,12 +32,8 @@ const TextContainer = styled.div`
 `;
 
 
-const Container = (props) => {
-    return (
-        <ContainerForContent>
-            {props.children}
-        </ContainerForContent>
-    );
+const Container = props => {
+  return <ContainerForContent>{props.children}</ContainerForContent>;
 };
 
 export default Container;
