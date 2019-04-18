@@ -19,10 +19,10 @@ const StyledFind = styled.div`
     display: flex;
     flex-direction: row;
     position: absolute;
-    bottom: 40px;
+    bottom: 4vh;
     h5 {
       font-weight: 300;
-      font-size: 24px;
+      font-size: 3vh;
       color: rgba(113, 113, 113, 0.7);
       margin: 0;
     }

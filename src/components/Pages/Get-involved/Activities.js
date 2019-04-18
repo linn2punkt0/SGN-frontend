@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
 const StyledActivities = styled.div`
+  /* Desktop styling done */
   height: 50vh;
   overflow-y: scroll;
   margin-right: 119px;

@@ -4,11 +4,11 @@ import Find from "./Find";
 import PageHeaderText from "../../Global/PageHeaderText";
 import ImageContainer from "../../Global/ImageContainer";
 import MemberForm from "./MemberForm";
-import Gathering from "./Gathering"
+import Gathering from "./Gathering";
 import Footer from "../../Global/Footer";
-// import Footer from "../../Global/Footer";
 
 const StyledGetInvolved = styled.div`
+  /* Desktop styling done */
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(5, 100vh);
