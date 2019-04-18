@@ -1,14 +1,19 @@
 import React from "react";
 import styled from "styled-components";
+import Header from "../../components/Pages/Contact/Header";
 
 const StyledPageHeaderText = styled.div`
   width: 50%;
   margin-bottom: 53px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
- >  *{
-   padding-left: 82px;  }
+  justify-content: space-between;
+  align-items: flex-start;
+
+  > * {
+    padding-left: 82px;
+  }
+
   h5 {
     margin: 0;
     font-style: normal;
@@ -24,6 +29,7 @@ const StyledPageHeaderText = styled.div`
   }
   p {
     font-weight: 300;
+    max-width: 634px;
   }
   a {
     font-weight: 500;
@@ -41,6 +47,7 @@ const StyledPageHeaderText = styled.div`
     text-decoration: underline;
   }
 
+
     @media (min-width: 320px) and (max-width: 767px) {
      height: 50vh;
      width: 100%;
@@ -48,15 +55,16 @@ const StyledPageHeaderText = styled.div`
 
 `
 const PageHeaderText = props => {
-  console.log(props.content);
   return (
     <StyledPageHeaderText>
+      <Header />
+      <div>
+        <h5>{props.content ? props.content.tagline : "Tagline"}</h5>
+        <h1>{props.content ? props.content.title : "Title"}</h1>
 
-      <h5>{props.content ? props.content.tagline : "Tagline"}</h5>
-      <h1>{props.content ? props.content.title : "Title"}</h1>
- 
-      <p>{props.content ? props.content.descriptions : "Description"}</p>
-      <h4>{props.content ? props.content.scroll : "Scroll down"}</h4>
+        <p>{props.content ? props.content.descriptions : "Description"}</p>
+        <h4>{props.content ? props.content.scroll : "Scroll down"}</h4>
+      </div>
     </StyledPageHeaderText>
   );
 };

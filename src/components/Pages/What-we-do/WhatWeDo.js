@@ -4,10 +4,6 @@ import ImageContainer from "../../Global/ImageContainer";
 import ProjectText from "./ProjectText";
 import PageHeaderText from "../../Global/PageHeaderText";
 import ContactUsFooter from "../../Global/ContactUsFooter";
-// import ImageSlide from "./ImageSlide"
-
-import Slider from "./Slide/Slider";
-import SlideImage from "./SlideImage";
 
 const StyledWhatWeDo = styled.div`
   display: grid;
@@ -66,10 +62,6 @@ const WhatWeDo = props => {
   return (
     <StyledWhatWeDo>
       <PageHeaderText content={content ? content.header : ""} />
-      <Slider />
-
-      {/* <ImageSlide /> */}
-      {/* <ImageContainer background="lightyellow" /> */}
       <ProjectText color={getRandomColor} />
       <ImageContainer background={getRandomColor} />
       <ProjectText color={getRandomColor} />

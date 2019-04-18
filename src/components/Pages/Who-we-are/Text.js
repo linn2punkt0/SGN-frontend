@@ -2,24 +2,27 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledText = styled.div`
+  /* Desktop styling done */
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  h1,
-  h2,
-  p {
-    font-weight: 300;
+  > * {
+    padding-left: 82px;
   }
   h1 {
-    font-size: 64px;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: normal;
+
+    color: rgba(31, 31, 31, 0.45);
   }
   p {
+    max-width: 474px;
     font-size: 24px;
-  }
-  h2 {
-    color: #9b9b9b;
+    font-weight: 300;
     font-size: 24px;
-    margin: 0;
+    color: #1f1f1f;
   }
 `;
 
