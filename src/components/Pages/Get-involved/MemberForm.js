@@ -10,6 +10,8 @@ const StyledMemberForm = styled.div`
   align-items: center;
 
   .container {
+    margin-top: 260px;
+    margin-bottom: 160px;
     max-width: 600px;
     flex-direction: column;
     justify-content: center;
@@ -71,7 +73,7 @@ const StyledMemberForm = styled.div`
     height: 44px;
     border: none;
     border-bottom: 1px solid black;
-    margin-bottom: 28px;
+    margin: 0 auto;
     color: #1f1f1f;
     font-size: 3vh;
     font-weight: 400;
