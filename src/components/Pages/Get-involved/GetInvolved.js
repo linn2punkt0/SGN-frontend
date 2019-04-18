@@ -7,17 +7,9 @@ import MemberForm from "./MemberForm";
 import Gathering from "./Gathering";
 import Map from "./Map";
 import Footer from "../../Global/Footer";
+import Container from "../../Global/Container";
 
-const StyledGetInvolved = styled.div`
-  /* Desktop styling done */
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(6, 100vh);
-
-  .last {
-    grid-row: 6 / 7;
-  }
-`;
+const StyledGetInvolved = styled.div``;
 
 const GetInvolved = props => {
   const [content, setContent] = useState(null);
@@ -37,14 +29,18 @@ const GetInvolved = props => {
 
   return (
     <StyledGetInvolved>
-      <PageHeaderText content={content ? content.header : ""} />
-      <ImageContainer background="lightpink" />
-      <Find content={content ? content.locations : ""} />
-      <Map content={content ? content.locations : ""} />
-    {/* <ImageContainer background="blue" /> */}
-      <Find content={content ? content.activities : ""} />
-      <Gathering />
-      {/* <ImageContainer background="red" /> */}
+      <Container>
+        <PageHeaderText content={content ? content.header : ""} />
+        <ImageContainer background="lightpink" />
+      </Container>
+      <Container>
+        <Find content={content ? content.locations : ""} />
+        <Map content={content ? content.locations : ""} />
+      </Container>
+      <Container>
+        <Find content={content ? content.activities : ""} />
+        <Gathering />
+      </Container>
       <MemberForm content={content ? content.membership : ""} />
       <Footer className="last" />
     </StyledGetInvolved>
