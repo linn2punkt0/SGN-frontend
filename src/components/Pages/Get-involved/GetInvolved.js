@@ -4,6 +4,7 @@ import Find from "./Find";
 import PageHeaderText from "../../Global/PageHeaderText";
 import ImageContainer from "../../Global/ImageContainer";
 import MemberForm from "./MemberForm";
+import Gathering from "./Gathering"
 import Footer from "../../Global/Footer";
 // import Footer from "../../Global/Footer";
 
@@ -36,9 +37,10 @@ const GetInvolved = props => {
       <Find content={content ? content.locations : ""} />
       <ImageContainer background="blue" />
       <Find content={content ? content.activities : ""} />
-      <ImageContainer background="green" />
+      <Gathering />
+      {/* <ImageContainer background="red" /> */}
       <MemberForm content={content ? content.membership : ""} />
-      <Footer />
+      {/* <Footer /> */}
     </StyledGetInvolved>
   );
 };
