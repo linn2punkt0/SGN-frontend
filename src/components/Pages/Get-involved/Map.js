@@ -15,7 +15,7 @@ const StyledActivities = styled.div`
   overflow-y: scroll;
   display: grid;
   grid-template-columns: 1fr;
-    
+  width: 50%;
   ul {
     display: flex;
     flex-wrap: wrap;
@@ -49,7 +49,6 @@ const StyledTextArea = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 50vw;
   img {
     width: 100%;
     height: 30vh;
