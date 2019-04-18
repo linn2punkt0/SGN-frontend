@@ -56,27 +56,25 @@ const StyledMemberForm = styled.div`
     }
     label {
       color: rgba(113, 113, 113, 0.7);
-      margin-bottom: 20px;
+      font-size: 3vh;
+      /* margin-bottom: 20px; */
     }
     input {
       width: 100%;
+      height: 44px;
       border: none;
       border-bottom: 1px solid black;
       margin-bottom: 28px;
     }
-    .checkbox input[type="checkbox"] {
-      opacity: 0;
-    }
-
-    .checkbox label::before {
-      content: "";
-      display: inline-block;
-
-      height: 16px;
-      width: 16px;
-
-      border: 1px solid;
-    }
+  }
+  button {
+    height: 44px;
+    border: none;
+    border-bottom: 1px solid black;
+    margin-bottom: 28px;
+    color: #1f1f1f;
+    font-size: 3vh;
+    font-weight: 400;
   }
 `;
 
@@ -140,6 +138,7 @@ const MemberForm = props => {
           </label>
           <input name="match" type="checkbox" className="checkbox" />
         </form>
+        <button>Submit</button>
       </div>
     </StyledMemberForm>
   );
