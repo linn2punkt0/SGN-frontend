@@ -17,13 +17,24 @@ const StyledPageHeaderText = styled.div`
     color: rgba(113, 113, 113, 0.7);
   }
   h1 {
+
     max-width: 634px;
     margin: 0 0 1.5vh 0;
+
     font-weight: 300;
     font-size: 8vh;
   }
   p {
     font-weight: 300;
+  }
+
+  a {
+    /* width: 634px;
+    height: 36px; */
+    font-weight: 500;
+    font-size: 24px;
+    color: #1f1f1f;
+    text-decoration: none;
     font-size: 3vh;
     max-width: 634px;
     margin: 0 0 1vh 0;
@@ -34,14 +45,14 @@ const StyledPageHeaderText = styled.div`
     color: #1f1f1f;
     text-decoration: underline;
   }
-`;
-
+`
 const PageHeaderText = props => {
   console.log(props.content);
   return (
     <StyledPageHeaderText>
       <h5>{props.content ? props.content.tagline : "Tagline"}</h5>
       <h1>{props.content ? props.content.title : "Title"}</h1>
+ 
       <p>{props.content ? props.content.descriptions : "Description"}</p>
       <h4>{props.content ? props.content.scroll : "Scroll down"}</h4>
     </StyledPageHeaderText>

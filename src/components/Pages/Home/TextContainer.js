@@ -1,9 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
-const StyledTextContainer = styled.div`
-  width: 474px;
-  height: 53px;
+
+const StyledTextContainer = styled.div `
+  width: 50vw;
+  height: 100vh;
+  top: 6%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: relative;
   font-family: "Heebo";
   font-style: normal;
@@ -12,32 +17,110 @@ const StyledTextContainer = styled.div`
   left: 82px;
   line-height: normal;
   color: #959595;
-`;
-const Headerh2 = styled.h2`
 
-color: #1F1F1F;`
+
+`
+const StyledForText = styled.div`
+  width: 100%;
+  height: 70%;
+  /* top: 8%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: normal;
+  margin:0;
+    >p{
+    margin:0;
+    width: 70%;
+    height: 45%;
+  }
+  >h6{
+    margin: 5% 0 0 0;
+    font-family: Heebo;
+    font-style: normal;
+    width: 100%;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: normal;
+    color: rgba(113, 113, 113, 0.7);
+
+    @media (min-width: 320px) and (max-width: 767px) {
+      >h6{
+        font-family: Heebo;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: normal;
+      }
+     >p{ font-family: Heebo;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 30px;
+     }
+    }
+
+  }`
+  const Headerh2 = styled.h2`
+  color: #1F1F1F;
+  margin: 0;
+  font-family: Heebo;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: normal;
+
+@media (min-width: 320px) and (max-width: 767px) {
+    font-family: Heebo;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: normal;
+  }
+  `
 
 const LinkReadMore = styled.a`
   background-color: ${props => props.colorButton};
- text-decoration-line: underline !important;
+  text-decoration-line: underline !important;
   padding: 0.5%;
+  font-family: Heebo;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: normal;
+  text-align: center;
+  align-self: flex-start;
+  margin: 0;
 
+ @media (min-width: 320px) and (max-width: 767px) {
+font-family: Heebo;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 30px;
+   }
 `
 
-;
+
 
 
 const TextContainer = props => {
+
   return (
     <StyledTextContainer>
-
+      <StyledForText>
       <Headerh2>{props.content ? props.content.title : "Title"}</Headerh2>
       <p>{props.content ? props.content.description : "Description"}</p>
       <h6>{props.content ? props.content.small_text : "Small text"}</h6>
-      <button href={props.content ? props.content.button_link : "/"}>
+      </StyledForText>
+      <LinkReadMore href={props.content ? props.content.button_link : "/"}>
         {props.content ? props.content.button_text : "Button text"}
-      </button>
-
+      </LinkReadMore>
     </StyledTextContainer>
   );
 };
