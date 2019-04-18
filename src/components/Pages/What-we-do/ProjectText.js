@@ -25,6 +25,7 @@ const StyledProjectText = styled.div`
     font-size: 24px;
     color: #1f1f1f;
     text-decoration: none;
+    background-color: ${props => props.color};
   }
 `;
 
