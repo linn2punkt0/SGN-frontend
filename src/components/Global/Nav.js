@@ -17,7 +17,8 @@ const StyledHamburger = styled.div`
   justify-content: center;
   flex-direction: column;
   margin: 6px;
-  padding-right: 3vw;
+  padding-right: 82px;
+  margin-top: 4vh;
   > div {
     transition: 0.6s;
     border-radius: 0.3px;
@@ -26,16 +27,16 @@ const StyledHamburger = styled.div`
 `;
 const BarOne = styled.div`
   background-color: black;
-  width: 1.4vw;
+  width: 18px;
   height: 2px;
 `;
 const BarTwo = styled.div`
-  width: 1.4vw;
+  width: 18px;
   background-color: black;
   height: 2px;
 `;
 const BarThree = styled.div`
-  width: 0.7vw;
+  width: 9px;
   background-color: black;
   height: 2px;
   ${StyledHamburger}:hover & {
