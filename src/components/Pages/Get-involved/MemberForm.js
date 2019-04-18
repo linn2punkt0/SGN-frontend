@@ -10,7 +10,9 @@ const StyledMemberForm = styled.div`
   align-items: center;
 
   .container {
-    max-width: 500px;
+    margin-top: 260px;
+    margin-bottom: 160px;
+    max-width: 600px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -24,9 +26,13 @@ const StyledMemberForm = styled.div`
     .grey {
       margin: 0;
       color: rgba(31, 31, 31, 0.45);
+      margin-bottom: 8vh;
     }
     p {
       text-align: center;
+      font-weight: 300;
+      font-size: 3vh;
+      margin-bottom: 10vh;
     }
     form {
       display: flex;
@@ -52,12 +58,25 @@ const StyledMemberForm = styled.div`
     }
     label {
       color: rgba(113, 113, 113, 0.7);
+      font-size: 3vh;
+      /* margin-bottom: 20px; */
     }
     input {
       width: 100%;
+      height: 44px;
       border: none;
       border-bottom: 1px solid black;
+      margin-bottom: 28px;
     }
+  }
+  button {
+    height: 44px;
+    border: none;
+    border-bottom: 1px solid black;
+    margin: 0 auto;
+    color: #1f1f1f;
+    font-size: 3vh;
+    font-weight: 400;
   }
 `;
 
@@ -106,9 +125,9 @@ const MemberForm = props => {
             </div>
           </div>
           <label htmlFor="refugee">Refugee</label>
-          <input name="refugee" type="checkbox" />
+          <input name="refugee" type="checkbox" className="checkbox" />
           <label htmlFor="volunter">Volunter</label>
-          <input name="volunter" type="checkbox" />
+          <input name="volunter" type="checkbox" className="checkbox" />
           <label htmlFor="offer">
             This is what i can offer (knowledge, materials, locales etc.)
           </label>
@@ -119,8 +138,9 @@ const MemberForm = props => {
             Yes, I would like for you to match my competence with suitable
             available jobs
           </label>
-          <input name="match" type="checkbox" />
+          <input name="match" type="checkbox" className="checkbox" />
         </form>
+        <button>Submit</button>
       </div>
     </StyledMemberForm>
   );

@@ -55,9 +55,14 @@ const WhatWeDo = props => {
       .catch(error => console.error(error));
   };
 
-  const fixedBack = {
-    position: "fixed"
+  // Get random color from color array
+  const colors = ["#FD422D", "#F9AD0E", "#0021B8"];
+
+  const getRandomColor = () => {
+    let randomColor = colors[Math.floor(Math.random() * colors.length)];
+    return randomColor;
   };
+
   return (
     <StyledWhatWeDo>
       <PageHeaderText content={content ? content.header : ""} />
@@ -65,12 +70,12 @@ const WhatWeDo = props => {
 
       {/* <ImageSlide /> */}
       {/* <ImageContainer background="lightyellow" /> */}
-      <ProjectText />
-      <ImageContainer background="blue" />
-      <ProjectText />
-      <ImageContainer background="green" />
-      <ProjectText />
-      <ImageContainer background="red" />
+      <ProjectText color={getRandomColor} />
+      <ImageContainer background={getRandomColor} />
+      <ProjectText color={getRandomColor} />
+      <ImageContainer background={getRandomColor} />
+      <ProjectText color={getRandomColor} />
+      <ImageContainer background={getRandomColor} />
       <ContactUsFooter />
     </StyledWhatWeDo>
   );

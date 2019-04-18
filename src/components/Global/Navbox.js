@@ -1,12 +1,12 @@
+import React, { Component } from "react";
+import styled from "styled-components";
+import NavLink from "./Link";
 
-import React, { Component } from 'react'
-import styled from "styled-components"
-import NavLink from "./Link"
-
-const StyledNav = styled.div `
+const StyledNav = styled.div`
     /* display: flex;
     position: absolute;
     flex-direction: column; */
+    pointer-events: all;
     background-color: white;
     transform: translate(100%);
     transition: all 0.3s ease-in-out;
@@ -21,29 +21,27 @@ const StyledNav = styled.div `
     background-color: white;
     justify-content: space-between;
     color: #1F1F1F;
-    ${props => props.transformMenu && `
+    ${props =>
+      props.transformMenu &&
+      `
     transform: translate(0%);
     `}
        /* transform: translate(50%); */
-    /* ${props => props.transforLinks && `
+    /* ${props =>
+      props.transforLinks &&
+      `
     transform: translate(0%);
     `} */
     
 `;
 //SÄTT IN STATES
 
-const NavBox = (props) => {
-
-    return(
-            //if link clicked go back to old style
-        <StyledNav transformMenu={props.visible}>
-
-        <NavLink transforlinks={props.linksnothidden} closeMenu={props.close}  />
-        
-
-        </StyledNav>
-    )
-    
-}
-export default NavBox
-
+const NavBox = props => {
+  return (
+    //if link clicked go back to old style
+    <StyledNav transformMenu={props.visible}>
+      <NavLink transforlinks={props.linksnothidden} closeMenu={props.close} />
+    </StyledNav>
+  );
+};
+export default NavBox;

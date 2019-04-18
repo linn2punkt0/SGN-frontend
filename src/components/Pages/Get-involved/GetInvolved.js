@@ -4,14 +4,19 @@ import Find from "./Find";
 import PageHeaderText from "../../Global/PageHeaderText";
 import ImageContainer from "../../Global/ImageContainer";
 import MemberForm from "./MemberForm";
-import Gathering from "./Gathering"
+import Gathering from "./Gathering";
+import Map from "./Map";
 import Footer from "../../Global/Footer";
-// import Footer from "../../Global/Footer";
 
 const StyledGetInvolved = styled.div`
+  /* Desktop styling done */
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(5, 100vh);
+  grid-template-rows: repeat(6, 100vh);
+
+  .last {
+    grid-row: 6 / 7;
+  }
 `;
 
 const GetInvolved = props => {
@@ -35,12 +40,13 @@ const GetInvolved = props => {
       <PageHeaderText content={content ? content.header : ""} />
       <ImageContainer background="lightpink" />
       <Find content={content ? content.locations : ""} />
-      <ImageContainer background="blue" />
+      <Map content={content ? content.locations : ""} />
+    {/* <ImageContainer background="blue" /> */}
       <Find content={content ? content.activities : ""} />
       <Gathering />
       {/* <ImageContainer background="red" /> */}
       <MemberForm content={content ? content.membership : ""} />
-      {/* <Footer /> */}
+      <Footer className="last" />
     </StyledGetInvolved>
   );
 };

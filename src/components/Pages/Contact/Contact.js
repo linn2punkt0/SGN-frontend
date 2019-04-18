@@ -106,73 +106,97 @@ const StyledContact = styled.div`
 
 `;
 
-
 const Contact = props => {
-    const [contacts, setContacts] = useState([]);
+  const [contacts, setContacts] = useState([]);
 
-    // console.log(contacts);
+  // console.log(contacts);
 
-    useEffect(() => {
-        fetchContacts();
-    }, []);
+  useEffect(() => {
+    fetchContacts();
+  }, []);
 
-    const fetchContacts = () => {
-        fetch(`http://wordplate.test/wp-json/wp/v2/contacts`)
-            .then(response => response.json())
-            .then(data => {
-            setContacts(data);
-        })
-        .catch(error => console.error(error));
-    };
-    const displayContacts = () => {
-     
-    }
-    return (
-        <StyledContact>
-            <div>
-                <Header />
-            </div>
-            <div className="wrapper">
-                <Text />
-                <img src="https://i.ibb.co/dc55VRx/logo.png" alt="logo" /> 
-            </div>
-            <div className="personContainerBig">
-                {contacts.slice(0, 2).map((person) => {
-                    // console.log(person.id)
-                    return(
-                        <Person key={person.id}
-                            contactName={person.title.rendered}
-                            contactImage={person.acf.information.image.sizes.large}
-                            contactDescription={person.acf.information.description}
-                            contactEmail={person.acf.information.email}
-                            contactPhone={person.acf.information.phone}
-                        />
-                    );
-                })}
-            </div>
-            <div className="personContainerSmall">
-               {contacts.slice(2).map((person) => {
-                    // console.log(person.id)
-                    return(
-                        <Person key={person.id}
-                            contactName={person.title.rendered}
-                            contactImage={person.acf.information.image.sizes.large}
-                            contactDescription={person.acf.information.description}
-                            contactEmail={person.acf.information.email}
-                            contactPhone={person.acf.information.phone}
-                        />
-                    );
-                })}
-            </div>
-            <div className="row">
-                <h6>info@supportgroup.com</h6>
-            </div>
-                <div>
-                    <Footer />
-                </div>
-        </StyledContact>
-    );
+  const fetchContacts = () => {
+    fetch(`http://wordplate.test/wp-json/wp/v2/contacts`)
+      .then(response => response.json())
+      .then(data => {
+        setContacts(data);
+      })
+      .catch(error => console.error(error));
+  };
+  const displayContacts = () => {};
+
+  return (
+    <StyledContact>
+      <div>
+        <Header />
+      </div>
+      <div className="wrapper">
+        <Text />
+        <img src="https://i.ibb.co/dc55VRx/logo.png" alt="logo" />
+      </div>
+      <div className="personContainerBig">
+        {contacts.slice(0, 2).map(person => {
+          console.log(person.acf.information.image);
+          // console.log(person.id)
+          return (
+            <Person
+              key={person.id ? person.id : ""}
+              contactName={person.title.rendered ? person.title.rendered : ""}
+              contactImage={
+                person.acf.information.image
+                  ? person.acf.information.image.sizes.large
+                  : ""
+              }
+              contactDescription={
+                person.acf.information.description
+                  ? person.acf.information.description
+                  : ""
+              }
+              contactEmail={
+                person.acf.information.email ? person.acf.information.email : ""
+              }
+              contactPhone={
+                person.acf.information.phone ? person.acf.information.phone : ""
+              }
+            />
+          );
+        })}
+      </div>
+      <div className="personContainerSmall">
+        {contacts.slice(2).map(person => {
+          // console.log(person.id)
+          return (
+            <Person
+              key={person.id ? person.id : ""}
+              contactName={person.title.rendered ? person.title.rendered : ""}
+              contactImage={
+                person.acf.information.image
+                  ? person.acf.information.image.sizes.large
+                  : ""
+              }
+              contactDescription={
+                person.acf.information.description
+                  ? person.acf.information.description
+                  : ""
+              }
+              contactEmail={
+                person.acf.information.email ? person.acf.information.email : ""
+              }
+              contactPhone={
+                person.acf.information.phone ? person.acf.information.phone : ""
+              }
+            />
+          );
+        })}
+      </div>
+      <div className="row">
+        <h6>info@supportgroup.com</h6>
+      </div>
+      <div>
+        <Footer />
+      </div>
+    </StyledContact>
+  );
 };
 
 export default Contact;
-

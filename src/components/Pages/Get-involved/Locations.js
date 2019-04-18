@@ -3,6 +3,7 @@ import styled from "styled-components";
 import locationImage from "../../ikoner/location.svg";
 
 const StyledLocations = styled.div`
+  /* Desktop styling done */
   height: 50vh;
   overflow-y: scroll;
   margin-right: 119px;

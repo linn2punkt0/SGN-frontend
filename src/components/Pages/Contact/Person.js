@@ -1,39 +1,39 @@
 import React from "react";
 import styled from "styled-components";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-
-const StlyedPerson = styled.div`
-img {
+const StyledPerson = styled.div`
+  img {
     width: 100%;
-}
-p {
+  }
+  p {
     max-width: 80%;
     font-weight: 300;
     font-size: 24px;
-}
-h1 {
+  }
+  h1 {
     font-weight: 300;
     text-transform: uppercase;
     font-size: 48px;
-}
-h4 {
+  }
+  h4 {
     font-weight: 400;
     font-size: 24px;
-}
-
+  }
 `;
 
 const Person = props => {
-    return (
-        <StlyedPerson>
-        		<img src={props.contactImage} />
-	        	<h1>{props.contactName}</h1>
-	        	<p>{props.contactDescription}</p>
-	        	<h4>{props.contactEmail}</h4>
-	        	<h4>{props.contactPhone}</h4>
-        </StlyedPerson>
-    );
+  return (
+    <StyledPerson>
+      <img src={props.contactImage ? props.contactImage : "Image"} />
+      <h1>{props.contactName ? props.contactName : "Name"}</h1>
+      <p>
+        {props.contactDescription ? props.contactDescription : "Description"}
+      </p>
+      <h4>{props.contactEmail ? props.contactEmail : "Email"}</h4>
+      <h4>{props.contactPhone ? props.contactPhone : "Phone"}</h4>
+    </StyledPerson>
+  );
 };
 
 export default Person;
