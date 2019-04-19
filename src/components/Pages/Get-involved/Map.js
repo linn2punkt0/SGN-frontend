@@ -87,12 +87,14 @@ const StyledTextArea = styled.div`
 const StyledMiniFooter = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin-top: 5vh;
 
   div {
     display: flex;
     align-items: center;
-    /*max-width: 60%;*/
+    font-weight: 300;
   }
+
   img {
     height: 40px;
     padding-right: 1vw;
@@ -103,11 +105,7 @@ const StyledMiniFooter = styled.div`
     font-size: 16px;
     padding-right: 0.7vw;
   }
-  p {
-    /*display: inline-block;*/
-    font-weight: 300;
-    align-self: center;
-  }
+
 `;
 
 const Map = props => {
@@ -194,11 +192,13 @@ const Map = props => {
           <div>
               <img src={Phone} />
               <h1>Ansvarig:</h1><p>+46 722-89 10 18</p>
-              <img src={Mail} /><p>name@nameson.se</p>
           </div>
           <div>
               <img src={LocationLogo} />
               <span>Vägens väg 15 433 98 Värnersborg</span>
+          </div>
+          <div>
+              <img src={Mail} /><p>name@nameson.se</p>
           </div>
         </StyledMiniFooter>
       </div>
