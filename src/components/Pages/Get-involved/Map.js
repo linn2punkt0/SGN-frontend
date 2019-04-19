@@ -13,27 +13,34 @@ import Locations from "./Locations";
 
 const StyledActivities = styled.div`
   overflow-y: scroll;
-  display: grid;
-  grid-template-columns: 1fr;
-  width: 50%;
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+`;
+const StyledIcons = styled.div`
+  display: flex;
+  justify-content: space-around;
+
   ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+ /*   grid-template-rows: 25% 25% 25% 25%;*/
   }
   li {
-    width: 34%;
-    margin-right: 1vh;
+    margin-right: 1vw;
     font-weight: 300;
     list-style: none;
-    border-bottom: 1px solid #1F1F1F;
+
     img {
       height: 40px;
     }
     span {
+      border-bottom: 1px solid #1F1F1F;
       display: flex;
-      justify-content: flex-start;
       align-items: center;
     }
   }
@@ -78,12 +85,13 @@ const StyledTextArea = styled.div`
 `;
 
 const StyledMiniFooter = styled.div`
-  margin-top: 5vh;
-  margin-bottom: 10vh;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
   div {
-    max-width: 35%;
+    display: flex;
+    align-items: center;
+    /*max-width: 60%;*/
   }
   img {
     height: 40px;
@@ -96,11 +104,10 @@ const StyledMiniFooter = styled.div`
     padding-right: 0.7vw;
   }
   p {
-    display: inline-block;
+    /*display: inline-block;*/
     font-weight: 300;
     align-self: center;
   }
-
 `;
 
 const Map = props => {
@@ -126,8 +133,8 @@ const Map = props => {
     <StyledActivities>
       <div>
         <StyledTextArea>
-          <img src="https://cdn1.tekrevue.com/wp-content/uploads/2015/04/map-location-pin-960x540.jpg"
-          />
+          {/*<img src="https://cdn1.tekrevue.com/wp-content/uploads/2015/04/map-location-pin-960x540.jpg"
+          />*/}
         <div>
           <h1>Värnesborg</h1>
           <p>
@@ -137,6 +144,7 @@ const Map = props => {
           </div>
           <h4>Feautured Activities</h4>
         </StyledTextArea>
+        <StyledIcons>
         <div>
           <ul>
             <li>
@@ -181,13 +189,14 @@ const Map = props => {
             </li>
           </ul>
         </div>
+        </StyledIcons>
         <StyledMiniFooter>
           <div>
               <img src={Phone} />
               <h1>Ansvarig:</h1><p>+46 722-89 10 18</p>
               <img src={Mail} /><p>name@nameson.se</p>
-           </div>
-           <div>
+          </div>
+          <div>
               <img src={LocationLogo} />
               <span>Vägens väg 15 433 98 Värnersborg</span>
           </div>
