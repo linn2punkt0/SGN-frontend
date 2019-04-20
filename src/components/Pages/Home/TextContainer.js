@@ -30,7 +30,7 @@ const StyledTextContainer = styled.div `
 `
 const StyledForText = styled.div`
   width: 100%;
-  height: 70%;
+  height: 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -47,10 +47,11 @@ const StyledForText = styled.div`
     height: 45%;
   }
   >h6{
-    margin: 0 0 0 0;
+    margin: 1% 0 0 0;
     font-family: Heebo;
     font-style: normal;
     width: 100%;
+    
     font-weight: 500;
     font-size: 16px;
     line-height: normal;
@@ -94,7 +95,7 @@ const StyledForText = styled.div`
 const LinkReadMore = styled.a`
   background-color: ${props => props.colorButton};
   text-decoration-line: underline !important;
-  padding: 0.5%;
+  height:5%;
   font-family: Heebo;
   font-style: normal;
   font-weight: 500;
@@ -103,6 +104,15 @@ const LinkReadMore = styled.a`
   text-align: center;
   align-self: flex-start;
   margin: 0;
+  &:hover{
+    /* height: 0%; */
+    /* text-underline-position: under; */
+    /* transition-delay: 0.2s; */
+    /* transition:  */
+    background-color: white;
+    color: black;
+  }
+
  
  @media (min-width: 320px) and (max-width: 767px) {
 font-family: Heebo;
@@ -125,7 +135,7 @@ const TextContainer = props => {
       <p>{props.content ? props.content.description : "Description"}</p>
       <h6>{props.content ? props.content.small_text : "Small text"}</h6>
       </StyledForText>
-      <LinkReadMore href={props.content ? props.content.button_link : "/"}>
+      <LinkReadMore colorButton={props.backgroundButton} href={props.content ? props.content.button_link : "/"}>
         {props.content ? props.content.button_text : "Button text"}
       </LinkReadMore>
     </StyledTextContainer>

@@ -1,57 +1,75 @@
 import React from "react";
 import styled from "styled-components";
-import Button from "./Button"
-import Footer from "../../Global/Footer.js"
 
 const ContactContainer = styled.div`
 display: flex;
-justify-content: space-around;
+flex-direction: column;
+justify-content: space-evenly;
 height: 100vh;
 width: 100vw;
-/* position: absolute; */
-align-items: flex-end;
-background-color: green;
-`
+align-items: center;
 
+`
 /* Wanna help out? */
-const ContactTitle = styled.h2`
-position: absolute;
-width: 474px;
-height: 53px;
-left: 483px;
-top: 3821px;
+const TitleContact = styled.div`
+height: 40%;
+>h2{
 font-family: Heebo;
 font-style: normal;
 font-weight: 300;
-font-size: 36 px;
+font-size: 64px;
 line-height: normal;
 text-align: center;
 color: #1F1F1F;
+}
+>p{
+  font-family: Heebo;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: normal;
+  text-align: center;
+  color: rgba(31, 31, 31, 0.45);
+}
 `
 /* Låna ut lokal? Donera pengar? Material? */
-const ContactText = styled.p`
-position: absolute;
-width: 634px;
-height: 68px;
-left: 411px;
-top: 3890px;
-font-family: Heebo;
+const ContactInfo = styled.div`
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+width: 100%;
+>a{
+  color: #FFFFFF;
+  background-color: #0021B8;
+  text-decoration-line: underline !important;
+  font-family: Heebo;
 font-style: normal;
-font-weight: 300;
-font-size: 36px;
+font-weight: 500;
+font-size: 24px;
 line-height: normal;
 text-align: center;
-color: rgba(31, 31, 31, 0.45);
+ &:hover {
+        /* transition: 0.3s;
+        box-shadow: 1px 1px 0px; */
+        }
+}
+
 `
 
 
 const Contact = props => {
   return (
     <ContactContainer>
-      <ContactTitle>{props.title}</ContactTitle>
-      <ContactText>{props.textContact}</ContactText>
-      <Button>SWISH</Button>
-      {/* <Footer /> */}
+      <TitleContact>
+          <h2>{props.title}</h2>
+          <p>{props.textContact}</p>
+      </TitleContact>
+
+      <ContactInfo>
+          <p>{props.swishNr}</p>
+          <a href="" >{props.contactUs}</a>
+          <p>{props.bGiro}</p>
+      </ContactInfo>
     </ContactContainer>
   )
 }

@@ -15,32 +15,14 @@ const LinksForNav = styled.div`
     justify-content: space-between;
     text-align: right;
     transform: translate(50%);
-  
-    /*VAD SKA JAG SÄGA HÄR FÖR ATT DEN SKA TRANSFPORMA*/
-  /* ${props =>
-    props.transformlinks &&
-    `
-    transform: translate(0%);
-    `} */
     > * {
     text-decoration: none; 
     color: #1F1F1F;
     transition:1s transform;
-    /* transform: translate(50%); */
-    
-    /* ${props =>
-      props.transforLinks &&
-      `
-    transform: translate(0%);
-    `} */
     }
     `;
 
 const NavLinks = props => {
-  // console.log(props);
-  // render(props){
-  // console.log(props)
-
   let delayIncrement = 1;
   return (
     <LinksForNav>
@@ -85,11 +67,6 @@ const NavLinks = props => {
       >
         WHAT WE DO
       </Link>
-      {/* <Link onClick={props.closeMenu} style={{transform: props.transforlinks ? 'translate(0)' : 'translate(50%)', transitionDelay:`0.${(delayIncrement++)}s`}} to="/get-involved">Membership</Link> */}
-      {/* Länka till botten av Get involved */}
-      {/* <Link onClick={props.closeMenu} style={{transform: props.transforlinks ? 'translate(0)' : 'translate(50%)', transitionDelay:`0.${(delayIncrement++)}s`}} to="/">Donations</Link> */}
-      {/* Länka till botten av Home */}
-      {/* <Link onClick={props.closeMenu} style={{transform: props.transforlinks ? 'translate(0)' : 'translate(50%)', transitionDelay:`0.${(delayIncrement++)}s`}} to="/news">News</Link> */}
       <Link
         onClick={props.closeMenu}
         style={{

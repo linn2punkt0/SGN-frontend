@@ -4,9 +4,6 @@ import ImageContainer from "../../Global/ImageContainer";
 import TextContainer from "./TextContainer.js";
 import PageHeaderText from "../../Global/PageHeaderText";
 import ContactContainer from "./Contact.js";
-// import * as Scroll from 'react-scroll';
-// import WhenInView from "./WhenInView"
-import ImageHeader from "../../Global/ImageHeader"
 // import Footer from "../../Global/Footer.js"
 import Container from "../../Global/Container"
 
@@ -22,17 +19,16 @@ const StyledHome = styled.div`
   background-size: cover;
   overflow-x: hidden;
     a {
-    height: 36px;
+    /* height: 36px; */
     font-weight: 500;
     font-size: 24px;
-    color: #1f1f1f;
+    color: #FFFFFF;
     text-decoration: none;
   }
 
   @media (min-width: 320px) and (max-width: 767px){
   position: relative;
   flex-direction: column;
-  /* background-color: green; */
   width: 100vw;
   height: 100%;
   background-attachment: fixed;
@@ -40,6 +36,7 @@ const StyledHome = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   overflow-x: hidden;
+ 
   }
 `;
 
@@ -62,38 +59,35 @@ const Home = props => {
       })
       .catch(error => console.error(error));
   };
-console.log(content)
-  return (
-    // <WhenInView>
 
-    // {({ isInView }) =>
+  return (
     <StyledHome>
-      {/* <PageHeaderText content={content ? content.header : ""} />
-      <ImageContainer background="pink" /> */}
-      <Container>
+      <Container flexDirection="column">
         <PageHeaderText content={content ? content.header : ""} />
-        <ImageContainer background="pink" />
+        <ImageContainer background="tomato" />
       </Container>
+
       <Container>
-        <TextContainer content={content ? content.get_involved : ""} />
+        <TextContainer content={content ? content.get_involved : ""}backgroundButton="#0021B8"/>
         <ImageContainer background="#2703BB" />
       </Container>
       <Container>
-        <TextContainer content={content ? content.get_involved : ""} />
-        <ImageContainer background="#2703BB" />
+        <TextContainer content={content ? content.who_we_are : ""}  backgroundButton="#F9DC0E" 
+        />
+        <ImageContainer background="#F9DC0E" />
       </Container>
       <Container>
-        <TextContainer content={content ? content.who_we_are : ""} />
-        <ImageContainer background="black" />
-      </Container>
-      <Container>
-        <TextContainer content={content ? content.what_we_do : ""} />
-        <ImageContainer background="lightgreen" />
+        <TextContainer content={content ? content.what_we_do : ""} backgroundButton="#F43F2A" />
+        <ImageContainer background="#F43F2A" />
       </Container>
       <ContactContainer
         title="Wanna help out?"
-        textContact="Låna ut lokal? Donera pengar? Material?"
+        textContact="Got a local or materials to lend? Send us a message!"
+        swishNr="Swish: 123 223 37 32"
+        contactUs="Contact Us"
+        bGiro="Bankgiro: 5138-5854"
       />
+      {/* <Footer/> */}
     </StyledHome>
   );
 };
