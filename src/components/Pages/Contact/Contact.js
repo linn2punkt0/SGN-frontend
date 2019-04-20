@@ -22,23 +22,22 @@ const StyledContact = styled.div`
         
     }
     .personContainerBig {
-        display: grid;
-        grid-template-columns: 1.7fr 1.7fr;
-        h1, h4, p {
-            margin-left: 5vw;
-            margin-right: 5vw;
-        }
+      margin-left: 5vw;
+      margin-right: 5vw;
+      display: grid;
+      grid-template-columns: 1.7fr 1.7fr;
     }
     .personContainerSmall {
         margin-top: 20vh;
+        margin-left: 4vw;
+        margin-right: 4vw;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        h1, h4, p {
-            margin-left: 5vw;
-            margin-right: 5vw;
-        }
+        
         img {
-            height: 300px
+            margin-left: 1vw;
+            margin-right: 1vw
+            height: 300px !important;
             justify-self: center;
         }
     }
@@ -136,7 +135,7 @@ const Contact = props => {
       </div>
       <div className="personContainerBig">
         {contacts.slice(0, 2).map(person => {
-          console.log(person.acf.information.image);
+          // console.log(person.acf.information.image);
           // console.log(person.id)
           return (
             <Person
