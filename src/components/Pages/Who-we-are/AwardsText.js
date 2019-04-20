@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const StyledPartnerText = styled.div`
+const StyledAwardText = styled.div`
   background: #0021b8;
   width: 50%;
   height: 100vh;
@@ -9,7 +9,7 @@ const StyledPartnerText = styled.div`
     padding-left: 82px;
   }
   h3 {
-    margin-top: 40vh;
+    margin-top: 20vh;
     font-weight: 300;
     font-size: 4vh;
     color: #ffffff;
@@ -22,15 +22,13 @@ const StyledPartnerText = styled.div`
   }
 `;
 
-const PartnerText = props => {
+const AwardText = props => {
   return (
-    <StyledPartnerText>
-      <h3>{props.content ? props.content.title : "Partners"}</h3>
-      <p>
-        {props.content ? props.content.description : "Partnerstext in here"}
-      </p>
-    </StyledPartnerText>
+    <StyledAwardText>
+      <h3>{props.content ? props.content.title : "Awards"}</h3>
+      <p>{props.content ? props.content.description : "Awardstext in here"}</p>
+    </StyledAwardText>
   );
 };
 
-export default PartnerText;
+export default AwardText;

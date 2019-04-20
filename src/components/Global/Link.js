@@ -15,6 +15,8 @@ const LinksForNav = styled.div`
     justify-content: space-between;
     text-align: right;
     transform: translate(50%);
+    margin-top: 135px;
+
     > * {
     text-decoration: none; 
     color: #1F1F1F;

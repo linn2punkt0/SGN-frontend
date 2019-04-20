@@ -6,16 +6,22 @@ import Container from "../../Global/Container";
 import ContactUsFooter from "../../Global/ContactUsFooter";
 import Partners from "./Partners";
 import PartnerText from "./PartnerText";
+import AwardsText from "./AwardsText";
+import Awards from "./Awards";
 
 const StyledWhoWeAre = styled.div`
   @media (min-width: 769px) {
+    .quote{
+      margin-top: 80vh;
+      margin-left: 200px;
+      font-weight: 500;
+      font-size: 16px;
+      color: white;
+    }
       .firstImg {
         height: 100vh;
         width: 50vw;
         background: url('https://i.ibb.co/k42yQCz/img1.png" alt="img1"');
-        h1 {
-          color: white;
-        }
       }
       .secondImg {
         height: 100vh;
@@ -44,7 +50,6 @@ const StyledWhoWeAre = styled.div`
         width: 100vw;
         background: url('https://i.ibb.co/k42yQCz/img1.png" alt="img1"');
         h1 {
-          color: white;
         }
       }
       .secondImg {
@@ -80,20 +85,27 @@ const WhoWeAre = props => {
       <Container>
         <Text content={content ? content.our_cause : ""} />
         <div className="firstImg">
-          <h1>{content ? content.our_cause.quote : "Some text"}</h1>
+          <h1 className="quote">
+            {content ? content.our_cause.quote : "Some text"}
+          </h1>
         </div>
       </Container>
       <Container>
         <Text content={content ? content.our_history : ""} />
         <div className="secondImg">
-          <h1>{content ? content.our_history.quote : "Some text"}</h1>
+          <h1 className="quote">
+            {content ? content.our_history.quote : "Some text"}
+          </h1>
         </div>
       </Container>
       <Container>
         <PartnerText content={content ? content.partnerships : ""} />
         <Partners />
       </Container>
-      <Container>Awards</Container>
+      <Container>
+        <Awards />
+        <AwardsText content={content ? content.awards : ""} />
+      </Container>
       <ContactUsFooter />
     </StyledWhoWeAre>
   );

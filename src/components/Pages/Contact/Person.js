@@ -20,11 +20,20 @@ const StyledPerson = styled.div`
     font-weight: 400;
     font-size: 24px;
   }
+  /* .image {
+    width: 100%;
+    height: 100px;
+    background: url(${props => props.contactImage});
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  } */
 `;
 
 const Person = props => {
   return (
     <StyledPerson>
+      {/* <div className="image" /> */}
       <img src={props.contactImage ? props.contactImage : "Image"} />
       <h1>{props.contactName ? props.contactName : "Name"}</h1>
       <p>
