@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import PropTypes from "prop-types";
+
 
 
 const StyledPerson = styled.div`
@@ -34,13 +34,23 @@ margin-top: 37vh;
 `;
 /* Images */
 const Content = styled.div`
+@media (min-width: 769px)  {
     background-image: url(${props => props.img});
     background-position: center;
     background-size: cover;
-    width: 90%;
-    height: 400px;
+    max-width: 90%;
     padding-left: 1vw;
     padding-right: 1vw;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  background-image: url(${props => props.img});
+  background-position: center;
+  background-size: cover;
+  max-width: 100%;
+  height: 400px;
+  padding-left: 0;
+  padding-right: 0;
+}
     
 `;
 

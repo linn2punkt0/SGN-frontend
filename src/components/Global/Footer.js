@@ -103,22 +103,22 @@ const Footer = props => {
           </div>
           <div>
             <a href={footerData.facebook}>
-              <img className="icons" src={FbLogo} />
+              <img className="icons" src={FbLogo} alt="Facebook Logo"/>
             </a>
             <a href={footerData.twitter}>
-              <img className="icons" src={TwitterLogo} />
+              <img className="icons" src={TwitterLogo} alt="Twitter Logo" />
             </a>
-            <a href="">
-              <img className="icons" src={WhatsAppLogo} />
+            <a href={footerData.whatsapp}>
+              <img className="icons" src={WhatsAppLogo} alt="Whats App Logo" />
             </a>
             <a href={footerData.instagram}>
-              <img className="icons" src={InstagramLogo} />
+              <img className="icons" src={InstagramLogo} alt="Instagram Logo" />
             </a>
           </div>
           <div>
-            <img src={EmailLogo} />
+            <img src={EmailLogo} alt="Email Logo"/>
             <p>{footerData.email ? footerData.email : "email@email.com"}</p>
-            <img src={PhoneLogo} />
+            <img src={PhoneLogo} alt="Phone Logo"/>
             <p>{footerData.phone ? footerData.phone : "1234567"}</p>
           </div>
         </div>

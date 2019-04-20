@@ -5,10 +5,10 @@ const StyledForm = styled.div`
 .line {
 	border-bottom: 1px solid black;
 	margin-top: 5px;
-	width: 120px;
+	max-width: 120px;
 }
 .transform {
-	width: 30%;
+	max-width: 30%;
 }
 .transform:hover {
     button, .line {
@@ -27,7 +27,7 @@ input, select {
 	margin-bottom: 10vh;
 	border: none;
 	border-bottom: 1px solid lightgrey;
-	width: 100%;
+	max-width: 100%;
 	font-size: 24px;
 	font-weight: 100;
 }
@@ -40,7 +40,7 @@ form {
 
 .inline {
 	display: inline-flex;
-	width: 100%;
+	max-width: 100%;
 }
 
 button {

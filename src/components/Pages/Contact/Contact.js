@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import PageHeaderText from "../../Global/PageHeaderText";
-import ImageContainer from "../../Global/ImageContainer";
 import Person from "./Person";
 import Text from "./Text";
-import Form from "./Form";
 import Header from "./Header";
 import Footer from "../../Global/Footer";
 
@@ -73,10 +70,12 @@ const StyledContact = styled.div`
         margin-bottom: 10vh;
         .inline {
             display:block;
-            width: 100%;
+            max-width: 100%;
         }
         img {
-            height: 400px;
+            position: relative;
+            left: 40vh;
+            max-width: 50%;
             margin-bottom: 5vh;
         }
     }
@@ -122,7 +121,6 @@ const Contact = props => {
       })
       .catch(error => console.error(error));
   };
-  const displayContacts = () => {};
 
   return (
     <StyledContact>

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import ImageContainer from "../../Global/ImageContainer";
 import Academic from "../../ikoner/academic-club.svg";
 import Sport from "../../ikoner/sports-club.svg";
 import Kids from "../../ikoner/kids-club.svg";
@@ -147,7 +146,7 @@ const Map = props => {
           <ul>
             <li>
               <span>
-                <img src={Sport} />
+                <img src={Sport} alt="Sport Logo"/>
                 <h5>
                   {activities.first_activity
                     ? activities.first_activity
@@ -157,7 +156,7 @@ const Map = props => {
             </li>
             <li>
               <span>
-                <img src={Academic} />
+                <img src={Academic} alt="Book Logo"/>
                 <h5>
                   {activities.second_activity
                     ? activities.second_activity
@@ -167,7 +166,7 @@ const Map = props => {
             </li>
             <li>
               <span>
-                <img src={Academic} />
+                <img src={Academic} alt="Book Logo"/>
                 <h5>
                   {activities.third_activity
                     ? activities.third_activity
@@ -177,7 +176,7 @@ const Map = props => {
             </li>
             <li>
               <span>
-                <img src={Kids} />
+                <img src={Kids} alt="Child Logo"/>
                 <h5>
                   {activities.fourth_activity
                     ? activities.fourth_activity
@@ -190,15 +189,15 @@ const Map = props => {
         </StyledIcons>
         <StyledMiniFooter>
           <div>
-              <img src={Phone} />
+              <img src={Phone} alt="Phone Logo"/>
               <h1>Ansvarig:</h1><p>+46 722-89 10 18</p>
           </div>
           <div>
-              <img src={LocationLogo} />
+              <img src={LocationLogo} alt="Locaton Logo" />
               <span>Vägens väg 15 433 98 Värnersborg</span>
           </div>
           <div>
-              <img src={Mail} /><p>name@nameson.se</p>
+              <img src={Mail} alt="Mail Logo"/><p>name@nameson.se</p>
           </div>
         </StyledMiniFooter>
       </div>
