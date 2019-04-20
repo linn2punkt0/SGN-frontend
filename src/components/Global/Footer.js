@@ -38,14 +38,41 @@ const StyledFooter = styled.div`
       height: 24px;
     }
   }
+
   @media (min-width: 320px) and (max-width: 767px) {
+    font-size: 16px;
+      display: flex;
     a {
+
     }
     p {
+      padding-right: 2vw;
     }
     div {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      align-items: center;
+      margin-top: 20vh;
+    }
+    div:nth-child(2) {
+      position: relative;
+      bottom: 25vh;
+      left: 100vw;
+    }
+    div:nth-child(1) {
+      position: relative;
+      left: -100vw;
+      width: 100%;
     }
     img {
+      height: 32px;
+      padding-right: 2vw
+    }
+    .icons {
+      padding-right: 18vw;
+    }
+    .hide {
+      display: none;
     }
   }
 `;
@@ -70,22 +97,22 @@ const Footer = props => {
     <StyledFooter>
       {footerData && (
         <div>
-          <div>
+          <div className="hide">
             <p>Language</p>
             <p>GDPR</p>
           </div>
           <div>
             <a href={footerData.facebook}>
-              <img src={FbLogo} />
+              <img className="icons" src={FbLogo} />
             </a>
             <a href={footerData.twitter}>
-              <img src={TwitterLogo} />
+              <img className="icons" src={TwitterLogo} />
             </a>
             <a href="">
-              <img src={WhatsAppLogo} />
+              <img className="icons" src={WhatsAppLogo} />
             </a>
             <a href={footerData.instagram}>
-              <img src={InstagramLogo} />
+              <img className="icons" src={InstagramLogo} />
             </a>
           </div>
           <div>
