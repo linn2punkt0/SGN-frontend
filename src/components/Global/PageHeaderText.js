@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Header from "../../components/Pages/Contact/Header";
-import Reveal from 'react-reveal/Reveal';
-
+import Reveal from "react-reveal/Reveal";
 
 const StyledPageHeaderText = styled.div`
   width: 50%;
@@ -48,27 +47,24 @@ const StyledPageHeaderText = styled.div`
     text-decoration: underline;
   }
 
-
-    @media (min-width: 320px) and (max-width: 767px) {
-     height: 50vh;
-     width: 100%;
-}
-`
+  @media (min-width: 320px) and (max-width: 767px) {
+    height: 50vh;
+    width: 100%;
+  }
+`;
 const StyledFade = styled.h1`
-font-size: 1.5em;
-      text-align: center;
-      color: palevioletred;
+  font-size: 1.5em;
+  text-align: center;
+  color: palevioletred;
 `;
 
 const PageHeaderText = props => {
-
-
   return (
     <StyledPageHeaderText>
       <Header />
       <Reveal top>
         <div>
-          <h1>{props.content ? props.content.tagline : "Tagline"}</h1>
+          <h5>{props.content ? props.content.tagline : "Tagline"}</h5>
           <h1>{props.content ? props.content.title : "Title"}</h1>
           <p>{props.content ? props.content.descriptions : "Description"}</p>
           <h4>{props.content ? props.content.scroll : "Scroll down"}</h4>
