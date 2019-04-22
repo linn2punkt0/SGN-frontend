@@ -8,6 +8,8 @@ import Partners from "./Partners";
 import PartnerText from "./PartnerText";
 import AwardsText from "./AwardsText";
 import Awards from "./Awards";
+import ImageOne from "../../../images/section-1.png";
+import ImageTwo from "../../../images/section-2.png";
 
 const StyledWhoWeAre = styled.div`
   @media (min-width: 769px) {
@@ -21,12 +23,16 @@ const StyledWhoWeAre = styled.div`
       .firstImg {
         height: 100vh;
         width: 50vw;
-        background: url('https://i.ibb.co/k42yQCz/img1.png" alt="img1"');
+        background: url(${ImageOne});
+        background-position: center;
+        background-size: cover;
       }
       .secondImg {
         height: 100vh;
         width: 50vw;
-        background: url('https://i.ibb.co/1qycyjY/img2.png" alt="img2"');
+        background: url(${ImageTwo});
+        background-position: center;
+        background-size: cover;
       }             
     .logo {
       height: 100h;
@@ -48,14 +54,12 @@ const StyledWhoWeAre = styled.div`
       .firstImg {
         height: 50vh;
         width: 100vw;
-        background: url('https://i.ibb.co/k42yQCz/img1.png" alt="img1"');
         h1 {
         }
       }
       .secondImg {
         height: 50vw;
         width: 100vw;
-        background: url('https://i.ibb.co/1qycyjY/img2.png" alt="img2"');
       }
     }
   }
