@@ -1,8 +1,11 @@
 import React from "react";
 import styled from "styled-components";
+import ImageFour from "../../../images/section-4.png";
 
 const StyledAwardText = styled.div`
-  background: #0021b8;
+  background: url(${ImageFour});
+  background-position: center;
+  background-size: cover;
   width: 50%;
   height: 100vh;
   > * {
