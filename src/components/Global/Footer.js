@@ -9,14 +9,13 @@ import PhoneLogo from "../ikoner/phone.svg";
 
 const StyledFooter = styled.div`
   @media (min-width: 769px) {
-    grid-column: 1 / 3;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     font-weight: 300;
     font-size: 16px;
-    height: 30vh;
+    height: 20vh;
     width: 100%;
     div {
       width: 100%;
@@ -41,9 +40,8 @@ const StyledFooter = styled.div`
 
   @media (min-width: 320px) and (max-width: 767px) {
     font-size: 16px;
-      display: flex;
+    display: flex;
     a {
-
     }
     p {
       padding-right: 2vw;
@@ -66,7 +64,7 @@ const StyledFooter = styled.div`
     }
     img {
       height: 32px;
-      padding-right: 2vw
+      padding-right: 2vw;
     }
     .icons {
       padding-right: 18vw;
@@ -103,7 +101,7 @@ const Footer = props => {
           </div>
           <div>
             <a href={footerData.facebook}>
-              <img className="icons" src={FbLogo} alt="Facebook Logo"/>
+              <img className="icons" src={FbLogo} alt="Facebook Logo" />
             </a>
             <a href={footerData.twitter}>
               <img className="icons" src={TwitterLogo} alt="Twitter Logo" />
@@ -116,9 +114,9 @@ const Footer = props => {
             </a>
           </div>
           <div>
-            <img src={EmailLogo} alt="Email Logo"/>
+            <img src={EmailLogo} alt="Email Logo" />
             <p>{footerData.email ? footerData.email : "email@email.com"}</p>
-            <img src={PhoneLogo} alt="Phone Logo"/>
+            <img src={PhoneLogo} alt="Phone Logo" />
             <p>{footerData.phone ? footerData.phone : "1234567"}</p>
           </div>
         </div>
