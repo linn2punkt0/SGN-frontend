@@ -6,7 +6,6 @@ const StyledHeader = styled.div`
     padding-top: 4vh;
     max-height: 60px;
     max-width: 150px;
-    margin-left: 5vw;
   }
 `;
 

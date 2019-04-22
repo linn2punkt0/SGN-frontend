@@ -6,36 +6,79 @@ import Header from "./Header";
 import Footer from "../../Global/Footer";
 
 const StyledContact = styled.div`
+  .contactLogo {
+    padding-left: 5vw;
+  }
+    .wrapper {
+        padding-right: 5vw;
+        padding-left: 5vw;
+        display: flex;
+        flex-direction: column-reverse;
+        margin-bottom: 10vh;
+        .inline {
+            display:block;
+            max-width: 100%;
+        }
+        img {
+            position: relative;
+            left: 40vh;
+            max-width: 50%;
+            margin-bottom: 5vh;
+        }
+    }
+    .personContainerBig, .personContainerSmall {
+
+      margin-top: 30vh;
+          
+        h1, h4, p {
+          margin-right: 5vw;
+          margin-left: 5vw;
+          margin-bottom: 5vh;
+        }
+        h1 {
+            margin-bottom: 0;
+        }
+    }
+    .row  {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60vh;
+
+        h6 {
+            font-size: 24px;
+            font-weight: 300;
+        }
+    }
 
 @media (min-width: 769px) {
     .wrapper {
         display: grid;
-        margin-left: 5vw;
-        margin-right: 5vw;
         grid-template-columns: 1.7fr 1.7fr;
         grid-template-rows: repeat(1, 100vh);
         margin-top: 20vh;
         margin-bottom: 10vh;
+        img {
+          position: unset;
+        }
         
     }
     .personContainerBig {
-      margin-left: 5vw;
-      margin-right: 5vw;
+
       display: grid;
       grid-template-columns: 1.7fr 1.7fr;
     }
     .personContainerSmall {
         margin-top: 20vh;
-        margin-left: 4vw;
-        margin-right: 4vw;
+
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         
         img {
             margin-left: 1vw;
-            margin-right: 1vw
-            height: 300px !important;
+            margin-right: 1vw;
             justify-self: center;
+            position: unset;
         }
     }
     .row {
@@ -54,54 +97,6 @@ const StyledContact = styled.div`
     }
     
 }
-
-@media (min-width: 768) and (orientation: landscape) {
-}
-
-@media (min-width: 320) and (max-width: 1024px) and (orientation: landscape) {
-}
-
-@media (min-width: 320px) and (max-width: 767px) {
-    .wrapper {
-        display: flex;
-        flex-direction: column-reverse;
-        margin-right: 5vw;
-        margin-left: 5vw;
-        margin-bottom: 10vh;
-        .inline {
-            display:block;
-            max-width: 100%;
-        }
-        img {
-            position: relative;
-            left: 40vh;
-            max-width: 50%;
-            margin-bottom: 5vh;
-        }
-    }
-    .personContainerBig, .personContainerSmall {
-        h1, h4, p {
-            margin-left: 5vw;
-            margin-right: 5vw;
-            max-width: 80%;
-            margin-bottom: 5vh;
-        }
-        h1 {
-            margin-bottom: 0;
-        }
-    }
-    .row  {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 30vh;
-        h6 {
-            font-size: 24px;
-            font-weight: 300;
-        }
-    }
-}
-
 `;
 
 const Contact = props => {

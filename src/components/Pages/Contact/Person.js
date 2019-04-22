@@ -34,15 +34,6 @@ margin-top: 37vh;
 `;
 /* Images */
 const Content = styled.div`
-@media (min-width: 769px)  {
-    background-image: url(${props => props.img});
-    background-position: center;
-    background-size: cover;
-    max-width: 90%;
-    padding-left: 1vw;
-    padding-right: 1vw;
-}
-@media (min-width: 320px) and (max-width: 767px) {
   background-image: url(${props => props.img});
   background-position: center;
   background-size: cover;
@@ -50,6 +41,13 @@ const Content = styled.div`
   height: 400px;
   padding-left: 0;
   padding-right: 0;
+  h4 {
+    word-break: break-all;
+  }
+@media (min-width: 769px)  {
+    max-width: 90%;
+    margin-left: 1vw;
+    margin-right: 1vw;
 }
     
 `;
