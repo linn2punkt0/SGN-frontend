@@ -4,9 +4,37 @@ import ImageContainer from "../../Global/ImageContainer";
 import TextContainer from "./TextContainer.js";
 import PageHeaderText from "../../Global/PageHeaderText";
 import ContactContainer from "./Contact.js";
-// import Footer from "../../Global/Footer.js"
-import Container from "../../Global/Container"
+// import Footer from "../../Global/Footer.js";
+import Container from "../../Global/Container";
+import Logo from "./Logo.svg";
 
+const StyledLogo = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+width: 50%;
+div {
+    background: #EBDCCD;
+    border-radius: 50%;
+    height:300px;
+    width: 300px;
+}
+img {
+  height:350px;
+}
+img:hover {
+  transform: scale3d(1.1, 1.1, 1.1);
+  transition: all 1s ease-in-out;
+}
+div:hover {
+  transform: translate3d(10px, 0px, 0px) 
+             skew(-5deg, 4deg); 
+  transform-style: preserve-3d; 
+  will-change: transform;
+  transition: all 1s ease-in-out;
+}
+`
 
 const StyledHome = styled.div`
   position: relative;
@@ -64,7 +92,11 @@ const Home = props => {
     <StyledHome>
       <Container flexDirection="column">
         <PageHeaderText content={content ? content.header : ""} />
-        <ImageContainer background="tomato" />
+          <StyledLogo>
+            <div>
+              <img src={Logo} alt="Logo"/>
+            </div>
+          </StyledLogo>
       </Container>
 
       <Container>
