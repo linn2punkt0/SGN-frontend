@@ -4,26 +4,29 @@ import styled from "styled-components";
 const StyledPartners = styled.div`
   width: 50%;
   height: 100vh;
+  z-index: 0;
   ul {
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    margin: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 20px;
     padding: 0;
+    overflow-y: scroll;
+    height: 95%;
 
     li {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin: 0;
+      margin: 10px;
       padding: 0;
     }
 
     img {
       margin: 5px;
       padding: 0;
-      max-width: 120px;
-      max-height: 110px;
+      max-width: 200px;
+      max-height: 150px;
     }
   }
 `;
