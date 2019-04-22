@@ -47,27 +47,21 @@ const StyledFooter = styled.div`
       padding-right: 2vw;
     }
     div {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 100%;
+
+    .social-icons {
+      display: flex;
+      justify-content: space-around;
+      padding-bottom: 5vh;
+    }
+    .contact-info {
+      display: flex;
       align-items: center;
-      margin-top: 20vh;
-    }
-    div:nth-child(2) {
-      position: relative;
-      bottom: 25vh;
-      left: 100vw;
-    }
-    div:nth-child(1) {
-      position: relative;
-      left: -100vw;
-      width: 100%;
+      justify-content: center;
     }
     img {
       height: 32px;
       padding-right: 2vw;
-    }
-    .icons {
-      padding-right: 18vw;
     }
     .hide {
       display: none;
@@ -99,7 +93,7 @@ const Footer = props => {
             <p>Language</p>
             <p>GDPR</p>
           </div>
-          <div>
+          <div className="social-icons">
             <a href={footerData.facebook}>
               <img className="icons" src={FbLogo} alt="Facebook Logo" />
             </a>
@@ -113,7 +107,7 @@ const Footer = props => {
               <img className="icons" src={InstagramLogo} alt="Instagram Logo" />
             </a>
           </div>
-          <div>
+          <div className="contact-info">
             <img src={EmailLogo} alt="Email Logo" />
             <p>{footerData.email ? footerData.email : "email@email.com"}</p>
             <img src={PhoneLogo} alt="Phone Logo" />
