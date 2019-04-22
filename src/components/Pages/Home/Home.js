@@ -4,12 +4,13 @@ import ImageContainer from "../../Global/ImageContainer";
 import TextContainer from "./TextContainer.js";
 import PageHeaderText from "../../Global/PageHeaderText";
 import ContactContainer from "./Contact.js";
-// import Footer from "../../Global/Footer.js";
+import Footer from "../../Global/Footer.js";
 import Container from "../../Global/Container";
 import Logo from "./Logo.svg";
-import ImageOne from "../../../images/get-involved_landing-page_illustration.png";
-import ImageTwo from "../../../images/who-we-arelanding-page_illustration.png";
-import ImageThree from "../../../images/what-we-do_landing-page_illustration.png";
+
+import GetInvolved from "../../Global/images/landing/get-involved_landing-page_illustration.png";
+import WhoWeAre from "../../Global/images/landing/who-we-arelanding-page_illustration.png";
+import WhatWeDo from "../../Global/images/landing/what-we-do_landing-page_illustration.png";
 
 const StyledLogo = styled.div`
   display: flex;
@@ -17,24 +18,26 @@ const StyledLogo = styled.div`
   align-items: center;
   height: 100vh;
   width: 50%;
+
+  img {
+    height: 350px;
+    transition: 1s;
+  }
+  img:hover {
+    transform: scale3d(1.2, 1.2, 1.2) skew(10deg, -4deg);
+    transition: all 0.7s ease-in-out;
+  }
   div {
     background: #ebdccd;
     border-radius: 50%;
     height: 300px;
     width: 300px;
+    transition: 1s;
   }
-  img {
-    height: 350px;
-  }
-  img:hover {
-    transform: scale3d(1.1, 1.1, 1.1);
-    transition: all 1s ease-in-out;
-  }
+
   div:hover {
-    transform: translate3d(10px, 0px, 0px) skew(-5deg, 4deg);
-    transform-style: preserve-3d;
-    will-change: transform;
-    transition: all 1s ease-in-out;
+    transform: translate3d(10px, 0px, 0px) skew(-10deg, 4deg);
+    transition: all 0.7s ease;
   }
 `;
 
@@ -102,21 +105,22 @@ const Home = props => {
           content={content ? content.get_involved : ""}
           backgroundButton="#0021B8"
         />
-        <ImageContainer background={ImageOne} />
+        <ImageContainer background="#F9DC0E" img={GetInvolved} />
       </Container>
       <Container>
         <TextContainer
           content={content ? content.who_we_are : ""}
           backgroundButton="#F9DC0E"
         />
-        <ImageContainer background={ImageTwo} />
+
+        <ImageContainer img={WhoWeAre} />
       </Container>
       <Container>
         <TextContainer
           content={content ? content.what_we_do : ""}
           backgroundButton="#F43F2A"
         />
-        <ImageContainer background={ImageThree} />
+        <ImageContainer img={WhatWeDo} />
       </Container>
       <ContactContainer
         title="Wanna help out?"
@@ -125,7 +129,7 @@ const Home = props => {
         contactUs="Contact Us"
         bGiro="Bankgiro: 5138-5854"
       />
-      {/* <Footer/> */}
+      <Footer />
     </StyledHome>
   );
 };
