@@ -8,6 +8,7 @@ import Gathering from "./Gathering";
 import Map from "./Map";
 import Footer from "../../Global/Footer";
 import Container from "../../Global/Container";
+import Map2 from "./Map2.js";
 
 const StyledGetInvolved = styled.div``;
 
@@ -35,7 +36,7 @@ const GetInvolved = props => {
       </Container>
       <Container>
         <Find content={content ? content.locations : ""} />
-        <Map content={content ? content.locations : ""} />
+        <Map2 content={content ? content.locations : ""} />
       </Container>
       <Container>
         <Find content={content ? content.activities : ""} />
