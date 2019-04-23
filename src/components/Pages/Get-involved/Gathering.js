@@ -18,17 +18,13 @@ const WelcomeText = styled.div`
   position: relative;
   width: 100%;
   height: 34%;
-  background-color: silver;
   > h2 {
     position: absolute;
     left: 25.35%;
     right: 28.03%;
     top: 8.33%;
-    /* bottom: 87.67%; */
-    font-family: Heebo;
-    font-style: normal;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 3vh;
     line-height: normal;
     color: #343434;
   }
@@ -38,18 +34,21 @@ const WelcomeText = styled.div`
     left: 25.51%;
     right: 25.35%;
     top: 14.78%;
-    font-family: Heebo;
-    font-style: normal;
     font-weight: 300;
-    font-size: 16px;
-    line-height: normal;
+    font-size: 2vh;
     color: #343434;
   }
 `;
 const AvailableLocation = styled.div`
   width: 100%;
   height: 34%;
-  background-color: yellow;
+  .img {
+    width: 100%;
+    height: 100%;
+    background: url(${GatheringImage});
+    background-size: cover;
+    background-position: center;
+  }
 `;
 
 const ContactActivities = styled.div`
@@ -58,16 +57,12 @@ const ContactActivities = styled.div`
   grid-template-rows: 25% 25% 25% 25%;
   width: 100%;
   height: 33%;
-  background-color: grey;
 
   > p {
     left: 0.16%;
     right: 0.79%;
-    font-family: Heebo;
-    font-style: normal;
     font-weight: 300;
-    font-size: 16px;
-    line-height: normal;
+    font-size: 2vh;
     text-align: center;
     color: #222222;
   }
@@ -80,11 +75,8 @@ const ContactActivities = styled.div`
       right: 50.71%;
       top: 80.44%;
       bottom: 16.89%;
-      font-family: Heebo;
-      font-style: normal;
       font-weight: 300;
-      font-size: 16px;
-      line-height: normal;
+      font-size: 2vh;
       text-align: center;
       color: #1f1f1f;
     }
@@ -141,25 +133,26 @@ const CollectionActivities = props => {
       </WelcomeText>
 
       <AvailableLocation>
-        <img alt="" src={GatheringImage} />
+        <div className="img" />
+        {/* <img alt="" src={GatheringImage} /> */}
       </AvailableLocation>
 
       <ContactActivities>
-        <p>Availeble at following Locations</p>
+        <p>Available at the following locations:</p>
 
         <StyleForLoction>
           <div>
             <img alt="loco" src={location} />
-            <p>Location</p>
+            <p>Vänersborg</p>
           </div>
 
           <div>
             <img alt="" src={location} />
-            <p>Location</p>
+            <p>Göteborg</p>
           </div>
         </StyleForLoction>
 
-        <p>Contact us to apply or learn more</p>
+        <p>Contact us to apply or learn more:</p>
         <IconContact>
           <img alt="" src={facebook} />
           <img alt="" src={phone} />
