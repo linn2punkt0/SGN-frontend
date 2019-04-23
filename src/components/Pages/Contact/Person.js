@@ -39,15 +39,14 @@ const Content = styled.div`
   background-size: cover;
   max-width: 100%;
   height: 400px;
-  padding-left: 0;
-  padding-right: 0;
+
   h4 {
     word-break: break-all;
   }
+
 @media (min-width: 769px)  {
-    max-width: 90%;
     margin-left: 1vw;
-    margin-right: 1vw;
+    margin-right: 0.5vw;
 }
     
 `;

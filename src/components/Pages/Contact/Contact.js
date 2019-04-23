@@ -31,9 +31,7 @@ const StyledContact = styled.div`
       margin-top: 30vh;
           
         h1, h4, p {
-          margin-right: 5vw;
-          margin-left: 3vw;
-          margin-bottom: 5vh;
+          margin-left: 5vw;
         }
         h1 {
             margin-bottom: 0;
@@ -65,16 +63,26 @@ const StyledContact = styled.div`
         
     }
     .personContainerBig {
-      margin-left: 2vw;
+      margin-left: 4vw;
+      margin-right: 4vw;
       display: grid;
       grid-template-columns: 1.7fr 1.7fr;
+      h1, h4, p {
+          margin-right: 1vw;
+          margin-left: 1vw;
+          margin-bottom: 1vw;
+        }
     }
     .personContainerSmall {
         margin-top: 20vh;
         margin-left: 2vw;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        
+        h1, h4, p {
+          margin-right: 1vw;
+          margin-left: 1vw;
+          margin-bottom: 1vw;
+        }
         img {
             margin-left: 1vw;
             margin-right: 1vw;
