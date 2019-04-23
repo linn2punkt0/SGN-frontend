@@ -104,7 +104,7 @@ const Home = props => {
 
 
         <TextContainer content={content ? content.get_involved : ""}backgroundButton="#0021B8"/>
-        <ImageContainer background="#2703BB"  />
+        <ImageContainer background="#2703BB" img={GetInvolved} />
 
 {/* 
         <TextContainer
