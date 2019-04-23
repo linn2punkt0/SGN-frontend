@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Form from "./Form";
+import Reveal from "react-reveal/Reveal";
 
 
 const StyledText = styled.div`
@@ -25,6 +26,7 @@ h2 {
 const Text = props => {
   return (
     <StyledText>
+    <Reveal top>
         <h2>We'd love to hear from you</h2>
         <h1>Contact Us</h1>
             <p>
@@ -33,6 +35,7 @@ const Text = props => {
             veniam, quis nostrud exercitation ullamco laboris.
             </p>
       <Form />
+      </Reveal>
     </StyledText>
   );
 };

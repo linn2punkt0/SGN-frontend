@@ -14,6 +14,7 @@ import ImageTwo from "../../../images/section-2.png";
 const StyledWhoWeAre = styled.div`
   @media (min-width: 769px) {
     .quote{
+      max-width: 500px;
       margin-top: 80vh;
       margin-left: 200px;
       font-weight: 500;
