@@ -181,7 +181,7 @@ const Map2 = props => {
         <div className="contact">
           <div className="contact-row">
             <div>
-              <h6>Ansvarig:</h6>
+              <h6>Contact:</h6>
               <img src={Phone} alt="Phone Logo" />
               <p>+46 722-89 10 18</p>
             </div>
