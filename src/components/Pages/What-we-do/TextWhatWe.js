@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
+import Reveal from "react-reveal/Reveal";
 const StyledTextContainer = styled.div`
   width: 50%;
   height: 100vh;
@@ -118,7 +118,9 @@ const TextWhatWe = props => {
   console.log(props.content);
   return (
     <StyledTextContainer>
+   
       <StyledForText>
+           <Reveal top>
         <Headerh4>{props.content ? props.content.type : "Type"}</Headerh4>
 
         <Headerh4>{props.content ? props.content.title : "Title"}</Headerh4>
@@ -132,13 +134,16 @@ const TextWhatWe = props => {
             ? props.content.small_text
             : "Small text with project start-date"}
         </h6>
+         </Reveal>
       </StyledForText>
+     
       <LinkReadMore
         colorButton={props.backgroundButton}
         href={props.content ? props.content.button_link : "/"}
       >
         {props.content ? props.content.button_text : "Button text"}
       </LinkReadMore>
+      
     </StyledTextContainer>
   );
 };
