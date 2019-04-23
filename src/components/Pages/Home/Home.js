@@ -7,7 +7,6 @@ import ContactContainer from "./Contact.js";
 import Footer from "../../Global/Footer.js";
 import Container from "../../Global/Container";
 import Logo from "./Logo.svg";
-
 import GetInvolved from "../../Global/images/landing/get-involved_landing-page_illustration.png";
 import WhoWeAre from "../../Global/images/landing/who-we-arelanding-page_illustration.png";
 import WhatWeDo from "../../Global/images/landing/what-we-do_landing-page_illustration.png";
