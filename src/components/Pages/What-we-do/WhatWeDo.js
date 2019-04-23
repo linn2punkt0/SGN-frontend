@@ -4,10 +4,8 @@ import ImageContainer from "../../Global/ImageContainer";
 // import ProjectText from "./ProjectText";
 import PageHeaderText from "../../Global/PageHeaderText";
 import ContactUsFooter from "../../Global/ContactUsFooter";
-import Container from "../../Global/Container"
-import TextWhatWe from "./TextWhatWe"
-
-
+import Container from "../../Global/Container";
+import TextWhatWe from "./TextWhatWe";
 
 const StyledWhatWeDo = styled.div`
   height: 100%;
@@ -19,11 +17,10 @@ const StyledWhatWeDo = styled.div`
   overflow-x: hidden;
 `;
 
-
 const WhatWeDo = props => {
   // Fetch all projects from API
   const [projects, setProjects] = useState(null);
-console.log('usch')
+  console.log("usch");
   useEffect(() => {
     fetchProjects();
   }, []);
@@ -62,11 +59,50 @@ console.log('usch')
     return randomColor;
   };
 
-//   const getGradient = (props) => {
-//  const grade = {background: "linear-gradient(180deg, rgba(39, 3, 187, 0.08) 47.4%, pink 87.5%)"}
-//  return grade;
-// }
- 
+  //   const getGradient = (props) => {
+  //  const grade = {background: "linear-gradient(180deg, rgba(39, 3, 187, 0.08) 47.4%, pink 87.5%)"}
+  //  return grade;
+  // }
+
+  const firstText = {
+    type: "Project",
+    title: "Strong Women’s Network",
+    description:
+      "Strong Women 's Network SKN' s goal is to create a meeting place for asylum seekers, newly arrived and already Swedish - established women in order to promote intercultural dialogue among women Strong Women 's Network SKN' s goal is.",
+    small_text: "Started 2016-08-21 till present",
+    button_text: "Official Website",
+    button_link: "",
+    slide_text_one:
+      "This is the story of Gina. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor lectus, bibendum.",
+    slide_text_two:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor lectus, bibendum at volutpat ac, gravida vel nisl. Pellentesque dolor lectus, bibendum at volutpat ac."
+  };
+  const secondText = {
+    type: "Project",
+    title: "Double Cup",
+    description:
+      "Double Cup’s goal is to create a meeting place for asylum seekers, newly arrived and already Swedish - established women in order to promote intercultural dialogue among women Strong Women 's Network SKN' s goal is.",
+    small_text: "Started 2018-02-21 to present",
+    button_text: "Official Website",
+    button_link: "",
+    slide_text_one:
+      "The best place for seamless integration. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor lectus.",
+    slide_text_two:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor lectus, bibendum at volutpat ac, gravida vel nisl. Pellentesque dolor lectus, bibendum at volutpat ac."
+  };
+  const thirdText = {
+    type: "Event",
+    title: "River Of Light",
+    description:
+      "Why it started. Under The Same Sun dance group Paragraph Heebo Sans Light Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor lectus, bibendum at volutpat ac, gravida vel nisl. Pellentesque dolor lectus, bibendum at gravida vel nisl.",
+    small_text: "Held 2018-02-20",
+    button_text: "View Gallery",
+    button_link: "",
+    slide_text_one:
+      "The whole cityscape projected the shimmer of an entire galaxy for a night. Lorem adipiscing elit. Pellentesque dolor lectus, bibendum.",
+    slide_text_two:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor lectus, bibendum at volutpat ac, gravida vel nisl. Pellentesque dolor lectus, bibendum at volutpat ac."
+  };
   // console.log(shadowColor)
   return (
     <StyledWhatWeDo>
@@ -75,7 +111,7 @@ console.log('usch')
       </Container>
 
       <Container>
-        <TextWhatWe />
+        <TextWhatWe content={firstText} />
         {/* <ProjectText color={getRandomColor} /> */}
         <ImageContainer
           background={getRandomColor}
@@ -85,7 +121,7 @@ console.log('usch')
       </Container>
 
       <Container>
-        <TextWhatWe />
+        <TextWhatWe content={secondText} />
         {/* <ProjectText color={getRandomColor} /> */}
         <ImageContainer
           background={getRandomColor}
@@ -95,7 +131,7 @@ console.log('usch')
       </Container>
 
       <Container>
-        <TextWhatWe />
+        <TextWhatWe content={thirdText} />
         {/* <ProjectText color={getRandomColor} /> */}
         <ImageContainer
           background={getRandomColor}
@@ -103,7 +139,7 @@ console.log('usch')
           // shadowImg={getGradient}
         />
       </Container>
-      <ContactUsFooter  />
+      <ContactUsFooter />
     </StyledWhatWeDo>
   );
 };

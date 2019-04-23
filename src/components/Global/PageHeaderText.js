@@ -9,7 +9,7 @@ import Fade from 'react-reveal/Fade';
 
 const StyledPageHeaderText = styled.div`
   width: 50%;
-  height:100vh;
+  height: 100vh;
   margin-bottom: 53px;
   /* position:absolute; */
   display: flex;
@@ -37,6 +37,8 @@ const StyledPageHeaderText = styled.div`
   p {
     font-weight: 300;
     max-width: 634px;
+    font-style: normal;
+    font-size: 24px;
   }
   a {
     font-weight: 500;
@@ -73,7 +75,7 @@ const PageHeaderText = props => {
         <div>
           <h5>{props.content ? props.content.tagline : "Tagline"}</h5>
           <h1>{props.content ? props.content.title : "Title"}</h1>
-          <p>{props.content ? props.content.descriptions : "Description"}</p>
+          <p>{props.content ? props.content.description : "Description"}</p>
           <h4>{props.content ? props.content.scroll : "Scroll down"}</h4>
         </div>
       </Fade>
