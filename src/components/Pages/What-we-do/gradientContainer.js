@@ -1,12 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import Hands from "./images/landing/get-involved_landing-page_illustration.png";
+// import Hands from "./images/landing/get-involved_landing-page_illustration.png";
 
 const StyledImageContainer = styled.div`
   background-color: ${props => props.background};
 
   &.gradient::after {
+    /* background: ${props => props.shadow}; */
+    background: linear-gradient(180deg, rgba(39, 3, 187, 0.08) 47.4%, #2703BB 87.5%);
     display: block;
+    /* position: absolute; */
     position: relative;
     width: 100%;
     height: 100vh;

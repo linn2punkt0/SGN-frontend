@@ -15,8 +15,6 @@ const StyledTextContainer = styled.div `
   font-size: 36px;
   position: relative;
   left: 5%;
-  /* left: 82px; */
-
   line-height: normal;
   color: #959595;
 

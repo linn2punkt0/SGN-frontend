@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import ImageContainer from "../../Global/ImageContainer";
+import GradientContainer from "./gradientContainer";
 // import ProjectText from "./ProjectText";
 import PageHeaderText from "../../Global/PageHeaderText";
 import ContactUsFooter from "../../Global/ContactUsFooter";
@@ -77,7 +77,7 @@ console.log('usch')
       <Container>
         <TextWhatWe />
         {/* <ProjectText color={getRandomColor} /> */}
-        <ImageContainer
+        <GradientContainer
           background={getRandomColor}
           imageProject="https://dummyimage.com/1324x720/21B8/aaa"
           // shadowImg={getGradient}
@@ -87,7 +87,7 @@ console.log('usch')
       <Container>
         <TextWhatWe />
         {/* <ProjectText color={getRandomColor} /> */}
-        <ImageContainer
+        <GradientContainer
           background={getRandomColor}
           imageProject="https://dummyimage.com/1324x720/FD22D/aaa"
           // shadowImg={getGradient}
@@ -97,7 +97,7 @@ console.log('usch')
       <Container>
         <TextWhatWe />
         {/* <ProjectText color={getRandomColor} /> */}
-        <ImageContainer
+        <GradientContainer
           background={getRandomColor}
           imageProject="https://dummyimage.com/1324x720/FAD0E/aaa"
           // shadowImg={getGradient}

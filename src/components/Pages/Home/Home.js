@@ -43,7 +43,8 @@ const StyledLogo = styled.div`
 
 const StyledHome = styled.div`
   position: relative;
-  display: grid;
+display: flex;
+flex-direction: column;
   height: 100%;
   width: 100%;
   background-attachment: fixed;
@@ -91,6 +92,7 @@ const Home = props => {
 
   return (
     <StyledHome>
+      
       <Container flexDirection="column">
         <PageHeaderText content={content ? content.header : ""} />
         <StyledLogo>
@@ -101,30 +103,25 @@ const Home = props => {
       </Container>
 
       <Container>
-
-
+{/* 
         <TextContainer content={content ? content.get_involved : ""}backgroundButton="#0021B8"/>
         <ImageContainer background="#2703BB"  />
-
-{/* 
+ */}
         <TextContainer
           content={content ? content.get_involved : ""}
           backgroundButton="#0021B8"
         />
         <ImageContainer background="#F9DC0E" img={GetInvolved} />
- */}
-
-
-
       </Container>
+
       <Container>
         <TextContainer
           content={content ? content.who_we_are : ""}
           backgroundButton="#F9DC0E"
         />
-
         <ImageContainer img={WhoWeAre} />
       </Container>
+
       <Container>
         <TextContainer
           content={content ? content.what_we_do : ""}
@@ -132,6 +129,7 @@ const Home = props => {
         />
         <ImageContainer img={WhatWeDo} />
       </Container>
+
       <ContactContainer
         title="Wanna help out?"
         textContact="Got a local or materials to lend? Send us a message!"
