@@ -7,6 +7,9 @@ import Fade from 'react-reveal/Fade';
 
 
 
+
+
+
 const StyledPageHeaderText = styled.div`
   width: 50%;
   height: 100vh;
@@ -71,14 +74,20 @@ const PageHeaderText = props => {
   return (
     <StyledPageHeaderText>
       <Header />
-      <Fade top delay={1400}>
         <div>
-          <h5>{props.content ? props.content.tagline : "Tagline"}</h5>
-          <h1>{props.content ? props.content.title : "Title"}</h1>
-          <p>{props.content ? props.content.description : "Description"}</p>
-          <h4>{props.content ? props.content.scroll : "Scroll down"}</h4>
+          <Fade delay={500}>
+            <h5>{props.content ? props.content.tagline : "Tagline"}</h5>
+          </Fade>
+          <Fade delay={600}>
+            <h1>{props.content ? props.content.title : "Title"}</h1>
+          </Fade>
+          <Fade delay={700}>
+            <p>{props.content ? props.content.description : "Description"}</p>
+          </Fade>
+          <Fade delay={800}>
+            <h4>{props.content ? props.content.scroll : "Scroll down"}</h4>
+          </Fade>
         </div>
-      </Fade>
     </StyledPageHeaderText>
   );
 };
