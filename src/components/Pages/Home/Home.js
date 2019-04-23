@@ -15,7 +15,7 @@ import WhatWeDo from "../../Global/images/landing/what-we-do_landing-page_illust
 const StyledLogo = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
+  padding-top: 15vh;
   height: 100vh;
   width: 50%;
 
@@ -104,7 +104,7 @@ const Home = props => {
 
 
         <TextContainer content={content ? content.get_involved : ""}backgroundButton="#0021B8"/>
-        <ImageContainer background="#2703BB"  />
+        <ImageContainer background="#2703BB" img={GetInvolved} />
 
 {/* 
         <TextContainer

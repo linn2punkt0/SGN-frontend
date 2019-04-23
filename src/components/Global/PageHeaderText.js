@@ -1,7 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import Header from "../../components/Pages/Contact/Header";
-import Reveal from "react-reveal/Reveal";
+import Fade from 'react-reveal/Fade';
+
+
+
+
 
 const StyledPageHeaderText = styled.div`
   width: 50%;
@@ -12,6 +16,7 @@ const StyledPageHeaderText = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+
 
   > * {
     padding-left: 82px;
@@ -66,14 +71,14 @@ const PageHeaderText = props => {
   return (
     <StyledPageHeaderText>
       <Header />
-      <Reveal top>
+      <Fade top delay={1400}>
         <div>
           <h5>{props.content ? props.content.tagline : "Tagline"}</h5>
           <h1>{props.content ? props.content.title : "Title"}</h1>
           <p>{props.content ? props.content.description : "Description"}</p>
           <h4>{props.content ? props.content.scroll : "Scroll down"}</h4>
         </div>
-      </Reveal>
+      </Fade>
     </StyledPageHeaderText>
   );
 };
