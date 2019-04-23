@@ -32,11 +32,12 @@ const StyledContact = styled.div`
           
         h1, h4, p {
           margin-right: 5vw;
-          margin-left: 5vw;
+          margin-left: 3vw;
           margin-bottom: 5vh;
         }
         h1 {
             margin-bottom: 0;
+            width:100%;
         }
     }
     .row  {
@@ -64,13 +65,13 @@ const StyledContact = styled.div`
         
     }
     .personContainerBig {
-
+      margin-left: 2vw;
       display: grid;
       grid-template-columns: 1.7fr 1.7fr;
     }
     .personContainerSmall {
         margin-top: 20vh;
-
+        margin-left: 2vw;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         
