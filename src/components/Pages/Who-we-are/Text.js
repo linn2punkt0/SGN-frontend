@@ -30,7 +30,11 @@ const Text = props => {
   return (
     <StyledText>
       <h1>{props.content ? props.content.title : "Title"}</h1>
-      <p>{props.content ? props.content.description : "Description"}</p>
+      <p>
+        {props.content
+          ? props.content.description
+          : "Paragraph Heebo Sans Light Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor lectus, bibendum at volutpat ac, gravida vel nisl. Pellentesque dolor lectus, bibendum at volutpat ac, gravida vel nisl. Light Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor lectus, bibendum at volutpat ac, gravida vel nisl. Pellentesque dolor lectus, bibendum at volutpat ac, gravida vel nisl."}
+      </p>
     </StyledText>
   );
 };

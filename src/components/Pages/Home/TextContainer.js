@@ -130,7 +130,11 @@ const TextContainer = props => {
       <StyledForText>
         <Reveal top>
           <Headerh2>{props.content ? props.content.title : "Title"}</Headerh2>
-          <p>{props.content ? props.content.description : "Description"}</p>
+          <p>
+            {props.content
+              ? props.content.description
+              : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor lectus, bibendum at volutpat ac, gravida vel nisl. Pellentesque dolor lectus, bibendum at volutpat ac."}
+          </p>
           <h6>{props.content ? props.content.small_text : "Small text"}</h6>
         </Reveal>
       </StyledForText>

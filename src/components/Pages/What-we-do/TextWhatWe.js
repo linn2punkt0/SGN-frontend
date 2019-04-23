@@ -122,7 +122,11 @@ const TextWhatWe = props => {
         <Headerh4>{props.content ? props.content.type : "Type"}</Headerh4>
 
         <Headerh4>{props.content ? props.content.title : "Title"}</Headerh4>
-        <p>{props.content ? props.content.description : "Description"}</p>
+        <p>
+          {props.content
+            ? props.content.description
+            : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor lectus, bibendum at volutpat ac, gravida vel nisl. Pellentesque dolor lectus, bibendum at volutpat ac."}
+        </p>
         <h6>
           {props.content
             ? props.content.small_text
