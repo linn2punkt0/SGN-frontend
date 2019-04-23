@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Reveal from 'react-reveal/Reveal';
 
 const ContactContainer = styled.div`
 display: flex;
@@ -61,14 +62,18 @@ const Contact = props => {
   return (
     <ContactContainer>
       <TitleContact>
+        <Reveal top>
           <h2>{props.title}</h2>
           <p>{props.textContact}</p>
+        </Reveal>
       </TitleContact>
 
       <ContactInfo>
+        <Reveal top>
           <p>{props.swishNr}</p>
           <a href="" >{props.contactUs}</a>
           <p>{props.bGiro}</p>
+        </Reveal>
       </ContactInfo>
     </ContactContainer>
   )

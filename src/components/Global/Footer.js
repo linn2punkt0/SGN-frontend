@@ -9,14 +9,13 @@ import PhoneLogo from "../ikoner/phone.svg";
 
 const StyledFooter = styled.div`
   @media (min-width: 769px) {
-    grid-column: 1 / 3;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     font-weight: 300;
     font-size: 16px;
-    height: 30vh;
+    height: 20vh;
     width: 100%;
     div {
       width: 100%;
@@ -38,14 +37,34 @@ const StyledFooter = styled.div`
       height: 24px;
     }
   }
+
   @media (min-width: 320px) and (max-width: 767px) {
+    font-size: 16px;
+    display: flex;
     a {
     }
     p {
+      padding-right: 2vw;
     }
     div {
+    width: 100%;
+
+    .social-icons {
+      display: flex;
+      justify-content: space-around;
+      padding-bottom: 5vh;
+    }
+    .contact-info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     img {
+      height: 32px;
+      padding-right: 2vw;
+    }
+    .hide {
+      display: none;
     }
   }
 `;
@@ -70,28 +89,28 @@ const Footer = props => {
     <StyledFooter>
       {footerData && (
         <div>
-          <div>
+          <div className="hide">
             <p>Language</p>
             <p>GDPR</p>
           </div>
-          <div>
+          <div className="social-icons">
             <a href={footerData.facebook}>
-              <img src={FbLogo} />
+              <img className="icons" src={FbLogo} alt="Facebook Logo" />
             </a>
             <a href={footerData.twitter}>
-              <img src={TwitterLogo} />
+              <img className="icons" src={TwitterLogo} alt="Twitter Logo" />
             </a>
-            <a href="">
-              <img src={WhatsAppLogo} />
+            <a href={footerData.whatsapp}>
+              <img className="icons" src={WhatsAppLogo} alt="Whats App Logo" />
             </a>
             <a href={footerData.instagram}>
-              <img src={InstagramLogo} />
+              <img className="icons" src={InstagramLogo} alt="Instagram Logo" />
             </a>
           </div>
-          <div>
-            <img src={EmailLogo} />
+          <div className="contact-info">
+            <img src={EmailLogo} alt="Email Logo" />
             <p>{footerData.email ? footerData.email : "email@email.com"}</p>
-            <img src={PhoneLogo} />
+            <img src={PhoneLogo} alt="Phone Logo" />
             <p>{footerData.phone ? footerData.phone : "1234567"}</p>
           </div>
         </div>

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import ImageContainer from "../../Global/ImageContainer";
 import Academic from "../../ikoner/academic-club.svg";
 import Sport from "../../ikoner/sports-club.svg";
 import Kids from "../../ikoner/kids-club.svg";
@@ -10,15 +9,13 @@ import Mail from "../../ikoner/email.svg";
 import LocationLogo from "../../ikoner/location.svg";
 import Locations from "./Locations";
 
-
 const StyledActivities = styled.div`
-  overflow-y: scroll;
   width: 50vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-
+  align-items: center;
 `;
 const StyledIcons = styled.div`
   display: flex;
@@ -28,7 +25,7 @@ const StyledIcons = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;
- /*   grid-template-rows: 25% 25% 25% 25%;*/
+    /*   grid-template-rows: 25% 25% 25% 25%;*/
   }
   li {
     margin-right: 1vw;
@@ -39,7 +36,7 @@ const StyledIcons = styled.div`
       height: 40px;
     }
     span {
-      border-bottom: 1px solid #1F1F1F;
+      border-bottom: 1px solid #1f1f1f;
       display: flex;
       align-items: center;
     }
@@ -71,7 +68,8 @@ const StyledTextArea = styled.div`
     font-weight: 500;
     font-size: 24px;
   }
-  h4, p {
+  h4,
+  p {
     font-weight: 300;
     font-size: 16px;
   }
@@ -105,7 +103,6 @@ const StyledMiniFooter = styled.div`
     font-size: 16px;
     padding-right: 0.7vw;
   }
-
 `;
 
 const Map = props => {
@@ -131,74 +128,78 @@ const Map = props => {
     <StyledActivities>
       <div>
         <StyledTextArea>
-          {/*<img src="https://cdn1.tekrevue.com/wp-content/uploads/2015/04/map-location-pin-960x540.jpg"
-          />*/}
-        <div>
-          <h1>Värnesborg</h1>
-          <p>
-            Vänersborg is the head seat of our organisation and has a wide
-            variety of activities and branches.
-          </p>
+          <img src="https://cdn1.tekrevue.com/wp-content/uploads/2015/04/map-location-pin-960x540.jpg" />
+          <div>
+            <h1>Vänersborg</h1>
+            <p>
+              Vänersborg is the head seat of our organisation and has a wide
+              variety of activities and branches.
+            </p>
           </div>
           <h4>Feautured Activities</h4>
         </StyledTextArea>
         <StyledIcons>
-        <div>
-          <ul>
-            <li>
-              <span>
-                <img src={Sport} />
-                <h5>
-                  {activities.first_activity
-                    ? activities.first_activity
-                    : "Sports Club"}
-                </h5>
-              </span>
-            </li>
-            <li>
-              <span>
-                <img src={Academic} />
-                <h5>
-                  {activities.second_activity
-                    ? activities.second_activity
-                    : "Womens Club"}
-                </h5>
-              </span>
-            </li>
-            <li>
-              <span>
-                <img src={Academic} />
-                <h5>
-                  {activities.third_activity
-                    ? activities.third_activity
-                    : "Academic Club"}
-                </h5>
-              </span>
-            </li>
-            <li>
-              <span>
-                <img src={Kids} />
-                <h5>
-                  {activities.fourth_activity
-                    ? activities.fourth_activity
-                    : "Kids Club"}
-                </h5>
-              </span>
-            </li>
-          </ul>
-        </div>
+          <div>
+            <ul>
+              <li>
+                <span>
+                  <img src={Sport} alt="Sport Logo" />
+                  <h5>
+                    {activities.first_activity
+                      ? activities.first_activity
+                      : "Sports Club"}
+                  </h5>
+                </span>
+              </li>
+              <li>
+                <span>
+                  <img src={Academic} alt="Book Logo" />
+                  <h5>
+                    {activities.second_activity
+                      ? activities.second_activity
+                      : "Womens Club"}
+                  </h5>
+                </span>
+              </li>
+              <li>
+                <span>
+                  <img src={Academic} alt="Book Logo" />
+                  <h5>
+                    {activities.third_activity
+                      ? activities.third_activity
+                      : "Academic Club"}
+                  </h5>
+                </span>
+              </li>
+              <li>
+                <span>
+                  <img src={Kids} alt="Child Logo" />
+                  <h5>
+                    {activities.fourth_activity
+                      ? activities.fourth_activity
+                      : "Kids Club"}
+                  </h5>
+                </span>
+              </li>
+            </ul>
+          </div>
         </StyledIcons>
         <StyledMiniFooter>
           <div>
-              <img src={Phone} />
-              <h1>Ansvarig:</h1><p>+46 722-89 10 18</p>
+            <img src={Phone} alt="Phone Logo" />
+            <h1>Ansvarig:</h1>
+            <p>+46 722-89 10 18</p>
           </div>
           <div>
-              <img src={LocationLogo} />
-              <span>Vägens väg 15 433 98 Värnersborg</span>
+            <img src={LocationLogo} alt="Locaton Logo" />
+            <span>Vägens väg 15</span>
           </div>
           <div>
-              <img src={Mail} /><p>name@nameson.se</p>
+            <img src={Mail} alt="Mail Logo" />
+            <p>name@nameson.se</p>
+          </div>
+          <div>
+            <span>433 98 Vänersborg</span>
           </div>
         </StyledMiniFooter>
       </div>

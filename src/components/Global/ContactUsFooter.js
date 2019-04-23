@@ -4,17 +4,17 @@ import Footer from "./Footer";
 import { Link } from "@reach/router";
 
 const StyledContactUsFooter = styled.div`
-  grid-column: 1 / 3;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   width: 100vw;
-  height: 94px;
+  height: 551px;
   font-weight: 300;
   font-size: 64px;
 
-  a {
+  > a {
+    margin-top: 180px;
     color: #1f1f1f;
     text-decoration: none;
   }
@@ -23,7 +23,7 @@ const StyledContactUsFooter = styled.div`
 const ContactUsFooter = props => {
   return (
     <StyledContactUsFooter>
-      <Link to="/contact">Contact</Link>
+      <Link to="/contact">Contact us</Link>
       <Footer />
     </StyledContactUsFooter>
   );

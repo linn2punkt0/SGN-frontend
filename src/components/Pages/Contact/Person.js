@@ -1,15 +1,20 @@
 import React from "react";
 import styled from "styled-components";
-import PropTypes from "prop-types";
+
+
 
 const StyledPerson = styled.div`
-  img {
-    width: 100%;
+margin-top: 37vh;
+  div {
+    display: flex;
+    flex-direction: column;
   }
   p {
+    margin-top: 0;
     max-width: 80%;
     font-weight: 300;
     font-size: 24px;
+    height: 10vh;
   }
   h1 {
     font-weight: 300;
@@ -19,28 +24,44 @@ const StyledPerson = styled.div`
   h4 {
     font-weight: 400;
     font-size: 24px;
+    margin-top: 1vh;
   }
-  /* .image {
-    width: 100%;
-    height: 100px;
-    background: url(${props => props.contactImage});
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-  } */
+@media (min-width: 769px)  {
+  .hide {
+    display: none;
+  }
+ }
+`;
+/* Images */
+const Content = styled.div`
+  background-image: url(${props => props.img});
+  background-position: center;
+  background-size: cover;
+  max-width: 100%;
+  height: 400px;
+  padding-left: 0;
+  padding-right: 0;
+  h4 {
+    word-break: break-all;
+  }
+@media (min-width: 769px)  {
+    max-width: 90%;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+    
 `;
 
 const Person = props => {
   return (
     <StyledPerson>
-      {/* <div className="image" /> */}
-      <img src={props.contactImage ? props.contactImage : "Image"} />
-      <h1>{props.contactName ? props.contactName : "Name"}</h1>
-      <p>
-        {props.contactDescription ? props.contactDescription : "Description"}
-      </p>
-      <h4>{props.contactEmail ? props.contactEmail : "Email"}</h4>
-      <h4>{props.contactPhone ? props.contactPhone : "Phone"}</h4>
+    <Content img={props.contactImage} />
+     <div>
+        <h1>{props.contactName ? props.contactName : "Name"}</h1>
+        <p>{props.contactDescription ? props.contactDescription : "Description"}</p>
+        <h4>{props.contactEmail ? props.contactEmail : "Email"}</h4>
+        <h4 className="hide">{props.contactPhone ? props.contactPhone : "Phone"}</h4>
+      </div>
     </StyledPerson>
   );
 };

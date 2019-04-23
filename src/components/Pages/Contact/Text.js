@@ -4,7 +4,7 @@ import Form from "./Form";
 
 
 const StyledText = styled.div`
-
+margin-top: 22vh;
 h1, h2, p {
     font-weight: 300;
 }

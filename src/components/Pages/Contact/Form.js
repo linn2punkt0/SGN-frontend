@@ -48,6 +48,7 @@ button {
 	font-size 24px;
 	font-weight: 500;
 	padding-left: 0px;
+	background: #FDFDFD;
 }
 select {
 	background-color: #FDFDFD;
