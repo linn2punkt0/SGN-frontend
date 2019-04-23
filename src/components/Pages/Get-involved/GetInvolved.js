@@ -2,15 +2,27 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Find from "./Find";
 import PageHeaderText from "../../Global/PageHeaderText";
-import ImageContainer from "../../Global/ImageContainer";
 import MemberForm from "./MemberForm";
 import Gathering from "./Gathering";
-import Map from "./Map";
 import Footer from "../../Global/Footer";
 import Container from "../../Global/Container";
 import Map2 from "./Map2.js";
+import HeaderImage from "../../../images/get-involved_hero.png";
 
-const StyledGetInvolved = styled.div``;
+const StyledGetInvolved = styled.div`
+  max-width: 100vw;
+
+  .header-image {
+    height: 100vh;
+    width: 50%;
+    max-height: 449px;
+    margin-top: 10vh;
+    background: url(${HeaderImage});
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+`;
 
 const GetInvolved = props => {
   const [content, setContent] = useState(null);
@@ -33,7 +45,7 @@ const GetInvolved = props => {
     <StyledGetInvolved>
       <Container>
         <PageHeaderText content={content ? content.header : ""} />
-        <ImageContainer background="lightpink" />
+        <div className="header-image" />
       </Container>
       <Container>
         <Find content={content ? content.locations : ""} />
