@@ -43,8 +43,8 @@ const StyledLogo = styled.div`
 
 const StyledHome = styled.div`
   position: relative;
-display: flex;
-flex-direction: column;
+  display: flex;
+  flex-direction: column;
   height: 100%;
   width: 100%;
   background-attachment: fixed;
@@ -79,6 +79,7 @@ const Home = props => {
 
   useEffect(() => {
     fetchContent();
+    window.scrollTo(0, 0);
   }, []);
 
   const fetchContent = () => {
@@ -92,7 +93,6 @@ const Home = props => {
 
   return (
     <StyledHome>
-      
       <Container flexDirection="column">
         <PageHeaderText content={content ? content.header : ""} />
         <StyledLogo>
@@ -103,7 +103,7 @@ const Home = props => {
       </Container>
 
       <Container>
-{/* 
+        {/* 
         <TextContainer content={content ? content.get_involved : ""}backgroundButton="#0021B8"/>
         <ImageContainer background="#2703BB"  />
  */}

@@ -39,6 +39,7 @@ const WhatWeDo = props => {
   const [content, setContent] = useState(null);
   useEffect(() => {
     fetchContent();
+    window.scrollTo(0, 0);
   }, []);
 
   const fetchContent = () => {

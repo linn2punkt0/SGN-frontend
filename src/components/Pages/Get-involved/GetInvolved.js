@@ -17,6 +17,7 @@ const GetInvolved = props => {
 
   useEffect(() => {
     fetchContent();
+    window.scrollTo(0, 0);
   }, []);
 
   const fetchContent = () => {

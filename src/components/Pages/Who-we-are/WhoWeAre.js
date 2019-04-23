@@ -12,11 +12,12 @@ import ImageOne from "../../../images/section-1.png";
 import ImageTwo from "../../../images/section-2.png";
 
 const StyledWhoWeAre = styled.div`
+max-width: 100vw;
   @media (min-width: 769px) {
     .quote{
       max-width: 500px;
       margin-top: 80vh;
-      margin-left: 200px;
+      margin-left: 20vh;
       font-weight: 500;
       font-size: 16px;
       color: white;
@@ -71,6 +72,7 @@ const WhoWeAre = props => {
   const [content, setContent] = useState(null);
   useEffect(() => {
     fetchContent();
+    window.scrollTo(0, 0);
   }, []);
   const fetchContent = () => {
     fetch(`http://wordplate.test/wp-json/wp/v2/pages?slug=who-we-are`)
