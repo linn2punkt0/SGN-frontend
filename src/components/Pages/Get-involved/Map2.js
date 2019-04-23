@@ -9,6 +9,8 @@ import Mail from "../../ikoner/email.svg";
 import LocationLogo from "../../ikoner/location.svg";
 import Locations from "./Locations";
 import Woman from "../../ikoner/womens-club.svg";
+import Reveal from 'react-reveal/Reveal';
+import Fade from 'react-reveal/Fade';
 
 const StyledMap2 = styled.div`
   width: 50%;
@@ -117,14 +119,18 @@ const Map2 = props => {
   };
   return (
     <StyledMap2>
+    <Reveal right>
       <img src="https://cdn1.tekrevue.com/wp-content/uploads/2015/04/map-location-pin-960x540.jpg" />
+    </Reveal>
       <div className="container">
+      <Fade right delay={300}>
         <h1>Vänersborg</h1>
         <p>
           Vänersborg is the head seat of our organisation and has a wide variety
           of activities and branches.
         </p>
-
+      </Fade>
+      <Fade right delay={400}>
         <div className="featured">
           <p>Feautured Activities:</p>
 
@@ -166,8 +172,10 @@ const Map2 = props => {
             </div>
           </div>
         </div>
+      </Fade>
       </div>
 
+      <Fade right delay={500}>
       <div className="contact">
         <div className="contact-row">
           <div>
@@ -190,6 +198,7 @@ const Map2 = props => {
           </div>
         </div>
       </div>
+      </Fade>
     </StyledMap2>
   );
 };
