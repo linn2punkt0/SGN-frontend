@@ -2,11 +2,30 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledProjectText = styled.div`
-  height: 100%;
+  width: 50%;
+  height: 100vh;
+  top: 6%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 82px;
+  /* position: relative; */
+  position: absolute;
+  font-family: "Heebo";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 36px;
+  left: 82px;
+  line-height: normal;
+  color: #959595;
+
+  @media (min-width: 320px) and (max-width: 767px) {
+  height: 50vh;
+  width: 100%;
+  top: 0;
+  /* justify-content: space-between; */
+  padding: 8%;
+  left: 0;
+   }
   .type {
     font-weight: 500;
     font-size: 24px;

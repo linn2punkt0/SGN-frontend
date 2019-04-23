@@ -1,27 +1,29 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import ImageContainer from "../../Global/ImageContainer";
-import ProjectText from "./ProjectText";
+// import ProjectText from "./ProjectText";
 import PageHeaderText from "../../Global/PageHeaderText";
 import ContactUsFooter from "../../Global/ContactUsFooter";
+import Container from "../../Global/Container"
+import TextWhatWe from "./TextWhatWe"
+
+
 
 const StyledWhatWeDo = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 100vh 100vh 100vh 100vh 60vh;
-
+  height: 100%;
+  width: 100%;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   overflow-x: hidden;
-  position: relative;
 `;
+
 
 const WhatWeDo = props => {
   // Fetch all projects from API
   const [projects, setProjects] = useState(null);
-
+console.log('usch')
   useEffect(() => {
     fetchProjects();
   }, []);
@@ -56,19 +58,52 @@ const WhatWeDo = props => {
 
   const getRandomColor = () => {
     let randomColor = colors[Math.floor(Math.random() * colors.length)];
+    // const boxShadow = `{{background: linear-gradient(180deg, rgba(39, 3, 187, 0.08) 47.4%, ${randomColor} 87.5%)}}`
     return randomColor;
   };
 
+//   const getGradient = (props) => {
+//  const grade = {background: "linear-gradient(180deg, rgba(39, 3, 187, 0.08) 47.4%, pink 87.5%)"}
+//  return grade;
+// }
+ 
+  // console.log(shadowColor)
   return (
     <StyledWhatWeDo>
-      <PageHeaderText content={content ? content.header : ""} />
-      <ProjectText color={getRandomColor} />
-      <ImageContainer background={getRandomColor} />
-      <ProjectText color={getRandomColor} />
-      <ImageContainer background={getRandomColor} />
-      <ProjectText color={getRandomColor} />
-      <ImageContainer background={getRandomColor} />
-      <ContactUsFooter />
+      <Container>
+        <PageHeaderText content={content ? content.header : ""} />
+      </Container>
+
+      <Container>
+        <TextWhatWe />
+        {/* <ProjectText color={getRandomColor} /> */}
+        <ImageContainer
+          background={getRandomColor}
+          imageProject="https://dummyimage.com/1324x720/21B8/aaa"
+          // shadowImg={getGradient}
+        />
+      </Container>
+
+      <Container>
+        <TextWhatWe />
+        {/* <ProjectText color={getRandomColor} /> */}
+        <ImageContainer
+          background={getRandomColor}
+          imageProject="https://dummyimage.com/1324x720/FD22D/aaa"
+          // shadowImg={getGradient}
+        />
+      </Container>
+
+      <Container>
+        <TextWhatWe />
+        {/* <ProjectText color={getRandomColor} /> */}
+        <ImageContainer
+          background={getRandomColor}
+          imageProject="https://dummyimage.com/1324x720/FAD0E/aaa"
+          // shadowImg={getGradient}
+        />
+      </Container>
+      <ContactUsFooter  />
     </StyledWhatWeDo>
   );
 };

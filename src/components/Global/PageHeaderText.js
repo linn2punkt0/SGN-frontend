@@ -4,7 +4,9 @@ import Header from "../../components/Pages/Contact/Header";
 
 const StyledPageHeaderText = styled.div`
   width: 50%;
+  height:100vh;
   margin-bottom: 53px;
+  /* position:absolute; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;

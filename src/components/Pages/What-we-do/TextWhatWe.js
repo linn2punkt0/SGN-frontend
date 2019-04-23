@@ -9,12 +9,14 @@ const StyledTextContainer = styled.div `
   display: flex;
   flex-direction: column;
   justify-content: center;
-  position: relative;
   font-family: "Heebo";
   font-style: normal;
   font-weight: 300;
   font-size: 36px;
-  left: 82px;
+  position: relative;
+  left: 5%;
+  /* left: 82px; */
+
   line-height: normal;
   color: #959595;
 
@@ -22,7 +24,6 @@ const StyledTextContainer = styled.div `
   height: 50vh;
   width: 100%;
   top: 0;
-  /* justify-content: space-between; */
   padding: 8%;
   left: 0;
    }
@@ -45,6 +46,8 @@ const StyledForText = styled.div`
     /* margin: 10% 0 0 0; */
     width: 70%;
     height: 45%;
+    font-weight: 300;
+    font-size: 24px;
   }
   >h6{
     margin: 1% 0 0 0;
@@ -70,18 +73,20 @@ const StyledForText = styled.div`
       font-weight: 300;
       font-size: 16px;
       line-height: 30px;
-      width: 85%;
+      /* width: 85%; */
+      
      }
     }
   `
-  const Headerh2 = styled.h2`
-  color: #1F1F1F;
+  const Headerh4 = styled.h4`
+
   margin: 0;
   font-family: Heebo;
   font-style: normal;
   font-weight: 300;
   font-size: 36px;
   line-height: normal;
+    color: rgba(31, 31, 31, 0.45);
 
 @media (min-width: 320px) and (max-width: 767px) {
     font-family: Heebo;
@@ -104,12 +109,7 @@ const LinkReadMore = styled.a`
   text-align: center;
   align-self: flex-start;
   margin: 0;
-  &:hover{
-    background-color: white;
-    color: black;
-  }
-
- 
+  
  @media (min-width: 320px) and (max-width: 767px) {
 font-family: Heebo;
 font-style: normal;
@@ -122,20 +122,35 @@ line-height: 30px;
 
 
 
-const TextContainer = props => {
+const TextWhatWe = props => {
 
   return (
     <StyledTextContainer>
       <StyledForText>
-      <Headerh2>{props.content ? props.content.title : "Title"}</Headerh2>
-      <p>{props.content ? props.content.description : "Description"}</p>
-      <h6>{props.content ? props.content.small_text : "Small text"}</h6>
+      <Headerh4>
+      {/* {props.content ? props.content.title : "Title"} */}
+      Project
+      </Headerh4>
+
+      <Headerh4>Title</Headerh4>
+      <p>
+      {/* {props.content ? props.content.description : "Description"} */}
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+        minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat.
+      </p>
+      <h6>
+      {props.content ? props.content.small_text : "Small text"}
+      Small text with project start-date
+      </h6>
       </StyledForText>
       <LinkReadMore colorButton={props.backgroundButton} href={props.content ? props.content.button_link : "/"}>
-        {props.content ? props.content.button_text : "Button text"}
+        {/* {props.content ? props.content.button_text : "Button text"} */}
+        Link to project
       </LinkReadMore>
     </StyledTextContainer>
   );
 };
 
-export default TextContainer;
+export default TextWhatWe;

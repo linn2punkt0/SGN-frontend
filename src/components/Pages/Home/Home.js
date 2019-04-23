@@ -69,7 +69,7 @@ const Home = props => {
 
       <Container>
         <TextContainer content={content ? content.get_involved : ""}backgroundButton="#0021B8"/>
-        <ImageContainer background="#2703BB" />
+        <ImageContainer background="#2703BB"  />
       </Container>
       <Container>
         <TextContainer content={content ? content.who_we_are : ""}  backgroundButton="#F9DC0E" 
