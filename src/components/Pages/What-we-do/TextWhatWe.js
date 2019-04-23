@@ -104,6 +104,8 @@ const LinkReadMore = styled.a`
   text-align: center;
   align-self: flex-start;
   margin: 0;
+  color: white;
+  padding: 0 5px;
 
   @media (min-width: 320px) and (max-width: 767px) {
     font-family: Heebo;
@@ -118,32 +120,30 @@ const TextWhatWe = props => {
   console.log(props.content);
   return (
     <StyledTextContainer>
-   
       <StyledForText>
-           <Reveal top>
-        <Headerh4>{props.content ? props.content.type : "Type"}</Headerh4>
+        <Reveal top>
+          <Headerh4>{props.content ? props.content.type : "Type"}</Headerh4>
 
-        <Headerh4>{props.content ? props.content.title : "Title"}</Headerh4>
-        <p>
-          {props.content
-            ? props.content.description
-            : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor lectus, bibendum at volutpat ac, gravida vel nisl. Pellentesque dolor lectus, bibendum at volutpat ac."}
-        </p>
-        <h6>
-          {props.content
-            ? props.content.small_text
-            : "Small text with project start-date"}
-        </h6>
-         </Reveal>
+          <Headerh4>{props.content ? props.content.title : "Title"}</Headerh4>
+          <p>
+            {props.content
+              ? props.content.description
+              : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor lectus, bibendum at volutpat ac, gravida vel nisl. Pellentesque dolor lectus, bibendum at volutpat ac."}
+          </p>
+          <h6>
+            {props.content
+              ? props.content.small_text
+              : "Small text with project start-date"}
+          </h6>
+        </Reveal>
       </StyledForText>
-     
+
       <LinkReadMore
-        colorButton={props.backgroundButton}
+        colorButton={props.color}
         href={props.content ? props.content.button_link : "/"}
       >
         {props.content ? props.content.button_text : "Button text"}
       </LinkReadMore>
-      
     </StyledTextContainer>
   );
 };

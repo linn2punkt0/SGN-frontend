@@ -1,9 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-// import Hands from "./images/landing/get-involved_landing-page_illustration.png";
 
-const StyledImageContainer = styled.div`
+// props: background=randomColor, img=fotot som ska vara bakgrund, color=hårdkodad utvald färg.
+const StyledGradientContainer = styled.div`
   background-color: ${props => props.background};
+  width: 50%;
+  height: 100vh;
 
   &.gradient::after {
     /* background: ${props => props.shadow}; */
@@ -21,7 +23,7 @@ const StyledImageContainer = styled.div`
   width: 50%;
 
   img{
-    z-index: -1;
+    z-index: 1;
     object-fit: cover;
     object-position: 50% 50%;
     width: 100%;
@@ -35,12 +37,7 @@ const StyledImageContainer = styled.div`
   }
 `;
 
-const ImageContainer = props => {
-
-  console.log(props)
-
-
-  return <StyledImageContainer className="gradient" background={props.background} img={props.img} />;
-
-}
-export default ImageContainer;
+const GradientContainer = props => {
+  return <StyledGradientContainer className="gradient" />;
+};
+export default GradientContainer;
