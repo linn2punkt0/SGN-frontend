@@ -15,7 +15,7 @@ import WhatWeDo from "../../Global/images/landing/what-we-do_landing-page_illust
 const StyledLogo = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
+  padding-top: 15vh;
   height: 100vh;
   width: 50%;
 
