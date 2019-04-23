@@ -47,7 +47,7 @@ const StyledContact = styled.div`
     height: 60vh;
 
     h6 {
-      font-size: 24px;
+      font-size: 3vh;
       font-weight: 300;
     }
   }

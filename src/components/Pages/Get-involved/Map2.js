@@ -20,6 +20,7 @@ const StyledMap2 = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-weight: 300;
 
   > h1 {
     font-weight: 500;
