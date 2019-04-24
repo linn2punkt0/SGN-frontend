@@ -42,9 +42,10 @@ const StyledForText = styled.div`
   margin: 0 0 10% 0;
   > p {
     width: 70%;
-    height: 45%;
+    /* height: 45%; */
     font-weight: 300;
     font-size: 24px;
+    margin-bottom: 0;
   }
   > h6 {
     margin: 1% 0 0 0;
