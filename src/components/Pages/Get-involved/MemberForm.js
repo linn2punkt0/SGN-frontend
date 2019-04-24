@@ -88,6 +88,13 @@ const StyledMemberForm = styled.div`
     font-size: 3vh;
     font-weight: 400;
   }
+@media (min-width: 320px) and (max-width: 767px) {
+  input.checkbox {
+    display: flex;
+    align-self: flex-start;
+    width: 10%;
+  }
+}
 `;
 
 const MemberForm = props => {
