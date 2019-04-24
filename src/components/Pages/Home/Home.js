@@ -4,6 +4,7 @@ import ImageContainer from "../../Global/ImageContainer";
 import TextContainer from "./TextContainer.js";
 import PageHeaderText from "../../Global/PageHeaderText";
 import ContactContainer from "./Contact.js";
+import TextHeader from "./TextHeader.js";
 import Footer from "../../Global/Footer.js";
 import Container from "../../Global/Container";
 import Logo from "./Logo.svg";
@@ -33,20 +34,26 @@ const StyledLogo = styled.div`
     width: 300px;
     transition: 1s;
   }
+
   div:hover {
     transform: translate3d(10px, 0px, 0px) skew(-10deg, 4deg);
     transition: all 0.7s ease;
   }
+
   @media (min-width: 320px) and (max-width: 767px) {
-    width: 100%;
-    div {
-      margin-top: 5vh;
-      max-width: 70%;
-      max-height: 70%;
-    }
-    img {
-      max-width: 100%;
-      max-height: 100%;
+    width: 95%;
+    > div {
+      background: none;
+      width: 100%;
+      border-radius: 0;
+      display: flex;
+      justify-content: flex-end;
+
+      img {
+        margin-top: 5%;
+        width: 55%;
+        height: 95%;
+      }
     }
   }
 `;
@@ -104,7 +111,7 @@ const Home = props => {
   return (
     <StyledHome>
       <Container flexDirection="column">
-        <PageHeaderText content={content ? content.header : ""} />
+        <TextHeader content={content ? content.header : ""} />
         <StyledLogo>
           <Zoom>
             <div>

@@ -8,6 +8,8 @@ const ContainerForContent = styled.div`
   width: 100vw;
   @media (min-width: 320px) and (max-width: 767px) {
     flex-direction: ${props => props.flexDirection || "column-reverse"};
+    flex: display;
+    flex-direction: column-reverse;
   }
 `;
 
