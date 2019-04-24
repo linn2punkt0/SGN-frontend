@@ -25,7 +25,14 @@ const StyledNavLang = styled.div`
     `}
 
  @media (min-width: 320px) and (max-width: 767px) {
-width: 100%;
+    width: 100%;
+    transform: translate(100%);
+        ${props =>
+      props.transformMenu &&
+      `
+    transform: translate(0%);
+    `}
+
  }  
 `;
 //SÄTT IN STATES

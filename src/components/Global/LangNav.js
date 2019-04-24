@@ -12,6 +12,7 @@ const StyledNavbar = styled.div`
 `;
 const LangBar = styled.div`
   pointer-events: all;
+  cursor: default;
   position: fixed;
   z-index: 999;
   justify-content: center;
@@ -26,6 +27,8 @@ const LangBar = styled.div`
   font-size: 16px;
   line-height: normal;
   @media (min-width: 320px) and (max-width: 767px) {
+     padding-right: 15%;
+     font-size: 20px;
 
   }
 `

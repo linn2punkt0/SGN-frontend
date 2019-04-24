@@ -22,7 +22,7 @@ const LinksForLangNav = styled.div`
     transition:1s transform;
     }
      @media (min-width: 320px) and (max-width: 767px) {
-      transform: translate(-5%);
+      transform: translate(1%);
       top: -3%;
       width: 100vw;
       height: 60vh;
@@ -32,8 +32,7 @@ const LinksForLangNav = styled.div`
       font-size: 24px;
       line-height: normal;
       text-align: right;
-
-color: #1F1F1F;
+      color: #1F1F1F;
       
      }
     `;
@@ -45,7 +44,7 @@ const LangNavLink = props => {
       <Link
         onClick={props.closeMenu}
         style={{
-          transform: props.transforlinks ? "translate(-110%)" : "translate(50%)",
+          transform: props.transforlinks ? "translate(-110%)" : "translate(50%)" ,
           transitionDelay: `0.${delayIncrement}s`
         }}
         to="/"
