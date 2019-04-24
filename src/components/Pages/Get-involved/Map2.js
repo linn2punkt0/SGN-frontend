@@ -88,8 +88,14 @@ const StyledMap2 = styled.div`
       justify-content: space-between;
       align-items: flex-start;
     }
+    .image-column {
+      justify-content: flex-start;
+      width: 3vh;
+      height: 100%;
+      margin: 0;
+    }
     img {
-      max-width: 3vh;
+      width: 3vh;
       margin-right: 10px;
     }
     div {
@@ -192,8 +198,8 @@ const Map2 = props => {
         <div className="contact">
           <div className="contact-column">
             <div>
-              <h6>Contact:</h6>
               <img src={Phone} alt="Phone Logo" />
+              <h6>Contact:</h6>
               <p>+46 722-89 10 18</p>
             </div>
             <div>
@@ -201,9 +207,11 @@ const Map2 = props => {
               <p>name@nameson.se</p>
             </div>
           </div>
+          <div className="contact-column image-column">
+            <img src={LocationLogo} alt="Locaton Logo" />
+          </div>
           <div className="contact-column">
             <div>
-              <img src={LocationLogo} alt="Locaton Logo" />
               <p>Vägens väg 15</p>
             </div>
             <div>
