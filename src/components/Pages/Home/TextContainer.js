@@ -22,7 +22,6 @@ const StyledTextContainer = styled.div`
     height: 50vh;
     width: 100%;
     top: 0;
-    /* justify-content: space-between; */
     padding: 8%;
     left: 0;
   }
@@ -41,12 +40,11 @@ const StyledForText = styled.div`
   line-height: normal;
   margin: 0 0 10% 0;
   > p {
-    /* margin: 10% 0 0 0; */
     width: 70%;
-    height: 45%;
+    margin-bottom: 0;
   }
   > h6 {
-    margin: 24px 0 0 0;
+    margin: 19px 0 0 0;
     font-family: Heebo;
     font-style: normal;
     width: 100%;

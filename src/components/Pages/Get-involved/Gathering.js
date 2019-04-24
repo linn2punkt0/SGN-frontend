@@ -39,6 +39,18 @@ const WelcomeText = styled.div`
     font-size: 2vh;
     color: #343434;
   }
+  @media (min-width: 320px) and (max-width: 767px) {
+  h2 {
+    width: 100%;
+    padding-bottom: 10px;
+  }
+    p {
+    left: 0%;
+    right: 0%;
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+}
 `;
 const AvailableLocation = styled.div`
   width: 100%;
@@ -82,6 +94,7 @@ const ContactActivities = styled.div`
       color: #1f1f1f;
     }
   }
+
 `;
 const StyleForLoction = styled.div`
   display: flex;
