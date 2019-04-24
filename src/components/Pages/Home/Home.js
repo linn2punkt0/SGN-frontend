@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import ImageContainer from "../../Global/ImageContainer";
 import TextContainer from "./TextContainer.js";
-import PageHeaderText from "../../Global/PageHeaderText";
 import ContactContainer from "./Contact.js";
 import TextHeader from "./TextHeader.js";
 import Footer from "../../Global/Footer.js";
