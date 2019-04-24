@@ -103,8 +103,7 @@ const LinkReadMore = styled.a`
   line-height: normal;
   text-align: center;
   align-self: flex-start;
-  margin: 0;
-
+  padding: 0 2px;
   &:hover {
     /* height: 0%; 
     transition-delay: 0.2s;
