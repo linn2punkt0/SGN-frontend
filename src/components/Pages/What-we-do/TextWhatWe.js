@@ -136,6 +136,12 @@ const LinkReadMore = styled.a`
   margin: 0;
   color: white;
   padding: 0 2px;
+  &:hover {
+    transition: ease-in;
+    transition-delay: 0.2s;
+    background-color: white;
+    color: black;
+  }
 
   @media (min-width: 320px) and (max-width: 767px) {
     font-family: Heebo;

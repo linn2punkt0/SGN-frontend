@@ -105,10 +105,10 @@ const LinkReadMore = styled.a`
   align-self: flex-start;
   padding: 0 2px;
   &:hover {
-    /* height: 0%; 
+    transition: ease-in;
     transition-delay: 0.2s;
     background-color: white;
-    color: black; */
+    color: black;
   }
 
   @media (min-width: 320px) and (max-width: 767px) {
