@@ -9,13 +9,10 @@ const StyledTextContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-family: "Heebo";
-  font-style: normal;
   font-weight: 300;
   font-size: 36px;
   position: relative;
   left: 5%;
-  line-height: normal;
   color: #959595;
 
   @media (min-width: 320px) and (max-width: 767px) {
@@ -34,49 +31,39 @@ const StyledForText = styled.div`
   flex-direction: column;
   justify-content: center;
   position: relative;
-  font-family: "Heebo";
-  font-style: normal;
   font-weight: 300;
   font-size: 36px;
   line-height: normal;
   margin: 0 0 10% 0;
   > p {
     width: 70%;
-    /* height: 45%; */
     font-weight: 300;
     font-size: 24px;
     margin-bottom: 0;
   }
   > h6 {
     margin: 1% 0 0 0;
-    font-family: Heebo;
-    font-style: normal;
     width: 100%;
     font-weight: 500;
     font-size: 16px;
-    line-height: normal;
     color: rgba(113, 113, 113, 0.7);
   }
   > .mobile-smalltext {
     display: none;
     margin-bottom: 3%;
   }
+
   @media (min-width: 320px) and (max-width: 767px) {
     > h6 {
       display: none;
     }
     > .mobile-smalltext {
       display: block;
-      font-family: Heebo;
-      font-style: normal;
       font-weight: 500;
       font-size: 14px;
-      line-height: normal;
     }
     > p {
       width: 90%;
-      font-family: Heebo;
-      font-style: normal;
       font-weight: 300;
       font-size: 16px;
       line-height: 30px;
@@ -86,16 +73,11 @@ const StyledForText = styled.div`
 
 const HeaderProject = styled.h4`
   margin: 0;
-  font-family: Heebo;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 36px;
-  line-height: normal;
-  color: rgba(31, 31, 31, 0.45);
+  font-weight: normal;
+  font-size: 24px;
+  color: ${props => props.colorLink};
 
   @media (min-width: 320px) and (max-width: 767px) {
-    font-family: Heebo;
-    font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 30px;
@@ -105,19 +87,13 @@ const HeaderProject = styled.h4`
 `;
 const Headerh4 = styled.h4`
   margin: 3% 0 0 0;
-  font-family: Heebo;
-  font-style: normal;
   font-weight: 300;
   font-size: 36px;
-  line-height: normal;
   color: rgba(31, 31, 31, 0.45);
 
   @media (min-width: 320px) and (max-width: 767px) {
-    font-family: Heebo;
-    font-style: normal;
     font-weight: 300;
     font-size: 24px;
-    line-height: normal;
   }
 `;
 
@@ -126,7 +102,6 @@ const LinkReadMore = styled.a`
   text-decoration-line: underline !important;
   font-weight: 500;
   font-size: 24px;
-  line-height: normal;
   text-align: center;
   align-self: flex-start;
   margin: 0;
@@ -140,8 +115,6 @@ const LinkReadMore = styled.a`
   }
 
   @media (min-width: 320px) and (max-width: 767px) {
-    font-family: Heebo;
-    font-style: normal;
     font-weight: 500;
     font-size: 16px !important;
     line-height: 30px;
@@ -153,7 +126,7 @@ const TextWhatWe = props => {
     <StyledTextContainer>
       <StyledForText>
         <Reveal top>
-          <HeaderProject className="project-link" colorLink={props.Link}>
+          <HeaderProject className="project-link" colorLink={props.link}>
             {props.content ? props.content.type : "Type"}
           </HeaderProject>
 
