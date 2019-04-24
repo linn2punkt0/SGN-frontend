@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Text from "./Text";
 import PageHeaderText from "../../Global/PageHeaderText";
 import Container from "../../Global/Container";
+import Container2 from "./Container2";
 import ContactUsFooter from "../../Global/ContactUsFooter";
 import Partners from "./Partners";
 import PartnerText from "./PartnerText";
@@ -13,8 +14,7 @@ import ImageTwo from "../../../images/section-2.png";
 import HeaderImage from "../../../images/who-we-are_hero.png";
 
 const StyledWhoWeAre = styled.div`
-  max-width: 100vw;
-  @media (min-width: 769px) {
+  overflow-x:hidden;
     .quote {
       max-width: 500px;
       margin-top: 80vh;
@@ -47,24 +47,46 @@ const StyledWhoWeAre = styled.div`
       background-size: contain;
       background-repeat: no-repeat;
     }
-  }
-
-  @media (min-width: 768) and (orientation: landscape) {
-  }
-
-  @media (min-width: 320) and (max-width: 1024px) and (orientation: landscape) {
-  }
-
+  
   @media (min-width: 320px) and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+
+    .logo {
+      display: none;
+    }
+    h1.quote {
+      /*padding-left: 82px;*/
+      color: white;
+      font-weight: 500;
+      font-size: 16px;
+    }
+    h5 {
+      padding-top: 5vh;
+    }
     .firstImg {
-      height: 50vh;
+      /*height: 50vh;*/
       width: 100vw;
-      h1 {
-      }
     }
     .secondImg {
-      height: 50vw;
+      padding-bottom: 3vh;
+      /*height: 50vh;*/
       width: 100vw;
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    p {
+      height: 50vh;
+      display: flex;
+      flex-direction: column;
+      font-size: 16px;
+    }
+    div {
+      width: 100%;
+    }
+     ul {
+      display: grid;
+      grid-template-columns: repeat(1,1fr);
     }
   }
 `;
@@ -87,10 +109,10 @@ const WhoWeAre = props => {
 
   return (
     <StyledWhoWeAre>
-      <Container>
+      <Container2>
         <PageHeaderText content={content ? content.header : ""} />
         <div className="logo" />
-      </Container>
+      </Container2>
       <Container>
         <Text content={content ? content.our_cause : ""} />
         <div className="firstImg">

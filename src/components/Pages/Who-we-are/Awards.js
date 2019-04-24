@@ -7,6 +7,7 @@ const StyledAwards = styled.div`
   ul {
     list-style: none;
   }
+
 `;
 
 const Awards = props => {

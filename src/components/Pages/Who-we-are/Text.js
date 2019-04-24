@@ -25,6 +25,12 @@ const StyledText = styled.div`
     font-size: 24px;
     color: #1f1f1f;
   }
+   @media (min-width: 320px) and (max-width: 767px) {
+     > * {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+  }
 `;
 
 const Text = props => {
