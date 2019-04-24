@@ -24,7 +24,7 @@ overflow-x:hidden;
       position: relative;
       left: 35vw;
       max-width: 60%;
-      margin-bottom: 5vh;
+      margin-top: 10vh;
     }
 
 
@@ -64,6 +64,7 @@ overflow-x:hidden;
       margin-bottom: 10vh;
       img {
         position: unset;
+        margin-top: 0;
       }
     }
     .personContainerBig {
