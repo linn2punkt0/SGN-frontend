@@ -15,7 +15,7 @@ align-items: center;
 width: 95%;
 height: 531px;
 right: 0;
-background: #ECDCCE;
+// background: #ECDCCE;
 align-self: center;
 margin-bottom: 10%;
 
