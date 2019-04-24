@@ -17,31 +17,43 @@ const StyledHamburger = styled.div`
   justify-content: center;
   flex-direction: column;
   margin: 6px;
-  padding-right: 82px;
+  padding-right: 7%;
   margin-top: 4vh;
   > div {
     transition: 0.6s;
-    border-radius: 0.3px;
-    margin: 3px 1px;
+    border-radius: 25%;
+    margin: 5px 1px;
+  }
+  @media (min-width: 320px) and (max-width: 767px) {
+
   }
 `
 const BarOne = styled.div`
   background-color: black;
-  width: 18px;
+  width: 1.5vw;
   height: 2px;
+   @media (min-width: 320px) and (max-width: 767px) {
+    width: 6vw;
+   }
 `
 const BarTwo = styled.div`
-  width: 18px;
+  width: 1.5vw;
   background-color: black;
   height: 2px;
+     @media (min-width: 320px) and (max-width: 767px) {
+    width: 6vw;
+   }
 `
 const BarThree = styled.div`
-  width: 9px;
+  width: 0.7vw;
   background-color: black;
   height: 2px;
   ${StyledHamburger}:hover & {
-    transform: translatex(0.6vw);
+    transform: translatex(0.725vw);
   }
+     @media (min-width: 320px) and (max-width: 767px) {
+    width: 3vw;
+   }
 `
 class Nav extends Component {
   constructor(props) {
@@ -76,14 +88,14 @@ class Nav extends Component {
           <BarOne
             style={
               !this.state.isHidden
-                ? { transform: "rotate(220deg) translate(-1.3vh, -0.5vw" }
+                ? { transform: "rotate(220deg) translate(-26%, -51.5%" }
                 : null
             }
           />
           <BarTwo
             style={
               !this.state.isHidden
-                ? { transform: "rotate(-45deg) translate(-0.4vh, 0.5vw" }
+                ? { transform: "rotate(-45deg) translate(13%, 12%" }
                 : null
             }
           />
