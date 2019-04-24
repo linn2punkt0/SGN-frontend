@@ -80,11 +80,18 @@ const StyledMap2 = styled.div`
     margin: auto 0;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     .contact-column {
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin: 0;
+    }
+    .contact-row {
+      display: flex;
+      flex-direction: row;
       justify-content: space-between;
       align-items: flex-start;
     }
@@ -207,15 +214,17 @@ const Map2 = props => {
               <p>name@nameson.se</p>
             </div>
           </div>
-          <div className="contact-column image-column">
-            <img src={LocationLogo} alt="Locaton Logo" />
-          </div>
-          <div className="contact-column">
-            <div>
-              <p>Vägens väg 15</p>
+          <div className="contact-row">
+            <div className="contact-column image-column">
+              <img src={LocationLogo} alt="Locaton Logo" />
             </div>
-            <div>
-              <p>433 98 Vänersborg</p>
+            <div className="contact-column">
+              <div>
+                <p>Vägens väg 15</p>
+              </div>
+              <div>
+                <p>433 98 Vänersborg</p>
+              </div>
             </div>
           </div>
         </div>
