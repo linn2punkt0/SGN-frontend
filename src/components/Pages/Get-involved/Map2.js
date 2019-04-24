@@ -136,7 +136,7 @@ const Map2 = props => {
     fetch(`http://wordplate.test/wp-json/wp/v2/branches`)
       .then(response => response.json())
       .then(data => {
-        console.log(data);
+        // console.log(data);
         setLocations(data[0].acf.branches);
         setActivities(data[0].acf.branches.featured_activity_headline);
       })
