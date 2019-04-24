@@ -6,12 +6,11 @@ import ContactUsFooter from "../../Global/ContactUsFooter";
 import Container from "../../Global/Container";
 import LargeContainer from "../../Global/LargeContainer";
 import TextWhatWe from "./TextWhatWe";
-import faceIllustation from "./faceillustration.svg"
-import ImageLady from "../../../images/project-1-slide.png"
-import ImageEvent from "../../../images/project-2-slide.png"
-import ImageProject from "../../../images/project-3-slide.png"
+import faceIllustation from "./faceillustration.svg";
+import ImageLady from "../../../images/project-1-slide.png";
+import ImageEvent from "../../../images/project-2-slide.png";
+import ImageProject from "../../../images/project-3-slide.png";
 import Reveal from "react-reveal/Reveal";
-
 
 const StyledWhatWeDo = styled.div`
   height: 100%;
@@ -22,7 +21,6 @@ const StyledWhatWeDo = styled.div`
   background-size: cover;
   overflow-x: hidden;
 `;
-
 
 const StyledLogo = styled.div`
   display: flex;
@@ -52,21 +50,21 @@ const StyledLogo = styled.div`
   }
 
   @media (min-width: 320px) and (max-width: 767px) {
-  width: 95%;
-    >div{
+    width: 95%;
+    > div {
       background: none;
-    width: 100%;
-    border-radius: 0;
-    display: flex;
-    justify-content: flex-end;
-    
-      img{
+      width: 100%;
+      border-radius: 0;
+      display: flex;
+      justify-content: flex-end;
+
+      img {
         margin-top: 5%;
-      width: 55%;
-      height: 95%;
-  }
-}
+        width: 55%;
+        height: 95%;
+      }
     }
+  }
 `;
 
 const TextOnImage = styled.p`
@@ -85,9 +83,12 @@ const TextOnImage = styled.p`
   > p {
     margin-top: 5%;
   }
+  > p:last-child {
+    font-weight: 300;
+  }
   @media (min-width: 320px) and (max-width: 767px) {
     width: 75%;
-    height:70%;
+    height: 70%;
     right: 12%;
     font-family: Heebo;
     font-style: normal;
@@ -96,7 +97,7 @@ const TextOnImage = styled.p`
     line-height: 30px;
     position: absolute;
     top: 26%;
-   
+
     > p:last-child {
       font-weight: 300;
     }
@@ -186,66 +187,64 @@ const WhatWeDo = props => {
   // console.log(shadowColor)
   return (
     <StyledWhatWeDo>
+      <Container>
+        <PageHeaderText content={content ? content.header : ""} />
+        <StyledLogo>
+          <div>
+            <img src={faceIllustation} alt="Logo" />
+          </div>
+        </StyledLogo>
+      </Container>
 
-        <Container>
-          <PageHeaderText content={content ? content.header : ""} />
-          <StyledLogo>
-            <div>
-              <img src={faceIllustation} alt="Logo" />
-            </div>
-          </StyledLogo>
-        </Container>
-
-        <LargeContainer>
-          <TextWhatWe content={firstText} color="#0021B8"/>
-          <GradientContainer
-            background={getRandomColor}
-            image={ImageLady}
-            color={colors[2]}
-            // shadowImg={getGradient}
-          />
-          <TextOnImage>
-            <Reveal top>
+      <LargeContainer>
+        <TextWhatWe content={firstText} color="#0021B8" />
+        <GradientContainer
+          background={getRandomColor}
+          image={ImageLady}
+          color={colors[2]}
+          // shadowImg={getGradient}
+        />
+        <TextOnImage>
+          <Reveal top>
             <p>{firstText.slide_text_one}</p>
             <p>{firstText.slide_text_two}</p>
           </Reveal>
-          </TextOnImage>
-        </LargeContainer>
+        </TextOnImage>
+      </LargeContainer>
 
-        <LargeContainer>
-          <TextWhatWe content={secondText} color="#FD422D"/>
-       
-          <GradientContainer
-            background={getRandomColor}
-            image={ImageEvent}
-            color={colors[0]}
-            // shadowImg={getGradient}
-          />
-          <TextOnImage>
-            <Reveal top>
+      <LargeContainer>
+        <TextWhatWe content={secondText} color="#FD422D" />
+
+        <GradientContainer
+          background={getRandomColor}
+          image={ImageEvent}
+          color={colors[0]}
+          // shadowImg={getGradient}
+        />
+        <TextOnImage>
+          <Reveal top>
             <p>{secondText.slide_text_one}</p>
             <p>{secondText.slide_text_two}</p>
-            </Reveal>
-          </TextOnImage>
-        </LargeContainer>
+          </Reveal>
+        </TextOnImage>
+      </LargeContainer>
 
-        <LargeContainer>
-          <TextWhatWe content={thirdText} color="#F9AD0E"/>
-          <GradientContainer
-            background={getRandomColor}
-            image={ImageProject}
-            color={colors[1]}
-            // shadowImg={getGradient}
-          />
-          <TextOnImage>
+      <LargeContainer>
+        <TextWhatWe content={thirdText} color="#F9AD0E" />
+        <GradientContainer
+          background={getRandomColor}
+          image={ImageProject}
+          color={colors[1]}
+          // shadowImg={getGradient}
+        />
+        <TextOnImage>
           <Reveal top>
             <p>{thirdText.slide_text_one}</p>
             <p>{thirdText.slide_text_two}</p>
-            </Reveal>
-          </TextOnImage>
-        </LargeContainer>
-        <ContactUsFooter />
-
+          </Reveal>
+        </TextOnImage>
+      </LargeContainer>
+      <ContactUsFooter />
     </StyledWhatWeDo>
   );
 };
