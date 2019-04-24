@@ -197,7 +197,7 @@ const WhatWeDo = props => {
         </Container>
 
         <LargeContainer>
-          <TextWhatWe content={firstText} color="#0021B8"/>
+          <TextWhatWe content={firstText} color="#0021B8" Link="#0021B8"/>
           <GradientContainer
             background={getRandomColor}
             image={ImageLady}
@@ -213,7 +213,7 @@ const WhatWeDo = props => {
         </LargeContainer>
 
         <LargeContainer>
-          <TextWhatWe content={secondText} color="#FD422D"/>
+          <TextWhatWe content={secondText} color="#FD422D" Link="#FD422D"/>
        
           <GradientContainer
             background={getRandomColor}
@@ -230,7 +230,7 @@ const WhatWeDo = props => {
         </LargeContainer>
 
         <LargeContainer>
-          <TextWhatWe content={thirdText} color="#F9AD0E"/>
+          <TextWhatWe content={thirdText} color="#F9AD0E" Link="#F9AD0E"/>
           <GradientContainer
             background={getRandomColor}
             image={ImageProject}
