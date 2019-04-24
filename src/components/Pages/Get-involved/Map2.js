@@ -119,7 +119,22 @@ const StyledMap2 = styled.div`
     p {
       margin: 0;
     }
-  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+    .activity-row {
+      width: 80vw;
+      padding-bottom: 5vh;
+      img {
+        font-size: 10px;
+      }
+    }
+    .contact-column, .contact-row {
+      font-size: 12px;
+      img {
+        font-size: 12px;
+      }
+    }
+}
 `;
 
 const Map2 = props => {
