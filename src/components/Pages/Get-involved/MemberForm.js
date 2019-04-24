@@ -2,18 +2,30 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledMemberForm = styled.div`
+
+  grid-row: 4/6;
+  grid-column: 1 / 3;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
   .container {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    width: 90%;
     margin-top: 260px;
     margin-bottom: 160px;
     max-width: 600px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    input.checkbox {
+      height: 20px;
+    }
+    button {
+      background: #FDFDFD;
+    }
 
     h4 {
       text-align: center;

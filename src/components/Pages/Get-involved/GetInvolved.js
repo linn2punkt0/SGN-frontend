@@ -12,7 +12,7 @@ import HeaderImage from "../../../images/get-involved_hero.png";
 
 const StyledGetInvolved = styled.div`
   max-width: 100vw;
-
+  overflow-x: hidden;
   .header-image {
     height: 100vh;
     width: 50%;
