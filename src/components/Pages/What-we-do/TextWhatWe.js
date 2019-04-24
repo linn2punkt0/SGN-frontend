@@ -21,6 +21,7 @@ const StyledTextContainer = styled.div`
   @media (min-width: 320px) and (max-width: 767px) {
   width: 100%;
   height: 100vh;
+  
   }
 `;
 
@@ -64,6 +65,7 @@ const StyledForText = styled.div`
       line-height: normal;
     }
     > p {
+      width: 90%;
       font-family: Heebo;
       font-style: normal;
       font-weight: 300;
@@ -103,7 +105,7 @@ const LinkReadMore = styled.a`
   text-align: center;
   align-self: flex-start;
   margin: 0;
-  color: black;
+  color: white;
   padding: 0 5px;
 
   @media (min-width: 320px) and (max-width: 767px) {
