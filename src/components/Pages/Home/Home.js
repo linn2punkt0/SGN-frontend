@@ -20,7 +20,6 @@ const StyledLogo = styled.div`
   margin-top: 10vh;
   height: 100vh;
   width: 50%;
-
   img {
     height: 350px;
     transition: 1s;
