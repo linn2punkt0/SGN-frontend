@@ -36,11 +36,22 @@ const StyledLogo = styled.div`
     width: 300px;
     transition: 1s;
   }
-
   div:hover {
     transform: translate3d(10px, 0px, 0px) skew(-10deg, 4deg);
     transition: all 0.7s ease;
   }
+@media (min-width: 320px) and (max-width: 767px) {
+  width: 100%;
+  div {
+    margin-top: 5vh;
+    max-width: 70%;
+    max-height: 70%;
+  }
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
 `;
 
 const StyledHome = styled.div`
