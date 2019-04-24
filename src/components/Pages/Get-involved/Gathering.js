@@ -40,17 +40,17 @@ const WelcomeText = styled.div`
     color: #343434;
   }
   @media (min-width: 320px) and (max-width: 767px) {
-  h2 {
-    width: 100%;
-    padding-bottom: 10px;
-  }
+    h2 {
+      width: 100%;
+      padding-bottom: 10px;
+    }
     p {
-    left: 0%;
-    right: 0%;
-    padding-left: 5vw;
-    padding-right: 5vw;
+      left: 0%;
+      right: 0%;
+      padding-left: 5vw;
+      padding-right: 5vw;
+    }
   }
-}
 `;
 const AvailableLocation = styled.div`
   width: 100%;
@@ -94,7 +94,6 @@ const ContactActivities = styled.div`
       color: #1f1f1f;
     }
   }
-
 `;
 const StyleForLoction = styled.div`
   display: flex;
@@ -128,8 +127,7 @@ const IconContact = styled.div`
   height: 50%;
 
   > img {
-    width: 19%;
-    height: 50%;
+    width: 40px;
   }
 `;
 
@@ -143,24 +141,23 @@ const CollectionActivities = props => {
         <Fade right delay={400}>
           <p>
             We meet new arrivals and collect preferences, interests and
-            professional activities. We provide information about Swedish society,
-            Swedish culture and lifestyle. We talk about our various activities at
-            your location.
+            professional activities. We provide information about Swedish
+            society, Swedish culture and lifestyle. We talk about our various
+            activities at your location.
           </p>
         </Fade>
       </WelcomeText>
 
       <AvailableLocation>
-      <Fade right delay={500}>
-        <div className="img" />
-        {/* <img alt="" src={GatheringImage} /> */}
-      </Fade>
+        <Fade right delay={500}>
+          <div className="img" />
+        </Fade>
       </AvailableLocation>
 
       <ContactActivities>
-      <Fade right delay={550}>
-        <p>Available at the following locations:</p>
-      </Fade>
+        <Fade right delay={550}>
+          <p>Available at the following locations:</p>
+        </Fade>
         <StyleForLoction>
           <Fade right delay={600}>
             <div>
@@ -169,13 +166,12 @@ const CollectionActivities = props => {
             </div>
           </Fade>
 
-        <Fade right delay={650}>
-          <div>
+          <Fade right delay={650}>
+            <div>
               <img alt="" src={location} />
               <p>Göteborg</p>
-          </div>
-        </Fade>
-
+            </div>
+          </Fade>
         </StyleForLoction>
         <Fade right delay={750}>
           <p>Contact us to apply or learn more:</p>
