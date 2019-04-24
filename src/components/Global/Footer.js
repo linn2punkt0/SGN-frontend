@@ -17,6 +17,13 @@ const StyledFooter = styled.div`
     font-size: 16px;
     height: 20vh;
     width: 100%;
+    /* .flex-container {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    } */
     div {
       width: 100%;
       display: flex;
@@ -24,13 +31,18 @@ const StyledFooter = styled.div`
       justify-content: center;
       align-items: center;
     }
+    .hide {
+      justify-content: flex-start;
+      :first-child {
+        margin-left: 80px;
+      }
+    }
     p {
       margin: 10px;
     }
     a {
       color: #1f1f1f;
       text-decoration: none;
-      /* Temporary margin */
       margin: 10px;
     }
     img {
@@ -47,24 +59,25 @@ const StyledFooter = styled.div`
       padding-right: 2vw;
     }
     div {
-    width: 100%;
+      width: 100%;
 
-    .social-icons {
-      display: flex;
-      justify-content: space-around;
-      padding-bottom: 5vh;
-    }
-    .contact-info {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    img {
-      height: 32px;
-      padding-right: 2vw;
-    }
-    .hide {
-      display: none;
+      .social-icons {
+        display: flex;
+        justify-content: space-around;
+        padding-bottom: 5vh;
+      }
+      .contact-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      img {
+        height: 32px;
+        padding-right: 2vw;
+      }
+      .hide {
+        display: none;
+      }
     }
   }
 `;
@@ -88,7 +101,7 @@ const Footer = props => {
   return (
     <StyledFooter>
       {footerData && (
-        <div>
+        <div className="flex-container">
           <div className="hide">
             <p>Language</p>
             <p>GDPR</p>

@@ -17,11 +17,10 @@ const StyledTextContainer = styled.div`
   left: 5%;
   line-height: normal;
   color: #959595;
-  
+
   @media (min-width: 320px) and (max-width: 767px) {
-  width: 100%;
-  height: 100vh;
-  
+    width: 100%;
+    height: 100vh;
   }
 `;
 
@@ -56,7 +55,6 @@ const StyledForText = styled.div`
     color: rgba(113, 113, 113, 0.7);
   }
   @media (min-width: 320px) and (max-width: 767px) {
-   
     > h6 {
       font-family: Heebo;
       font-style: normal;
@@ -106,7 +104,7 @@ const LinkReadMore = styled.a`
   align-self: flex-start;
   margin: 0;
   color: white;
-  padding: 0 5px;
+  padding: 0 2px;
 
   @media (min-width: 320px) and (max-width: 767px) {
     font-family: Heebo;

@@ -5,6 +5,7 @@ import facebook from "../../ikoner/facebook.svg";
 import whatsapp from "../../ikoner/whatsapp.svg";
 import phone from "../../ikoner/phone.svg";
 import GatheringImage from "../../../images/activity_card-template.png";
+import Fade from "react-reveal/Fade";
 
 const StyledActivities = styled.div`
   width: 50vw;
@@ -123,41 +124,54 @@ const CollectionActivities = props => {
   return (
     <StyledActivities>
       <WelcomeText>
-        <h2>Welcome Gathering</h2>
-        <p>
-          We meet new arrivals and collect preferences, interests and
-          professional activities. We provide information about Swedish society,
-          Swedish culture and lifestyle. We talk about our various activities at
-          your location.
-        </p>
+        <Fade right delay={300}>
+          <h2>Welcome Gathering</h2>
+        </Fade>
+        <Fade right delay={400}>
+          <p>
+            We meet new arrivals and collect preferences, interests and
+            professional activities. We provide information about Swedish society,
+            Swedish culture and lifestyle. We talk about our various activities at
+            your location.
+          </p>
+        </Fade>
       </WelcomeText>
 
       <AvailableLocation>
+      <Fade right delay={500}>
         <div className="img" />
         {/* <img alt="" src={GatheringImage} /> */}
+      </Fade>
       </AvailableLocation>
 
       <ContactActivities>
+      <Fade right delay={550}>
         <p>Available at the following locations:</p>
-
+      </Fade>
         <StyleForLoction>
-          <div>
-            <img alt="loco" src={location} />
-            <p>Vänersborg</p>
-          </div>
+          <Fade right delay={600}>
+            <div>
+              <img alt="loco" src={location} />
+              <p>Vänersborg</p>
+            </div>
+          </Fade>
 
+        <Fade right delay={650}>
           <div>
-            <img alt="" src={location} />
-            <p>Göteborg</p>
+              <img alt="" src={location} />
+              <p>Göteborg</p>
           </div>
+        </Fade>
+
         </StyleForLoction>
-
-        <p>Contact us to apply or learn more:</p>
-        <IconContact>
-          <img alt="" src={facebook} />
-          <img alt="" src={phone} />
-          <img alt="" src={whatsapp} />
-        </IconContact>
+        <Fade right delay={750}>
+          <p>Contact us to apply or learn more:</p>
+          <IconContact>
+            <img alt="" src={facebook} />
+            <img alt="" src={phone} />
+            <img alt="" src={whatsapp} />
+          </IconContact>
+        </Fade>
       </ContactActivities>
     </StyledActivities>
   );

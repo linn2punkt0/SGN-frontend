@@ -10,6 +10,9 @@ import Logo from "./Logo.svg";
 import GetInvolved from "../../Global/images/landing/get-involved_landing-page_illustration.png";
 import WhoWeAre from "../../Global/images/landing/who-we-arelanding-page_illustration.png";
 import WhatWeDo from "../../Global/images/landing/what-we-do_landing-page_illustration.png";
+import Zoom from 'react-reveal/Zoom';
+import LightSpeed from 'react-reveal/LightSpeed';
+
 
 const StyledLogo = styled.div`
   display: flex;
@@ -94,9 +97,11 @@ const Home = props => {
       <Container flexDirection="column">
         <PageHeaderText content={content ? content.header : ""} />
         <StyledLogo>
+        <Zoom>
           <div>
             <img src={Logo} alt="Logo" />
           </div>
+        </Zoom>
         </StyledLogo>
       </Container>
 

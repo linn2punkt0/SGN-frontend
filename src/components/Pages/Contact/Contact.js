@@ -6,6 +6,7 @@ import Header from "./Header";
 import Footer from "../../Global/Footer";
 
 const StyledContact = styled.div`
+overflow-x:hidden;
   .contactLogo {
     padding-left: 5vw;
   }
@@ -21,10 +22,12 @@ const StyledContact = styled.div`
     }
     img {
       position: relative;
-      left: 40vh;
-      max-width: 50%;
+      left: 35vw;
+      max-width: 60%;
       margin-bottom: 5vh;
     }
+
+
   }
   .personContainerBig,
   .personContainerSmall {

@@ -23,6 +23,17 @@ const StyledAwardText = styled.div`
     font-size: 4vh;
     color: rgba(255, 255, 255, 0.72);
   }
+@media (min-width: 320px) and (max-width: 767px) {
+background: none;
+height: 0;
+  div {
+    display: none;
+  }
+  h3, p {
+    display: none;
+  }
+}
+
 `;
 
 const AwardText = props => {
