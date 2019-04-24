@@ -37,6 +37,19 @@ const StyledFind = styled.div`
       font-weight: 400;
     }
   }
+@media (min-width: 320px) and (max-width: 767px) {
+  > * {
+    padding-left: 0px;
+  }
+  h4 {
+    padding-left: 5vw;
+  }
+  .startYourOwn {
+    position: relative;
+    padding-top: 5vh;
+    padding-left: 5vw;
+  }
+}
 `;
 
 const Find = props => {
