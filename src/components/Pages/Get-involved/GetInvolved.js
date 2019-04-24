@@ -6,6 +6,7 @@ import MemberForm from "./MemberForm";
 import Gathering from "./Gathering";
 import Footer from "../../Global/Footer";
 import Container from "../../Global/Container";
+import Container2 from "./Container2";
 import Map2 from "./Map2.js";
 import HeaderImage from "../../../images/get-involved_hero.png";
 
@@ -21,6 +22,17 @@ const StyledGetInvolved = styled.div`
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+  }
+  @media (min-width: 320px) and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    .header-image {
+      display: flex;
+      width: 100%;
+    }
+    div {
+      width: 100%;
+    }
   }
 `;
 
@@ -47,14 +59,14 @@ const GetInvolved = props => {
         <PageHeaderText content={content ? content.header : ""} />
         <div className="header-image" />
       </Container>
-      <Container>
+      <Container2>
         <Find content={content ? content.locations : ""} />
         <Map2 content={content ? content.locations : ""} />
-      </Container>
-      <Container>
+      </Container2>
+      <Container2>
         <Find content={content ? content.activities : ""} />
         <Gathering />
-      </Container>
+      </Container2>
       <MemberForm content={content ? content.membership : ""} />
       <Footer className="last" />
     </StyledGetInvolved>
