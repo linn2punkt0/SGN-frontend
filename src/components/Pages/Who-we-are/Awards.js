@@ -54,11 +54,11 @@ const Awards = props => {
       </div>
       <div>
         <div className="second" />
-        <p>Human Rights Award</p>
+        <p>Integration Award</p>
       </div>
       <div>
         <div className="third" />
-        <p>Integration Award</p>
+        <p>Human Rights Award</p>
       </div>
     </StyledAwards>
   );

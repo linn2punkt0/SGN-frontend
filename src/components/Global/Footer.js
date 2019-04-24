@@ -34,7 +34,7 @@ const StyledFooter = styled.div`
     .hide {
       justify-content: flex-start;
       :first-child {
-        margin-left: 80px;
+        padding-left: 80px;
       }
     }
     p {
@@ -47,6 +47,9 @@ const StyledFooter = styled.div`
     }
     img {
       height: 24px;
+    }
+    .social-icons {
+      margin-left: -80px;
     }
   }
 
