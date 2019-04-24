@@ -43,11 +43,37 @@ const StyledAwards = styled.div`
   p {
     margin: 0;
   }
+  > h3 {
+    display: none;
+  }
+  @media (min-width: 320px) and (max-width: 767px) {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    > div {
+      max-height: 25vh;
+      margin: 0 10px;
+    }
+    > h3 {
+      display: inline;
+      font-weight: 300;
+      font-size: 24px;
+      align-self: flex-start;
+      margin-left: 24px;
+    }
+    p {
+      text-align: center;
+    }
+  }
 `;
 
 const Awards = props => {
   return (
     <StyledAwards>
+      <h3>Awards</h3>
       <div>
         <div className="first" />
         <p>Inspiring Practice</p>

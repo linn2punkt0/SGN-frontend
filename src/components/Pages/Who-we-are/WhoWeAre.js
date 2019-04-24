@@ -13,20 +13,20 @@ import ImageOne from "../../../images/section-1.png";
 import ImageTwo from "../../../images/section-2.png";
 import HeaderImage from "../../../images/who-we-are_hero.png";
 
-import GradientContainer from "../../Pages/What-we-do/gradientContainer"
+import GradientContainer from "../../Pages/What-we-do/gradientContainer";
 // import ImageContainer from "../../Global/ImageContainer"
 // import LargeContainer from "../../Global/LargeContainer"
 import Reveal from "react-reveal/Reveal";
 
 const StyledWhoWeAre = styled.div`
-    height: 100%;
+  height: 100%;
   width: 100%;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   overflow-x: hidden;
-  
+
   @media (min-width: 320px) and (max-width: 767px) {
     display: flex;
     flex-direction: column;
@@ -35,24 +35,17 @@ const StyledWhoWeAre = styled.div`
     h5 {
       padding-top: 5vh;
     }
-
-    p {
-      height: 50vh;
-      display: flex;
-      flex-direction: column;
-      font-size: 16px;
-    }
     div {
       width: 100%;
     }
-     ul {
+    ul {
       display: grid;
-      grid-template-columns: repeat(1,1fr);
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 `;
 
-const StyledLogo = styled.div `
+const StyledLogo = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 10vh;
@@ -79,52 +72,52 @@ const StyledLogo = styled.div `
       width: 100%;
       display: flex;
       justify-content: flex-end;
-      >img{
+      > img {
         width: 60%;
         height: 90%;
       }
     }
   }
-      `
+`;
 
-const TextOnImage = styled.div `
+const TextOnImage = styled.div`
   z-index: 99;
   position: absolute;
   width: 40%;
   align-self: flex-end;
   right: 5%;
   padding-bottom: 4%;
-  font-family: Heebo;
-  font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  line-height: normal;
   color: #ffffff;
 
   > h1 {
     /* height: 40%; */
-      color: white;
-      font-weight: 500;
-      font-size: 16px;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
   }
 
   @media (min-width: 320px) and (max-width: 767px) {
     width: 75%;
-    
     right: 12%;
     align-self: flex-start;
-    font-family: Heebo;
-    font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 30px;
     position: absolute;
     top: 20%;
-    >h1{ 
-   
-      color:black;
+    > h1 {
+      color: black;
     }
- 
+    .footer {
+      p {
+        height: 10vh;
+        /* display: flex;
+      flex-direction: column;
+      font-size: 16px; */
+      }
+    }
   }
 `;
 
@@ -149,7 +142,7 @@ const WhoWeAre = props => {
       <Container>
         <PageHeaderText content={content ? content.header : ""} />
 
-          <StyledLogo>
+        <StyledLogo>
           <div>
             <img src={HeaderImage} alt="Logo" />
           </div>
@@ -157,33 +150,30 @@ const WhoWeAre = props => {
         {/* <div className="logo" /> */}
       </Container>
 
-
       <Container>
         <Text content={content ? content.our_cause : ""} />
-        <GradientContainer
-          image={ImageTwo}
-          height="50vh"
-        />
+        <GradientContainer image={ImageTwo} height="50vh" />
         <TextOnImage>
           <Reveal top>
-          <h1 className="quote">
-            {content ? content.our_cause.quote : "Some textSome textSome textSome textSome textSome textSome textSome textSome "}
-          </h1>
+            <h1 className="quote">
+              {content
+                ? content.our_cause.quote
+                : "Some textSome textSome textSome textSome textSome textSome textSome textSome "}
+            </h1>
           </Reveal>
         </TextOnImage>
       </Container>
 
-        <Container>
+      <Container>
         <Text content={content ? content.our_cause : ""} />
-        <GradientContainer
-          image={ImageOne}
-          height="50vh"
-        />
+        <GradientContainer image={ImageOne} height="50vh" />
         <TextOnImage>
           <Reveal top>
-          <h1 className="quote">
-            {content ? content.our_cause.quote : "Some textSome textSome textSome textSome textSome textSome textSome textSome"}
-          </h1>
+            <h1 className="quote">
+              {content
+                ? content.our_cause.quote
+                : "Some textSome textSome textSome textSome textSome textSome textSome textSome"}
+            </h1>
           </Reveal>
         </TextOnImage>
       </Container>
@@ -196,7 +186,7 @@ const WhoWeAre = props => {
         <Awards />
         <AwardsText content={content ? content.awards : ""} />
       </Container>
-      <ContactUsFooter />
+      <ContactUsFooter className="footer" />
     </StyledWhoWeAre>
   );
 };

@@ -25,10 +25,16 @@ const StyledText = styled.div`
     font-size: 24px;
     color: #1f1f1f;
   }
-   @media (min-width: 320px) and (max-width: 767px) {
-     > * {
+  @media (min-width: 320px) and (max-width: 767px) {
+    > * {
       padding-left: 24px;
       padding-right: 24px;
+    }
+    p {
+      height: 50vh;
+      display: flex;
+      flex-direction: column;
+      font-size: 16px;
     }
   }
 `;
@@ -36,15 +42,15 @@ const StyledText = styled.div`
 const Text = props => {
   return (
     <StyledText>
-    <Fade delay={300}>
-      <h1>{props.content ? props.content.title : "Title"}</h1>
-    </Fade>
-    <Fade delay={400}>
-      <p>
-        {props.content
-          ? props.content.description
-          : "Paragraph Heebo Sans Light Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor lectus, bibendum at volutpat ac, gravida vel nisl. Pellentesque dolor lectus, bibendum at volutpat ac, gravida vel nisl. Light Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor lectus, bibendum at volutpat ac, gravida vel nisl. Pellentesque dolor lectus, bibendum at volutpat ac, gravida vel nisl."}
-      </p>
+      <Fade delay={300}>
+        <h1>{props.content ? props.content.title : "Title"}</h1>
+      </Fade>
+      <Fade delay={400}>
+        <p>
+          {props.content
+            ? props.content.description
+            : "Paragraph Heebo Sans Light Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor lectus, bibendum at volutpat ac, gravida vel nisl. Pellentesque dolor lectus, bibendum at volutpat ac, gravida vel nisl. Light Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor lectus, bibendum at volutpat ac, gravida vel nisl. Pellentesque dolor lectus, bibendum at volutpat ac, gravida vel nisl."}
+        </p>
       </Fade>
     </StyledText>
   );

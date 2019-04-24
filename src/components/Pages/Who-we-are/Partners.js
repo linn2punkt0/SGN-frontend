@@ -28,6 +28,23 @@ const StyledPartners = styled.div`
       max-width: 200px;
       max-height: 150px;
     }
+    > h3 {
+      display: none;
+    }
+  }
+  @media (min-width: 320px) and (max-width: 767px) {
+    height: 80vh;
+    padding-bottom: 20px;
+    img {
+      max-width: 150px;
+    }
+    > h3 {
+      display: inline;
+      font-weight: 300;
+      font-size: 24px;
+      align-self: flex-start;
+      margin-left: 24px;
+    }
   }
 `;
 
@@ -48,6 +65,7 @@ const Partners = props => {
   };
   return (
     <StyledPartners>
+      <h3>Partners</h3>
       {partners && (
         <ul>
           {partners.map(partner => {
