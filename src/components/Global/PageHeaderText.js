@@ -53,6 +53,11 @@ const StyledPageHeaderText = styled.div`
   @media (min-width: 320px) and (max-width: 767px) {
     height: 50vh;
     width: 100%;
+    >div{
+      >h4{
+        display: none;
+      }
+    }
     > * {
       padding-left: 24px;
     }
@@ -66,6 +71,7 @@ const StyledPageHeaderText = styled.div`
       font-size: 16px;
       max-width: 90%;
     }
+   
   }
 `;
 
