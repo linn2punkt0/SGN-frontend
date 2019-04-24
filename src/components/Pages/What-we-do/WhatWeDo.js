@@ -67,7 +67,7 @@ const StyledLogo = styled.div`
   }
 `;
 
-const TextOnImage = styled.p`
+const TextOnImage = styled.div`
   z-index: 99;
   position: absolute;
   width: 22%;
@@ -106,19 +106,19 @@ const TextOnImage = styled.p`
 
 const WhatWeDo = props => {
   // Fetch all projects from API
-  const [projects, setProjects] = useState(null);
-  useEffect(() => {
-    fetchProjects();
-  }, []);
+  // const [projects, setProjects] = useState(null);
+  // useEffect(() => {
+  //   fetchProjects();
+  // }, []);
 
-  const fetchProjects = () => {
-    fetch(`http://wordplate.test/wp-json/wp/v2/projects`)
-      .then(response => response.json())
-      .then(data => {
-        setProjects(data);
-      })
-      .catch(error => console.error(error));
-  };
+  // const fetchProjects = () => {
+  //   fetch(`http://wordplate.test/wp-json/wp/v2/projects`)
+  //     .then(response => response.json())
+  //     .then(data => {
+  //       setProjects(data);
+  //     })
+  //     .catch(error => console.error(error));
+  // };
 
   // Fetch What-we-do-page from API and set all custom-field-content to content-hook
   const [content, setContent] = useState(null);
@@ -187,58 +187,57 @@ const WhatWeDo = props => {
   // console.log(shadowColor)
   return (
     <StyledWhatWeDo>
+      <Container>
+        <PageHeaderText content={content ? content.header : ""} />
+        <StyledLogo>
+          <div>
+            <img src={faceIllustation} alt="Logo" />
+          </div>
+        </StyledLogo>
+      </Container>
 
-        <Container>
-          <PageHeaderText content={content ? content.header : ""} />
-          <StyledLogo>
-            <div>
-              <img src={faceIllustation} alt="Logo" />
-            </div>
-          </StyledLogo>
-        </Container>
-
-        <LargeContainer>
-          <TextWhatWe content={firstText} color="#0021B8" Link="#0021B8"/>
-          <GradientContainer
-            background={getRandomColor}
-            image={ImageLady}
-            color={colors[2]}
-            // shadowImg={getGradient}
-          />
-          <TextOnImage>
-            <Reveal top>
+      <LargeContainer>
+        <TextWhatWe content={firstText} color="#0021B8" Link="#0021B8" />
+        <GradientContainer
+          background={getRandomColor}
+          image={ImageLady}
+          color={colors[2]}
+          // shadowImg={getGradient}
+        />
+        <TextOnImage>
+          <Reveal top>
             <p>{firstText.slide_text_one}</p>
             <p>{firstText.slide_text_two}</p>
           </Reveal>
-          </TextOnImage>
-        </LargeContainer>
+        </TextOnImage>
+      </LargeContainer>
 
-        <LargeContainer>
-          <TextWhatWe content={secondText} color="#FD422D" Link="#FD422D"/>
-       
-          <GradientContainer
-            background={getRandomColor}
-            image={ImageEvent}
-            color={colors[0]}
-            // shadowImg={getGradient}
-          />
-          <TextOnImage>
-            <Reveal top>
+      <LargeContainer>
+        <TextWhatWe content={secondText} color="#FD422D" Link="#FD422D" />
+
+        <GradientContainer
+          background={getRandomColor}
+          image={ImageEvent}
+          color={colors[0]}
+          // shadowImg={getGradient}
+        />
+        <TextOnImage>
+          <Reveal top>
             <p>{secondText.slide_text_one}</p>
             <p>{secondText.slide_text_two}</p>
-            </Reveal>
-          </TextOnImage>
-        </LargeContainer>
+          </Reveal>
+        </TextOnImage>
+      </LargeContainer>
 
-        <LargeContainer>
-          <TextWhatWe content={thirdText} color="#F9AD0E" Link="#F9AD0E"/>
-          <GradientContainer
-            background={getRandomColor}
-            image={ImageProject}
-            color={colors[1]}
-            // shadowImg={getGradient}
-          />
-          <TextOnImage>
+      <LargeContainer>
+        <TextWhatWe content={thirdText} color="#F9AD0E" Link="#F9AD0E" />
+        <GradientContainer
+          background={getRandomColor}
+          image={ImageProject}
+          color={colors[1]}
+          // shadowImg={getGradient}
+        />
+        <TextOnImage>
           <Reveal top>
             <p>{thirdText.slide_text_one}</p>
             <p>{thirdText.slide_text_two}</p>

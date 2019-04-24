@@ -13,26 +13,6 @@ const ContainerForContent = styled.div`
   }
 `;
 
-const ImageContainer = styled.div`
-  width: 50vw;
-  height: 100vh;
-  background-color: red;
-  @media (min-width: 320px) and (max-width: 767px) {
-    width: 100vw;
-    height: 50vh;
-  }
-`;
-
-const TextContainer = styled.div`
-  width: 50vw;
-  height: 100vh;
-  background-color: blue;
-  @media (min-width: 320px) and (max-width: 767px) {
-    width: 100vw;
-    height: 100vh;
-  }
-`;
-
 const Container2 = props => {
   return (
     <ContainerForContent {...props} style={props.reverseRow}>

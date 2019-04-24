@@ -35,22 +35,22 @@ const StyledActivities = styled.div`
 `;
 
 const Activities = props => {
-  const [activities, setActivities] = useState([]);
+  // const [activities, setActivities] = useState([]);
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    fetchActivities();
+    // fetchActivities();
     fetchProjects();
   }, []);
 
-  const fetchActivities = () => {
-    fetch(`http://wordplate.test/wp-json/wp/v2/activities`)
-      .then(response => response.json())
-      .then(data => {
-        setActivities(data);
-      })
-      .catch(error => console.error(error));
-  };
+  // const fetchActivities = () => {
+  //   fetch(`http://wordplate.test/wp-json/wp/v2/activities`)
+  //     .then(response => response.json())
+  //     .then(data => {
+  //       setActivities(data);
+  //     })
+  //     .catch(error => console.error(error));
+  // };
   const fetchProjects = () => {
     fetch(`http://wordplate.test/wp-json/wp/v2/projects`)
       .then(response => response.json())

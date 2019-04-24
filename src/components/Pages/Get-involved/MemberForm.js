@@ -2,8 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledMemberForm = styled.div`
-  grid-row: 4/6;
-  grid-column: 1 / 3;
   display: flex;
   flex-direction: column;
   justify-content: center;

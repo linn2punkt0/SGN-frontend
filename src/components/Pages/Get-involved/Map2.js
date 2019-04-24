@@ -3,11 +3,9 @@ import styled from "styled-components";
 import Academic from "../../ikoner/academic-club.svg";
 import Sport from "../../ikoner/sports-club.svg";
 import Kids from "../../ikoner/kids-club.svg";
-import Culture from "../../ikoner/culture-club.svg";
 import Phone from "../../ikoner/phone.svg";
 import Mail from "../../ikoner/email.svg";
 import LocationLogo from "../../ikoner/location.svg";
-import Locations from "./Locations";
 import Woman from "../../ikoner/womens-club.svg";
 import Reveal from "react-reveal/Reveal";
 import Fade from "react-reveal/Fade";
@@ -125,7 +123,7 @@ const StyledMap2 = styled.div`
 `;
 
 const Map2 = props => {
-  const [locations, setLocations] = useState([]);
+  // const [locations, setLocations] = useState([]);
   const [activities, setActivities] = useState([]);
 
   useEffect(() => {
@@ -136,8 +134,7 @@ const Map2 = props => {
     fetch(`http://wordplate.test/wp-json/wp/v2/branches`)
       .then(response => response.json())
       .then(data => {
-        // console.log(data);
-        setLocations(data[0].acf.branches);
+        // setLocations(data[0].acf.branches);
         setActivities(data[0].acf.branches.featured_activity_headline);
       })
       .catch(error => console.error(error));

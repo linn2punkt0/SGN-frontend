@@ -11,22 +11,22 @@ const StyledGradientContainer = styled.div`
   z-index: 99;
   position: relative;
   &.gradient::after {
-    background: ${props => `linear-gradient(180deg, rgba(0,0,0,0), ${props.color} 100%)`};
+    background: ${props =>
+      `linear-gradient(180deg, rgba(0,0,0,0), ${props.color} 100%)`};
     display: block;
     position: relative;
     width: 100%;
     height: 100vh;
     content: "";
-  } 
-  >
-  img{
+  }
+  > img {
     z-index: 1;
     object-fit: cover;
     object-position: 50% 50%;
     width: 100%;
     height: 100%;
   }
-    @media (min-width: 320px) and (max-width: 767px) {
+  @media (min-width: 320px) and (max-width: 767px) {
     height: 100vh;
     width: 100%;
     position: relative;
@@ -34,12 +34,13 @@ const StyledGradientContainer = styled.div`
 `;
 
 const GradientContainer = props => {
-
-  console.log(props)
-
-
-  return <StyledGradientContainer className="gradient" background={props.background} color={props.color} img={props.image} />;
-
-}
+  return (
+    <StyledGradientContainer
+      className="gradient"
+      background={props.background}
+      color={props.color}
+      img={props.image}
+    />
+  );
+};
 export default GradientContainer;
-

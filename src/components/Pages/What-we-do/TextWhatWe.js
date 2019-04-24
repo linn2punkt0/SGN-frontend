@@ -24,7 +24,6 @@ const StyledTextContainer = styled.div`
     top: 0;
     padding-bottom: 10%;
     justify-content: space-between;
-
   }
 `;
 
@@ -57,7 +56,7 @@ const StyledForText = styled.div`
     line-height: normal;
     color: rgba(113, 113, 113, 0.7);
   }
-  >.mobile-smalltext{
+  > .mobile-smalltext {
     display: none;
     margin-bottom: 3%;
   }
@@ -65,14 +64,13 @@ const StyledForText = styled.div`
     > h6 {
       display: none;
     }
-    >.mobile-smalltext{
+    > .mobile-smalltext {
       display: block;
       font-family: Heebo;
       font-style: normal;
       font-weight: 500;
       font-size: 14px;
       line-height: normal;
-
     }
     > p {
       width: 90%;
@@ -95,15 +93,15 @@ const HeaderProject = styled.h4`
   color: rgba(31, 31, 31, 0.45);
 
   @media (min-width: 320px) and (max-width: 767px) {
-  font-family: Heebo;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 30px;
-  color: ${props => props.colorLink};
-  margin: 20% 0 3% 0;
+    font-family: Heebo;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 30px;
+    color: ${props => props.colorLink};
+    margin: 20% 0 3% 0;
   }
-  `
+`;
 const Headerh4 = styled.h4`
   margin: 3% 0 0 0;
   font-family: Heebo;
@@ -118,16 +116,13 @@ const Headerh4 = styled.h4`
     font-style: normal;
     font-weight: 300;
     font-size: 24px;
-    line-height: normal;  
+    line-height: normal;
   }
 `;
 
 const LinkReadMore = styled.a`
   background-color: ${props => props.colorButton};
   text-decoration-line: underline !important;
-  height: 5%;
-  font-family: Heebo;
-  font-style: normal;
   font-weight: 500;
   font-size: 24px;
   line-height: normal;
@@ -153,16 +148,21 @@ const LinkReadMore = styled.a`
 `;
 
 const TextWhatWe = props => {
-  console.log(props.content);
   return (
     <StyledTextContainer>
       <StyledForText>
         <Reveal top>
-          <HeaderProject className="project-link" colorLink={props.Link}>{props.content ? props.content.type : "Type"}</HeaderProject>
+          <HeaderProject className="project-link" colorLink={props.Link}>
+            {props.content ? props.content.type : "Type"}
+          </HeaderProject>
 
           <Headerh4>{props.content ? props.content.title : "Title"}</Headerh4>
 
-         <h6 className="mobile-smalltext">{props.content ? props.content.small_text : "Small text with project start-date"}</h6>
+          <h6 className="mobile-smalltext">
+            {props.content
+              ? props.content.small_text
+              : "Small text with project start-date"}
+          </h6>
           <p>
             {props.content
               ? props.content.description

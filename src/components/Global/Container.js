@@ -7,7 +7,7 @@ const ContainerForContent = styled.div`
   height: 100vh;
   width: 100vw;
   @media (min-width: 320px) and (max-width: 767px) {
-    flex-direction: ${props => props.flexDirection || 'column-reverse'}
+    flex-direction: ${props => props.flexDirection || "column-reverse"};
   }
 `;
 

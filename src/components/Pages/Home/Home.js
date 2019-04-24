@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import ImageContainer from "../../Global/ImageContainer";
 import TextContainer from "./TextContainer.js";
@@ -10,9 +10,7 @@ import Logo from "./Logo.svg";
 import GetInvolved from "../../Global/images/landing/get-involved_landing-page_illustration.png";
 import WhoWeAre from "../../Global/images/landing/who-we-arelanding-page_illustration.png";
 import WhatWeDo from "../../Global/images/landing/what-we-do_landing-page_illustration.png";
-import Zoom from 'react-reveal/Zoom';
-import LightSpeed from 'react-reveal/LightSpeed';
-
+import Zoom from "react-reveal/Zoom";
 
 const StyledLogo = styled.div`
   display: flex;
@@ -39,18 +37,18 @@ const StyledLogo = styled.div`
     transform: translate3d(10px, 0px, 0px) skew(-10deg, 4deg);
     transition: all 0.7s ease;
   }
-@media (min-width: 320px) and (max-width: 767px) {
-  width: 100%;
-  div {
-    margin-top: 5vh;
-    max-width: 70%;
-    max-height: 70%;
+  @media (min-width: 320px) and (max-width: 767px) {
+    width: 100%;
+    div {
+      margin-top: 5vh;
+      max-width: 70%;
+      max-height: 70%;
+    }
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
   }
-  img {
-    max-width: 100%;
-    max-height: 100%;
-  }
-}
 `;
 
 const StyledHome = styled.div`
@@ -108,19 +106,15 @@ const Home = props => {
       <Container flexDirection="column">
         <PageHeaderText content={content ? content.header : ""} />
         <StyledLogo>
-        <Zoom>
-          <div>
-            <img src={Logo} alt="Logo" />
-          </div>
-        </Zoom>
+          <Zoom>
+            <div>
+              <img src={Logo} alt="Logo" />
+            </div>
+          </Zoom>
         </StyledLogo>
       </Container>
 
       <Container>
-        {/* 
-        <TextContainer content={content ? content.get_involved : ""}backgroundButton="#0021B8"/>
-        <ImageContainer background="#2703BB"  />
- */}
         <TextContainer
           content={content ? content.get_involved : ""}
           backgroundButton="#0021B8"

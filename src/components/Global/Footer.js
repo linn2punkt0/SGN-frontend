@@ -17,13 +17,6 @@ const StyledFooter = styled.div`
     font-size: 16px;
     height: 20vh;
     width: 100%;
-    /* .flex-container {
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    } */
     div {
       width: 100%;
       display: flex;

@@ -46,7 +46,7 @@ const StyledForText = styled.div`
     height: 45%;
   }
   > h6 {
-    margin: 3vh 0 0 0;
+    margin: 24px 0 0 0;
     font-family: Heebo;
     font-style: normal;
     width: 100%;
@@ -95,7 +95,6 @@ const Headerh2 = styled.h2`
 const LinkReadMore = styled.a`
   background-color: ${props => props.colorButton};
   text-decoration-line: underline !important;
-  height: 5%;
   font-family: Heebo;
   font-style: normal;
   font-weight: 500;
