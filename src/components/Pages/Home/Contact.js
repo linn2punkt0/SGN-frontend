@@ -5,10 +5,11 @@ import Reveal from 'react-reveal/Reveal';
 const ContactContainer = styled.div`
 display: flex;
 flex-direction: column;
-justify-content: space-evenly;
-height: 100vh;
+justify-content: flex-start;
+height: 80vh;
 width: 100vw;
 align-items: center;
+/* padding-top: 0%; */
 
  @media (min-width: 320px) and (max-width: 767px) {
 width: 95%;
@@ -16,13 +17,14 @@ height: 531px;
 right: 0;
 background: #ECDCCE;
 align-self: center;
+margin-bottom: 10%;
 
  }
 
 `
 /* Wanna help out? */
 const TitleContact = styled.div`
-height: 40%;
+height: 60%;
 >h2{
 font-family: Heebo;
 font-style: normal;
@@ -77,31 +79,42 @@ const ContactInfo = styled.div`
 display: flex;
 flex-direction: row;
 justify-content: space-around;
-width: 100%;
->a{
-  color: #FFFFFF;
-  background-color: #0021B8;
-  height: 70%;
-  text-decoration-line: underline !important;
+width: 70%;
   font-family: Heebo;
 font-style: normal;
 font-weight: 500;
 font-size: 24px;
 line-height: normal;
 text-align: center;
- &:hover {
-        /* transition: 0.3s;
-        box-shadow: 1px 1px 0px; */
-        }
+
+>a{
+  display: block;
+  color: #FFFFFF;
+  background-color: #0021B8;
+  margin-top: 2%;
+  height: 43%;
+  text-decoration-line: underline !important;
+color: #1F1F1F;
+}
+>.contactus-mobile{
+  display: none;
 }
 
  @media (min-width: 320px) and (max-width: 767px) {
 flex-direction: column;
-
+align-items: center;
+height: 30%;
+>.contactus-mobile{
+    font-size: 16px;
+    display: block;
+    color: #1F1F1F;
+    background: none;
+}
 >a{
-  font-size: 16px;
-  color:#1F1F1F;
-  background-color: white;
+  display: none;
+}
+>p{
+  margin: 0;
 }
 
  }
@@ -121,6 +134,7 @@ const Contact = props => {
 
       <ContactInfo>
         <Reveal top>
+        <a href="" className="contactus-mobile">{props.contactUs}</a>
           <p>{props.swishNr}</p>
           <a href="" >{props.contactUs}</a>
           <p>{props.bGiro}</p>

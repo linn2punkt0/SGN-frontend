@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Reveal from "react-reveal/Reveal";
+
 const StyledTextContainer = styled.div`
   width: 50%;
   height: 100vh;
@@ -16,15 +17,13 @@ const StyledTextContainer = styled.div`
   left: 5%;
   line-height: normal;
   color: #959595;
-
+  
   @media (min-width: 320px) and (max-width: 767px) {
-    height: 50vh;
-    width: 100%;
-    top: 0;
-    padding: 8%;
-    left: 0;
+  width: 100%;
+  height: 100vh;
   }
 `;
+
 const StyledForText = styled.div`
   width: 100%;
   height: 60%;
@@ -39,7 +38,6 @@ const StyledForText = styled.div`
   line-height: normal;
   margin: 0 0 10% 0;
   > p {
-    /* margin: 10% 0 0 0; */
     width: 70%;
     height: 45%;
     font-weight: 300;
@@ -57,6 +55,7 @@ const StyledForText = styled.div`
     color: rgba(113, 113, 113, 0.7);
   }
   @media (min-width: 320px) and (max-width: 767px) {
+   
     > h6 {
       font-family: Heebo;
       font-style: normal;
@@ -104,7 +103,7 @@ const LinkReadMore = styled.a`
   text-align: center;
   align-self: flex-start;
   margin: 0;
-  color: white;
+  color: black;
   padding: 0 5px;
 
   @media (min-width: 320px) and (max-width: 767px) {

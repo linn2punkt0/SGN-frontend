@@ -106,13 +106,10 @@ const LinkReadMore = styled.a`
   margin: 0;
 
   &:hover {
-    /* height: 0%; */
-    /* text-underline-position: under; */
-    /* transition-delay: 0.2s; */
-    /* transition:  */
-
+    /* height: 0%; 
+    transition-delay: 0.2s;
     background-color: white;
-    color: black;
+    color: black; */
   }
 
   @media (min-width: 320px) and (max-width: 767px) {
@@ -121,6 +118,7 @@ const LinkReadMore = styled.a`
     font-weight: 500;
     font-size: 16px !important;
     line-height: 30px;
+    height: 10%;
   }
 `;
 

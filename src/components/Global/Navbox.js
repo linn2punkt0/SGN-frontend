@@ -26,12 +26,11 @@ const StyledNav = styled.div`
       `
     transform: translate(0%);
     `}
-       /* transform: translate(50%); */
-    /* ${props =>
-      props.transforLinks &&
-      `
-    transform: translate(0%);
-    `} */
+
+ @media (min-width: 320px) and (max-width: 767px) {
+width: 100%;
+
+ }
     
 `;
 //SÄTT IN STATES
