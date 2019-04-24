@@ -32,12 +32,6 @@ const StyledWhoWeAre = styled.div`
     flex-direction: column;
     height: 100%;
 
-    h5 {
-      padding-top: 5vh;
-    }
-    div {
-      width: 100%;
-    }
     ul {
       display: grid;
       grid-template-columns: repeat(1, 1fr);
@@ -92,7 +86,6 @@ const TextOnImage = styled.div`
   color: #ffffff;
 
   > h1 {
-    /* height: 40%; */
     color: white;
     font-weight: 500;
     font-size: 16px;
@@ -100,22 +93,15 @@ const TextOnImage = styled.div`
 
   @media (min-width: 320px) and (max-width: 767px) {
     width: 75%;
-    right: 12%;
-    align-self: flex-start;
     font-weight: 500;
     font-size: 16px;
     line-height: 30px;
-    position: absolute;
-    top: 20%;
     > h1 {
       color: black;
     }
     .footer {
       p {
         height: 10vh;
-        /* display: flex;
-      flex-direction: column;
-      font-size: 16px; */
       }
     }
   }
@@ -147,7 +133,6 @@ const WhoWeAre = props => {
             <img src={HeaderImage} alt="Logo" />
           </div>
         </StyledLogo>
-        {/* <div className="logo" /> */}
       </Container>
 
       <Container>

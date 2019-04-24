@@ -4,7 +4,7 @@ import styled from "styled-components";
 const StyledGradientContainer = styled.div`
   width: 50%;
   height: 100vh;
-  
+
   background-image: url(${props => props.img});
   background-position: center;
   background-size: cover;
@@ -43,7 +43,6 @@ const GradientContainer = props => {
       color={props.color}
       img={props.image}
       height={props.height}
-
     />
   );
 };

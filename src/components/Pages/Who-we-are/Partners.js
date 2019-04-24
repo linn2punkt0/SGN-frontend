@@ -33,6 +33,7 @@ const StyledPartners = styled.div`
     }
   }
   @media (min-width: 320px) and (max-width: 767px) {
+    width: 100%;
     height: 80vh;
     padding-bottom: 20px;
     img {
