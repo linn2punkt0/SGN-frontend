@@ -6,14 +6,13 @@ const StyledHeader = styled.div`
     padding-top: 4vh;
     max-height: 60px;
     max-width: 150px;
-
+  
     @media (min-width: 320px) and (max-width: 767px) {
-      img {
-        margin: 0;
-      }
+        display: none;
     }
   }
-`;
+    `
+
 
 const Header = props => {
   return (

@@ -21,16 +21,6 @@ const StyledWhatWeDo = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   overflow-x: hidden;
-
-  .header-image {
-    height: 100vh;
-    width: 50%;
-    max-height: 449px;
-    margin-top: 10vh;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
 `;
 
 
@@ -60,6 +50,23 @@ const StyledLogo = styled.div`
     transform: translate3d(10px, 0px, 0px) skew(-10deg, 4deg);
     transition: all 0.7s ease;
   }
+
+  @media (min-width: 320px) and (max-width: 767px) {
+  width: 95%;
+    >div{
+      background: none;
+    width: 100%;
+    border-radius: 0;
+    display: flex;
+    justify-content: flex-end;
+    
+      img{
+        margin-top: 5%;
+      width: 55%;
+      height: 95%;
+  }
+}
+    }
 `;
 
 const TextOnImage = styled.p`
@@ -136,11 +143,6 @@ const WhatWeDo = props => {
     // const boxShadow = `{{background: linear-gradient(180deg, rgba(39, 3, 187, 0.08) 47.4%, ${randomColor} 87.5%)}}`
     return randomColor;
   };
-
-  //   const getGradient = (props) => {
-  //  const grade = {background: "linear-gradient(180deg, rgba(39, 3, 187, 0.08) 47.4%, pink 87.5%)"}
-  //  return grade;
-  // }
 
   const firstText = {
     type: "Project",
