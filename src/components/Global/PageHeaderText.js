@@ -64,10 +64,10 @@ const StyledPageHeaderText = styled.div`
     }
     p {
       font-size: 16px;
+      max-width: 90%;
     }
   }
 `;
-
 
 const PageHeaderText = props => {
   return (
