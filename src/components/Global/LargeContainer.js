@@ -6,14 +6,18 @@ const ContainerForContent = styled.div`
   flex-direction: row;
   height: 100vh;
   width: 100vw;
-
+  position: relative;
   @media (min-width: 320px) and (max-width: 767px) {
-    flex-direction: ${props => props.flexDirection || 'column-reverse'}
+    flex-direction: ${props => props.flexDirection || 'column-reverse'};
+    height: 200vh;
   }
 `;
 
-const Container = props => {
+
+
+
+const LargeContainer = props => {
   return <ContainerForContent {...props} style={props.reverseRow}>{props.children}</ContainerForContent>;
 };
 
-export default Container;
+export default LargeContainer;

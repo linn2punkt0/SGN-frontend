@@ -4,6 +4,7 @@ import GradientContainer from "./gradientContainer";
 import PageHeaderText from "../../Global/PageHeaderText";
 import ContactUsFooter from "../../Global/ContactUsFooter";
 import Container from "../../Global/Container";
+import LargeContainer from "../../Global/LargeContainer";
 import TextWhatWe from "./TextWhatWe";
 import faceIllustation from "./faceillustration.svg"
 import ImageLady from "../../../images/project-1-slide.png"
@@ -39,7 +40,6 @@ const StyledLogo = styled.div`
   margin-top: 10vh;
   height: 100vh;
   width: 50%;
-
   img {
     height: 350px;
     transition: 1s;
@@ -79,14 +79,17 @@ const TextOnImage = styled.p`
     margin-top: 5%;
   }
   @media (min-width: 320px) and (max-width: 767px) {
-    width: 80%;
-    right: 6%;
+    width: 75%;
+    height:70%;
+    right: 12%;
     font-family: Heebo;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 30px;
-    padding-bottom: 10%;
+    position: absolute;
+    top: 26%;
+   
     > p:last-child {
       font-weight: 300;
     }
@@ -191,7 +194,7 @@ const WhatWeDo = props => {
           </StyledLogo>
         </Container>
 
-        <Container>
+        <LargeContainer>
           <TextWhatWe content={firstText} color="#0021B8"/>
           <GradientContainer
             background={getRandomColor}
@@ -205,15 +208,15 @@ const WhatWeDo = props => {
             <p>{firstText.slide_text_two}</p>
           </Reveal>
           </TextOnImage>
-        </Container>
+        </LargeContainer>
 
-        <Container>
+        <LargeContainer>
           <TextWhatWe content={secondText} color="#FD422D"/>
        
           <GradientContainer
             background={getRandomColor}
             image={ImageEvent}
-            color={colors[1]}
+            color={colors[0]}
             // shadowImg={getGradient}
           />
           <TextOnImage>
@@ -222,14 +225,14 @@ const WhatWeDo = props => {
             <p>{secondText.slide_text_two}</p>
             </Reveal>
           </TextOnImage>
-        </Container>
+        </LargeContainer>
 
-        <Container>
+        <LargeContainer>
           <TextWhatWe content={thirdText} color="#F9AD0E"/>
           <GradientContainer
             background={getRandomColor}
             image={ImageProject}
-            color={colors[0]}
+            color={colors[1]}
             // shadowImg={getGradient}
           />
           <TextOnImage>
@@ -238,7 +241,7 @@ const WhatWeDo = props => {
             <p>{thirdText.slide_text_two}</p>
             </Reveal>
           </TextOnImage>
-        </Container>
+        </LargeContainer>
         <ContactUsFooter />
 
     </StyledWhatWeDo>
