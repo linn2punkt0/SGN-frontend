@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Fade from "react-reveal/Fade";
 
 const StyledText = styled.div`
   /* Desktop styling done */
@@ -29,12 +30,16 @@ const StyledText = styled.div`
 const Text = props => {
   return (
     <StyledText>
+    <Fade delay={300}>
       <h1>{props.content ? props.content.title : "Title"}</h1>
+    </Fade>
+    <Fade delay={400}>
       <p>
         {props.content
           ? props.content.description
           : "Paragraph Heebo Sans Light Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor lectus, bibendum at volutpat ac, gravida vel nisl. Pellentesque dolor lectus, bibendum at volutpat ac, gravida vel nisl. Light Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor lectus, bibendum at volutpat ac, gravida vel nisl. Pellentesque dolor lectus, bibendum at volutpat ac, gravida vel nisl."}
       </p>
+      </Fade>
     </StyledText>
   );
 };
