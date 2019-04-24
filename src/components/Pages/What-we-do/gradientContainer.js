@@ -4,6 +4,7 @@ import styled from "styled-components";
 const StyledGradientContainer = styled.div`
   width: 50%;
   height: 100vh;
+  
   background-image: url(${props => props.img});
   background-position: center;
   background-size: cover;
@@ -27,7 +28,8 @@ const StyledGradientContainer = styled.div`
     height: 100%;
   }
   @media (min-width: 320px) and (max-width: 767px) {
-    height: 100vh;
+    /* height: 100vh; */
+    height: ${props => props.height};
     width: 100%;
     position: relative;
   }
@@ -40,6 +42,8 @@ const GradientContainer = props => {
       background={props.background}
       color={props.color}
       img={props.image}
+      height={props.height}
+
     />
   );
 };

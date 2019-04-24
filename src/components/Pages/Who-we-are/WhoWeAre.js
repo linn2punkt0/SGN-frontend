@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Text from "./Text";
 import PageHeaderText from "../../Global/PageHeaderText";
 import Container from "../../Global/Container";
-import Container2 from "./Container2";
+
 import ContactUsFooter from "../../Global/ContactUsFooter";
 import Partners from "./Partners";
 import PartnerText from "./PartnerText";
@@ -13,68 +13,29 @@ import ImageOne from "../../../images/section-1.png";
 import ImageTwo from "../../../images/section-2.png";
 import HeaderImage from "../../../images/who-we-are_hero.png";
 
+import GradientContainer from "../../Pages/What-we-do/gradientContainer"
+// import ImageContainer from "../../Global/ImageContainer"
+// import LargeContainer from "../../Global/LargeContainer"
+import Reveal from "react-reveal/Reveal";
+
 const StyledWhoWeAre = styled.div`
-  overflow-x:hidden;
-    .quote {
-      max-width: 500px;
-      margin-top: 80vh;
-      margin-left: 20vh;
-      font-weight: 500;
-      font-size: 16px;
-      color: white;
-    }
-    .firstImg {
-      height: 100vh;
-      width: 50vw;
-      background: url(${ImageOne});
-      background-position: center;
-      background-size: cover;
-    }
-    .secondImg {
-      height: 100vh;
-      width: 50vw;
-      background: url(${ImageTwo});
-      background-position: center;
-      background-size: cover;
-    }
-    .logo {
-      height: 100vh;
-      width: 50vw;
-      max-height: 449px;
-      margin-top: 10vh;
-      background: url(${HeaderImage});
-      background-position: center;
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
+    height: 100%;
+  width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
   
   @media (min-width: 320px) and (max-width: 767px) {
     display: flex;
     flex-direction: column;
+    height: 100%;
 
-    .logo {
-      display: none;
-    }
-    h1.quote {
-      /*padding-left: 82px;*/
-      color: white;
-      font-weight: 500;
-      font-size: 16px;
-    }
     h5 {
       padding-top: 5vh;
     }
-    .firstImg {
-      /*height: 50vh;*/
-      width: 100vw;
-    }
-    .secondImg {
-      padding-bottom: 3vh;
-      /*height: 50vh;*/
-      width: 100vw;
-      display: flex;
-      flex-direction: column-reverse;
-    }
+
     p {
       height: 50vh;
       display: flex;
@@ -88,6 +49,82 @@ const StyledWhoWeAre = styled.div`
       display: grid;
       grid-template-columns: repeat(1,1fr);
     }
+  }
+`;
+
+const StyledLogo = styled.div `
+  display: flex;
+  justify-content: center;
+  margin-top: 10vh;
+  height: 100vh;
+  width: 50%;
+  img {
+    height: 350px;
+    transition: 1s;
+  }
+  img:hover {
+    transform: scale3d(1.2, 1.2, 1.2) skew(10deg, -4deg);
+    transition: all 0.7s ease-in-out;
+  }
+
+  div:hover {
+    transform: translate3d(10px, 0px, 0px) skew(-10deg, 4deg);
+    transition: all 0.7s ease;
+  }
+
+  @media (min-width: 320px) and (max-width: 767px) {
+    width: 95%;
+    height: 50vh;
+    > div {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      >img{
+        width: 60%;
+        height: 90%;
+      }
+    }
+  }
+      `
+
+const TextOnImage = styled.div `
+  z-index: 99;
+  position: absolute;
+  width: 40%;
+  align-self: flex-end;
+  right: 5%;
+  padding-bottom: 4%;
+  font-family: Heebo;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: normal;
+  color: #ffffff;
+
+  > h1 {
+    /* height: 40%; */
+      color: white;
+      font-weight: 500;
+      font-size: 16px;
+  }
+
+  @media (min-width: 320px) and (max-width: 767px) {
+    width: 75%;
+    
+    right: 12%;
+    align-self: flex-start;
+    font-family: Heebo;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 30px;
+    position: absolute;
+    top: 20%;
+    >h1{ 
+   
+      color:black;
+    }
+ 
   }
 `;
 
@@ -109,26 +146,48 @@ const WhoWeAre = props => {
 
   return (
     <StyledWhoWeAre>
-      <Container2>
+      <Container>
         <PageHeaderText content={content ? content.header : ""} />
-        <div className="logo" />
-      </Container2>
+
+          <StyledLogo>
+          <div>
+            <img src={HeaderImage} alt="Logo" />
+          </div>
+        </StyledLogo>
+        {/* <div className="logo" /> */}
+      </Container>
+
+
       <Container>
         <Text content={content ? content.our_cause : ""} />
-        <div className="firstImg">
+        <GradientContainer
+          image={ImageTwo}
+          height="50vh"
+        />
+        <TextOnImage>
+          <Reveal top>
           <h1 className="quote">
-            {content ? content.our_cause.quote : "Some text"}
+            {content ? content.our_cause.quote : "Some textSome textSome textSome textSome textSome textSome textSome textSome "}
           </h1>
-        </div>
+          </Reveal>
+        </TextOnImage>
       </Container>
-      <Container>
-        <Text content={content ? content.our_history : ""} />
-        <div className="secondImg">
+
+        <Container>
+        <Text content={content ? content.our_cause : ""} />
+        <GradientContainer
+          image={ImageOne}
+          height="50vh"
+        />
+        <TextOnImage>
+          <Reveal top>
           <h1 className="quote">
-            {content ? content.our_history.quote : "Some text"}
+            {content ? content.our_cause.quote : "Some textSome textSome textSome textSome textSome textSome textSome textSome"}
           </h1>
-        </div>
+          </Reveal>
+        </TextOnImage>
       </Container>
+
       <Container>
         <PartnerText content={content ? content.partnerships : ""} />
         <Partners />
