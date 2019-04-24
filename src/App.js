@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import { Router } from "@reach/router";
 import Nav from "./components/Global/Nav";
+import LangNav from "./components/Global/LangNav";
 import Home from "./components/Pages/Home/Home";
 import GetInvolved from "./components/Pages/Get-involved/GetInvolved";
 import WhoWeAre from "./components/Pages/Who-we-are/WhoWeAre";
@@ -12,6 +13,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <LangNav />
         <Nav />
         <Router>
           <Home path="/" />
