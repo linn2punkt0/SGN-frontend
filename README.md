@@ -3,6 +3,7 @@
 - npm install react-slick
 - npm install slick-carousel
 - npm install react-reveal --save
+- npm install react-anchor-link-smooth-scroll
 Plugins: ACF, Classic Editor, ACF to REST, Bainternet Posts Creation Limits
 - Try to run npm start and see if it works.
 # END OF INSTALLATION

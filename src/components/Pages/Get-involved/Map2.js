@@ -22,6 +22,14 @@ const StyledMap2 = styled.div`
   align-items: center;
   font-weight: 300;
 
+  .map {
+    width: 100%;
+    height: 40%;
+    background: url(${MapImage});
+    background-size: cover;
+    background-position: center;
+  }
+
   > h1 {
     font-weight: 500;
     font-size: 3vh;
@@ -68,35 +76,50 @@ const StyledMap2 = styled.div`
     }
   }
   .contact {
-    width: 90%;
+    width: 100%;
     margin: auto 0;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
+    .contact-column {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin: 0;
+    }
     .contact-row {
-      width: 100%;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
+    }
+    .image-column {
+      justify-content: flex-start;
+      width: 3vh;
+      height: 100%;
+      margin: 0;
     }
     img {
-      max-width: 3vh;
+      width: 3vh;
       margin-right: 10px;
     }
     div {
-      width: 100%;
       display: flex;
       flex-direction: row;
       justify-content: flex-start;
       align-items: center;
       margin: 0 10px 0 10px;
+      white-space: nowrap;
     }
     h6 {
       margin: 0 10px 0 0;
       font-weight: 500;
       font-size: 2vh;
+    }
+    p {
+      margin: 0;
     }
   }
 `;
@@ -122,7 +145,8 @@ const Map2 = props => {
   return (
     <StyledMap2>
       <Reveal right>
-        <img src={MapImage} />
+        {/* <img src={MapImage} /> */}
+        <div className="map" />
       </Reveal>
       <div className="container">
         <Fade right delay={300}>
@@ -179,24 +203,28 @@ const Map2 = props => {
 
       <Fade right delay={500}>
         <div className="contact">
-          <div className="contact-row">
+          <div className="contact-column">
             <div>
-              <h6>Contact:</h6>
               <img src={Phone} alt="Phone Logo" />
+              <h6>Contact:</h6>
               <p>+46 722-89 10 18</p>
             </div>
-            <div>
-              <img src={LocationLogo} alt="Locaton Logo" />
-              <p>Vägens väg 15</p>
-            </div>
-          </div>
-          <div className="contact-row">
             <div>
               <img src={Mail} alt="Mail Logo" />
               <p>name@nameson.se</p>
             </div>
-            <div>
-              <p>433 98 Vänersborg</p>
+          </div>
+          <div className="contact-row">
+            <div className="contact-column image-column">
+              <img src={LocationLogo} alt="Locaton Logo" />
+            </div>
+            <div className="contact-column">
+              <div>
+                <p>Vägens väg 15</p>
+              </div>
+              <div>
+                <p>433 98 Vänersborg</p>
+              </div>
             </div>
           </div>
         </div>
