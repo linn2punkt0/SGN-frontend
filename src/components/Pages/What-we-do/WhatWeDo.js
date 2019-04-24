@@ -196,6 +196,7 @@ const WhatWeDo = props => {
           <GradientContainer
             background={getRandomColor}
             image={ImageLady}
+            color={colors[2]}
             // shadowImg={getGradient}
           />
           <TextOnImage>
@@ -212,6 +213,7 @@ const WhatWeDo = props => {
           <GradientContainer
             background={getRandomColor}
             image={ImageEvent}
+            color={colors[1]}
             // shadowImg={getGradient}
           />
           <TextOnImage>
@@ -227,6 +229,7 @@ const WhatWeDo = props => {
           <GradientContainer
             background={getRandomColor}
             image={ImageProject}
+            color={colors[0]}
             // shadowImg={getGradient}
           />
           <TextOnImage>
