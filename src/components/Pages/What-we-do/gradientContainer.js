@@ -1,9 +1,24 @@
 import React from "react";
 import styled from "styled-components";
-// import Hands from "./images/landing/get-involved_landing-page_illustration.png";
 
-const StyledImageContainer = styled.div`
-  /* background-color: ${props => props.background}; */
+
+
+const StyledGradientContainer = styled.div`
+  background-color: ${props => props.background};
+  width: 50%;
+  height: 100vh;
+
+  &.gradient::after {
+    /* background: ${props => props.shadow}; */
+    background: linear-gradient(180deg, rgba(39, 3, 187, 0.08) 47.4%, #2703BB 87.5%);
+    display: block;
+    /* position: absolute; */
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    content: "";
+  } 
+
   background-image: url(${props => props.img});
   background-position: center;
   background-size: cover;
@@ -11,7 +26,11 @@ const StyledImageContainer = styled.div`
   z-index: 99;
 /* position: relative; */
 
-  >img{
+
+  >
+  img{
+    z-index: 1;
+
     object-fit: cover;
     object-position: 50% 50%;
     width: 100%;
@@ -42,7 +61,8 @@ const ImageContainer = props => {
   console.log(props)
 
 
-  return <StyledImageContainer className="gradient" background={props.background} img={props.image} />;
+  return <StyledGradientContainer className="gradient" background={props.background} img={props.image} />;
 
 }
 export default ImageContainer;
+

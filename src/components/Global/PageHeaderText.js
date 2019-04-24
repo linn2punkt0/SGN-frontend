@@ -1,22 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 import Header from "../../components/Pages/Contact/Header";
-import Fade from 'react-reveal/Fade';
-
-
-
-
+import Fade from "react-reveal/Fade";
 
 const StyledPageHeaderText = styled.div`
   width: 50%;
   height: 100vh;
   margin-bottom: 53px;
-  /* position:absolute; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-
 
   > * {
     padding-left: 82px;
@@ -59,6 +53,18 @@ const StyledPageHeaderText = styled.div`
   @media (min-width: 320px) and (max-width: 767px) {
     height: 50vh;
     width: 100%;
+    > * {
+      padding-left: 24px;
+    }
+    h5 {
+      font-size: 16px;
+    }
+    h1 {
+      font-size: 40px;
+    }
+    p {
+      font-size: 16px;
+    }
   }
 `;
 const StyledFade = styled.h1`
@@ -71,14 +77,20 @@ const PageHeaderText = props => {
   return (
     <StyledPageHeaderText>
       <Header />
-      <Fade top delay={1400}>
-        <div>
+      <div>
+        <Fade delay={500}>
           <h5>{props.content ? props.content.tagline : "Tagline"}</h5>
+        </Fade>
+        <Fade delay={600}>
           <h1>{props.content ? props.content.title : "Title"}</h1>
+        </Fade>
+        <Fade delay={700}>
           <p>{props.content ? props.content.description : "Description"}</p>
+        </Fade>
+        <Fade delay={800}>
           <h4>{props.content ? props.content.scroll : "Scroll down"}</h4>
-        </div>
-      </Fade>
+        </Fade>
+      </div>
     </StyledPageHeaderText>
   );
 };

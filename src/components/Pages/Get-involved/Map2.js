@@ -9,8 +9,9 @@ import Mail from "../../ikoner/email.svg";
 import LocationLogo from "../../ikoner/location.svg";
 import Locations from "./Locations";
 import Woman from "../../ikoner/womens-club.svg";
-import Reveal from 'react-reveal/Reveal';
-import Fade from 'react-reveal/Fade';
+import Reveal from "react-reveal/Reveal";
+import Fade from "react-reveal/Fade";
+import MapImage from "../../../images/map_template.png";
 
 const StyledMap2 = styled.div`
   width: 50%;
@@ -19,6 +20,7 @@ const StyledMap2 = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-weight: 300;
 
   > h1 {
     font-weight: 500;
@@ -119,85 +121,85 @@ const Map2 = props => {
   };
   return (
     <StyledMap2>
-    <Reveal right>
-      <img src="https://cdn1.tekrevue.com/wp-content/uploads/2015/04/map-location-pin-960x540.jpg" />
-    </Reveal>
+      <Reveal right>
+        <img src={MapImage} />
+      </Reveal>
       <div className="container">
-      <Fade right delay={300}>
-        <h1>Vänersborg</h1>
-        <p>
-          Vänersborg is the head seat of our organisation and has a wide variety
-          of activities and branches.
-        </p>
-      </Fade>
-      <Fade right delay={400}>
-        <div className="featured">
-          <p>Feautured Activities:</p>
+        <Fade right delay={300}>
+          <h1>Vänersborg</h1>
+          <p>
+            Vänersborg is the head seat of our organisation and has a wide
+            variety of activities and branches.
+          </p>
+        </Fade>
+        <Fade right delay={400}>
+          <div className="featured">
+            <p>Feautured Activities:</p>
 
-          <div className="activity-row">
-            <div className="activity">
-              <img src={Sport} alt="Sport Logo" />
-              <p>
-                {activities.first_activity
-                  ? activities.first_activity
-                  : "Sports Club"}
-              </p>
+            <div className="activity-row">
+              <div className="activity">
+                <img src={Sport} alt="Sport Logo" />
+                <p>
+                  {activities.first_activity
+                    ? activities.first_activity
+                    : "Sports Club"}
+                </p>
+              </div>
+              <div className="activity">
+                <img src={Woman} alt="Woman Logo" />
+                <p>
+                  {activities.second_activity
+                    ? activities.second_activity
+                    : "Womens Club"}
+                </p>
+              </div>
             </div>
-            <div className="activity">
-              <img src={Woman} alt="Woman Logo" />
-              <p>
-                {activities.second_activity
-                  ? activities.second_activity
-                  : "Womens Club"}
-              </p>
+
+            <div className="activity-row">
+              <div className="activity">
+                <img src={Academic} alt="Book Logo" />
+                <p>
+                  {activities.third_activity
+                    ? activities.third_activity
+                    : "Academic Club"}
+                </p>
+              </div>
+              <div className="activity">
+                <img src={Kids} alt="Child Logo" />
+                <p>
+                  {activities.fourth_activity
+                    ? activities.fourth_activity
+                    : "Kids Club"}
+                </p>
+              </div>
             </div>
           </div>
-
-          <div className="activity-row">
-            <div className="activity">
-              <img src={Academic} alt="Book Logo" />
-              <p>
-                {activities.third_activity
-                  ? activities.third_activity
-                  : "Academic Club"}
-              </p>
-            </div>
-            <div className="activity">
-              <img src={Kids} alt="Child Logo" />
-              <p>
-                {activities.fourth_activity
-                  ? activities.fourth_activity
-                  : "Kids Club"}
-              </p>
-            </div>
-          </div>
-        </div>
-      </Fade>
+        </Fade>
       </div>
 
       <Fade right delay={500}>
-      <div className="contact">
-        <div className="contact-row">
-          <div>
-            <h6>Ansvarig:</h6>
-            <img src={Phone} alt="Phone Logo" />
-            <p>+46 722-89 10 18</p>
+        <div className="contact">
+          <div className="contact-row">
+            <div>
+              <h6>Contact:</h6>
+              <img src={Phone} alt="Phone Logo" />
+              <p>+46 722-89 10 18</p>
+            </div>
+            <div>
+              <img src={LocationLogo} alt="Locaton Logo" />
+              <p>Vägens väg 15</p>
+            </div>
           </div>
-          <div>
-            <img src={LocationLogo} alt="Locaton Logo" />
-            <p>Vägens väg 15</p>
+          <div className="contact-row">
+            <div>
+              <img src={Mail} alt="Mail Logo" />
+              <p>name@nameson.se</p>
+            </div>
+            <div>
+              <p>433 98 Vänersborg</p>
+            </div>
           </div>
         </div>
-        <div className="contact-row">
-          <div>
-            <img src={Mail} alt="Mail Logo" />
-            <p>name@nameson.se</p>
-          </div>
-          <div>
-            <p>433 98 Vänersborg</p>
-          </div>
-        </div>
-      </div>
       </Fade>
     </StyledMap2>
   );

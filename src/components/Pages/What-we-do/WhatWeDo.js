@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import GradientContainer from "./gradientContainer";
-// import ProjectText from "./ProjectText";
 import PageHeaderText from "../../Global/PageHeaderText";
 import ContactUsFooter from "../../Global/ContactUsFooter";
 import Container from "../../Global/Container";
@@ -12,6 +11,7 @@ import ImageEvent from "../../../images/project-2-slide.png"
 import ImageProject from "../../../images/project-3-slide.png"
 import Reveal from "react-reveal/Reveal";
 
+
 const StyledWhatWeDo = styled.div`
   height: 100%;
   width: 100%;
@@ -20,6 +20,16 @@ const StyledWhatWeDo = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   overflow-x: hidden;
+
+  .header-image {
+    height: 100vh;
+    width: 50%;
+    max-height: 449px;
+    margin-top: 10vh;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
 `;
 
 
@@ -86,7 +96,6 @@ const TextOnImage = styled.p`
 const WhatWeDo = props => {
   // Fetch all projects from API
   const [projects, setProjects] = useState(null);
-  console.log("usch");
   useEffect(() => {
     fetchProjects();
   }, []);
@@ -95,7 +104,6 @@ const WhatWeDo = props => {
     fetch(`http://wordplate.test/wp-json/wp/v2/projects`)
       .then(response => response.json())
       .then(data => {
-        console.log(data);
         setProjects(data);
       })
       .catch(error => console.error(error));
@@ -184,7 +192,7 @@ const WhatWeDo = props => {
         </Container>
 
         <Container>
-          <TextWhatWe content={firstText} />
+          <TextWhatWe content={firstText} color="#0021B8"/>
           <GradientContainer
             background={getRandomColor}
             image={ImageLady}
@@ -199,7 +207,7 @@ const WhatWeDo = props => {
         </Container>
 
         <Container>
-          <TextWhatWe content={secondText} />
+          <TextWhatWe content={secondText} color="#FD422D"/>
        
           <GradientContainer
             background={getRandomColor}
@@ -215,10 +223,10 @@ const WhatWeDo = props => {
         </Container>
 
         <Container>
-          <TextWhatWe content={thirdText} />
+          <TextWhatWe content={thirdText} color="#F9AD0E"/>
           <GradientContainer
             background={getRandomColor}
-            imageProject={ImageProject}
+            image={ImageProject}
             // shadowImg={getGradient}
           />
           <TextOnImage>

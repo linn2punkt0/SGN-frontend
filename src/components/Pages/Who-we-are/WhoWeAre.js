@@ -10,11 +10,12 @@ import AwardsText from "./AwardsText";
 import Awards from "./Awards";
 import ImageOne from "../../../images/section-1.png";
 import ImageTwo from "../../../images/section-2.png";
+import HeaderImage from "../../../images/who-we-are_hero.png";
 
 const StyledWhoWeAre = styled.div`
-max-width: 100vw;
+  max-width: 100vw;
   @media (min-width: 769px) {
-    .quote{
+    .quote {
       max-width: 500px;
       margin-top: 80vh;
       margin-left: 20vh;
@@ -22,27 +23,29 @@ max-width: 100vw;
       font-size: 16px;
       color: white;
     }
-      .firstImg {
-        height: 100vh;
-        width: 50vw;
-        background: url(${ImageOne});
-        background-position: center;
-        background-size: cover;
-      }
-      .secondImg {
-        height: 100vh;
-        width: 50vw;
-        background: url(${ImageTwo});
-        background-position: center;
-        background-size: cover;
-      }             
+    .firstImg {
+      height: 100vh;
+      width: 50vw;
+      background: url(${ImageOne});
+      background-position: center;
+      background-size: cover;
+    }
+    .secondImg {
+      height: 100vh;
+      width: 50vw;
+      background: url(${ImageTwo});
+      background-position: center;
+      background-size: cover;
+    }
     .logo {
-      height: 100h;
+      height: 100vh;
       width: 50vw;
       max-height: 449px;
-      background: url("https://i.ibb.co/1mk4H7L/who-we-are.png");
+      margin-top: 10vh;
+      background: url(${HeaderImage});
       background-position: center;
       background-size: contain;
+      background-repeat: no-repeat;
     }
   }
 
@@ -52,17 +55,16 @@ max-width: 100vw;
   @media (min-width: 320) and (max-width: 1024px) and (orientation: landscape) {
   }
 
-  @media (min-width: 320px) and (max-width: 767px) {                                
-      .firstImg {
-        height: 50vh;
-        width: 100vw;
-        h1 {
-        }
+  @media (min-width: 320px) and (max-width: 767px) {
+    .firstImg {
+      height: 50vh;
+      width: 100vw;
+      h1 {
       }
-      .secondImg {
-        height: 50vw;
-        width: 100vw;
-      }
+    }
+    .secondImg {
+      height: 50vw;
+      width: 100vw;
     }
   }
 `;
