@@ -3,7 +3,6 @@ import styled from "styled-components";
 import Text from "./Text";
 import PageHeaderText from "../../Global/PageHeaderText";
 import Container from "../../Global/Container";
-
 import ContactUsFooter from "../../Global/ContactUsFooter";
 import Partners from "./Partners";
 import PartnerText from "./PartnerText";
@@ -12,10 +11,7 @@ import Awards from "./Awards";
 import ImageOne from "../../../images/section-1.png";
 import ImageTwo from "../../../images/section-2.png";
 import HeaderImage from "../../../images/who-we-are_hero.png";
-
 import GradientContainer from "../../Pages/What-we-do/gradientContainer";
-// import ImageContainer from "../../Global/ImageContainer"
-// import LargeContainer from "../../Global/LargeContainer"
 import Reveal from "react-reveal/Reveal";
 
 const StyledWhoWeAre = styled.div`

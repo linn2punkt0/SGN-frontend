@@ -12,7 +12,7 @@ const StyledPartners = styled.div`
     margin-top: 20px;
     padding: 0;
     overflow-y: scroll;
-    height: 95%;
+    height: 90%;
 
     li {
       display: flex;
@@ -28,8 +28,9 @@ const StyledPartners = styled.div`
       max-width: 200px;
       max-height: 150px;
     }
-    > h3 {
+    .mobile {
       display: none;
+      color: white;
     }
   }
   @media (min-width: 320px) and (max-width: 767px) {
@@ -39,7 +40,7 @@ const StyledPartners = styled.div`
     img {
       max-width: 150px;
     }
-    > h3 {
+    .mobile {
       display: inline;
       font-weight: 300;
       font-size: 24px;
@@ -66,7 +67,7 @@ const Partners = props => {
   };
   return (
     <StyledPartners>
-      <h3>Partners</h3>
+      <h6 className="mobile">Partners</h6>
       {partners && (
         <ul>
           {partners.map(partner => {
