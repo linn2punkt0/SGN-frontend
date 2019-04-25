@@ -47,8 +47,9 @@ const StyledAwards = styled.div`
     display: none;
   }
   @media (min-width: 320px) and (max-width: 767px) {
-    width: 100%;
+    width: 80%;
     height: 90vh;
+    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -62,7 +63,7 @@ const StyledAwards = styled.div`
       font-weight: 300;
       font-size: 24px;
       align-self: flex-start;
-      margin-left: 24px;
+      /* margin-left: 24px; */
     }
     p {
       text-align: center;
