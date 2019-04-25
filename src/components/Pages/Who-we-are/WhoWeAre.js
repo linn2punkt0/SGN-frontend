@@ -146,7 +146,7 @@ const WhoWeAre = props => {
       </Container>
 
       <Container>
-        <Text content={content ? content.our_cause : ""} />
+        <Text content={content ? content.our_history : ""} />
         <GradientContainer image={ImageOne} height="50vh" />
         <TextOnImage>
           <Reveal top>

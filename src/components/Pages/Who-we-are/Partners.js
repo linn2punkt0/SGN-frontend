@@ -28,10 +28,10 @@ const StyledPartners = styled.div`
       max-width: 200px;
       max-height: 150px;
     }
-    .mobile {
-      display: none;
-      color: white;
-    }
+  }
+  .mobile {
+    display: none;
+    color: white;
   }
   @media (min-width: 320px) and (max-width: 767px) {
     width: 80%;
